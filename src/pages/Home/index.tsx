@@ -17,6 +17,7 @@ const PageWrapper = styled(AutoColumn)`
 const TopSection = styled(AutoColumn)`
   max-width: 720px;
   width: 100%;
+  justify-self: center;
 `
 
 const PoolSection = styled.div`

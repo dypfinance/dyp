@@ -109,7 +109,6 @@ export default function App() {
               <Route exact strict path="/uni" component={Earn} />
               <Route exact strict path="/home" component={Home} />
               <Route exact strict path="/vote" component={Vote} />
-              <Route exact strict path="/footer" component={Footer} />
               <Route exact strict path="/create" component={RedirectToAddLiquidity} />
               <Route exact path="/add" component={AddLiquidity} />
               <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
