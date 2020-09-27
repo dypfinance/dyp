@@ -295,14 +295,10 @@ function Header({ history }: { history: any }) {
           </UniIcon>
         </Title>
         <HeaderLinks>
-          <StyledNavLink
-            id={`stake-nav-link`}
-            to={'/home'}
-            isActive={() => history.location.pathname.includes('/home')}
-          >
+          <StyledNavLink id={`home-nav-link`} to={'/home'} isActive={() => history.location.pathname.includes('/home')}>
             {t('Home')}
           </StyledNavLink>
-          <StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>
+          <StyledNavLink id={`earn-nav-link`} to={'/earn'} isActive={() => history.location.pathname.includes('/earn')}>
             {t('Stake')}
           </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
@@ -318,7 +314,7 @@ function Header({ history }: { history: any }) {
             {t('Tokenomics')}
           </StyledExternalLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
-            {t('Get DYP')}
+            {t('Get DRYP')}
           </StyledExternalLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Referral Program')}
