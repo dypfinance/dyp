@@ -296,7 +296,7 @@ function Header({ history }: { history: any }) {
             to={'/home'}
             isActive={() => history.location.pathname.includes('/home')}
           >
-            {t('Homes')}
+            {t('Home')}
           </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Stake')}
