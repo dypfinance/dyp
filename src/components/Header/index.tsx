@@ -197,18 +197,20 @@ const StyledNavLink = styled(NavLink).attrs({
 })`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
-  border-radius: 3rem;
+  // border-radius: 3rem;
+  // border-bottom: 3px solid rgba(25, 101, 233, 0.5);
   outline: none;
   cursor: pointer;
   text-decoration: none;
   color: ${({ theme }) => theme.text2};
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: fit-content;
   margin: 0 12px;
   font-weight: 500;
 
   &.${activeClassName} {
-    border-radius: 12px;
+    // border-radius: 12px;
+    border-bottom: 3px solid rgba(25, 101, 233, 0.5);
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
   }
@@ -229,7 +231,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   cursor: pointer;
   text-decoration: none;
   color: ${({ theme }) => theme.text2};
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: fit-content;
   margin: 0 12px;
   font-weight: 500;
@@ -298,9 +300,9 @@ function Header({ history }: { history: any }) {
           >
             {t('Home')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+          <StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>
             {t('Stake')}
-          </StyledExternalLink>
+          </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('ETH Mining Pool')}
           </StyledExternalLink>
