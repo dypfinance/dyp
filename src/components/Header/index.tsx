@@ -30,6 +30,8 @@ import UniBalanceContent from './UniBalanceContent'
 import usePrevious from '../../hooks/usePrevious'
 
 const HeaderFrame = styled.div`
+  // Header Color
+  background-color: #2172e530;
   display: grid;
   grid-template-columns: 1fr 120px;
   align-items: center;
@@ -210,7 +212,7 @@ const StyledNavLink = styled(NavLink).attrs({
 
   &.${activeClassName} {
     // border-radius: 12px;
-    border-bottom: 3px solid rgba(25, 101, 233, 0.5);
+    border-bottom: 3px solid red;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
   }

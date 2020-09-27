@@ -33,11 +33,6 @@ const Footer: React.FC = () => (
     </StyledFooterInner>
     <StyledFooterInner>
       <StyledNav>
-        <StyledSpace></StyledSpace>
-      </StyledNav>
-    </StyledFooterInner>
-    <StyledFooterInner>
-      <StyledNav>
         <StyledLink target="_blank" href="https://twitter.com/sushiswap">
           <img width={'24px'} src={Github} alt="logo" />
         </StyledLink>
@@ -68,6 +63,7 @@ const Footer: React.FC = () => (
 )
 
 const StyledFooter = styled.footer`
+  background-color: #1e272f;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -91,7 +87,7 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled.a`
   color: grey;
-  margin: 5px 15px;
+  margin: 30px 15px;
   -webkit-align-items: center;
   text-decoration: none;
   &:hover {
@@ -99,11 +95,11 @@ const StyledLink = styled.a`
   }
 `
 
-const StyledSpace = styled.div`
-  width: 100px;
-  margin: 8px auto;
-  max-width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-`
+// const StyledSpace = styled.div`
+//   width: 100px;
+//   margin: 5px auto;
+//   max-width: 100%;
+//   background-color: rgba(0, 0, 0, 0);
+// `
 
 export default Footer
