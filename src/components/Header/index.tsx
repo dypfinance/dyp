@@ -8,9 +8,9 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
+// import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
-import { useDarkModeManager } from '../../state/user/hooks'
+// import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances, useAggregateUniBalance } from '../../state/wallet/hooks'
 import { CardNoise } from '../earn/styled'
 import { CountUp } from 'use-count-up'
@@ -202,7 +202,7 @@ const StyledNavLink = styled(NavLink).attrs({
   cursor: pointer;
   text-decoration: none;
   color: ${({ theme }) => theme.text2};
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: fit-content;
   margin: 0 12px;
   font-weight: 500;
@@ -229,7 +229,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   cursor: pointer;
   text-decoration: none;
   color: ${({ theme }) => theme.text2};
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: fit-content;
   margin: 0 12px;
   font-weight: 500;
@@ -262,7 +262,7 @@ function Header({ history }: { history: any }) {
   const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  const [isDark] = useDarkModeManager()
+  // const [isDark] = useDarkModeManager()
 
   const toggleClaimModal = useToggleSelfClaimModal()
 
@@ -287,7 +287,7 @@ function Header({ history }: { history: any }) {
       <HeaderRow>
         <Title href="." style={{}}>
           <UniIcon>
-            <img width={'24px'} src={isDark ? LogoDark : Logo} alt="logo" />
+            <img width={'120px'} src={Logo} alt="logo" />
           </UniIcon>
         </Title>
         <HeaderLinks>
