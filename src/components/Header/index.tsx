@@ -31,7 +31,7 @@ import usePrevious from '../../hooks/usePrevious'
 
 const HeaderFrame = styled.div`
   // Header Color
-  background-color: #2172e530;
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr 120px;
   align-items: center;
