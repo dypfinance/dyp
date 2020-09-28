@@ -66,11 +66,11 @@ export default function Earn() {
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
                   DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
                   providers. <div></div> Maintaining token price stability — every day at 00:00 UTC, the smart contract
-                  automatically try to convert 276,480 DYP to ETH. If the DYP price is affected by more than -2.5%, then
-                  amount that does not affect the price will be swapped to ETH, with the remaining amount distributed in
-                  the next day’s rewards. After seven days, if we still have undistributed DYP rewards, the DeFi Yield
-                  protocol governance will vote on whether the remaining DYP will be distributed to the token holders or
-                  burned (all burned tokens are removed from circulation).
+                  will automatically try to convert 276,480 DYP to ETH. If the DYP price is affected by more than -2.5%,
+                  then the maximum DYP amount that does not affect the price will be swapped to ETH, with the remaining
+                  amount distributed in the next day’s rewards. After seven days, if we still have undistributed DYP
+                  rewards, the DeFi Yield protocol governance will vote on whether the remaining DYP will be distributed
+                  to the token holders or burned (all burned tokens are removed from circulation).
                 </TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
