@@ -142,7 +142,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
           {/*  ?.multiply(`${60 * 60 * 24 * 7}`)*/}
           {/*  ?.toFixed(0, { groupSeparator: ',' })} DYP / week`}</TYPE.white>*/}
-          <TYPE.white>{` 483,840 DYP / week`}</TYPE.white>
+          <TYPE.white>{` 69,120 DYP / day`}</TYPE.white>
           {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
           {/*  ?.multiply(`${60 * 60 * 24 * 7 * 0 + 69120 * 7}`)*/}
           {/*  ?.toFixed(0, { groupSeparator: ',' })} DYP / week`}</TYPE.white>*/}
@@ -162,7 +162,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
                 ⚡
               </span>
               {`${stakingInfo.rewardRate
-                ?.multiply(`${60 * 60 * 24 * 7 * 0 + 69120 * 7}`)
+                ?.multiply(`${60 * 60 * 24 * 7 * 0 + 69120}`)
                 ?.toSignificant(4, { groupSeparator: ',' })} UNI / week`}
             </TYPE.black>
           </BottomSection>
