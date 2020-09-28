@@ -314,7 +314,7 @@ function Header({ history }: { history: any }) {
             {t('Tokenomics')}
           </StyledExternalLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
-            {t('Get DRYP')}
+            {t('Get DYP')}
           </StyledExternalLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Referral Program')}

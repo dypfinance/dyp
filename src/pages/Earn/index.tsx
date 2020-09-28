@@ -6,7 +6,7 @@ import { TYPE, ExternalLink } from '../../theme'
 import PoolCard from '../../components/earn/PoolCard'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
-import { Countdown } from './Countdown'
+// import { Countdown } from './Countdown'
 import Loader from '../../components/Loader'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -50,11 +50,23 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>Uniswap liquidity mining</TYPE.white>
+                <TYPE.white fontWeight={600}>DYP Liquidity Mining</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Deposit your Liquidity Provider tokens to receive UNI, the Uniswap protocol governance token.
+                  Deposit your liquidity provider tokens to receive DYP, the DeFi Yield protocol governance token.
+                </TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>
+                  In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
+                  DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
+                  Maintaining token price stability — every day at 00:00 UTC, the smart contract will automatically try
+                  to convert 276,480 DYP to ETH. If the DYP price is affected by more than -2.5%, then the maximum DYP
+                  amount that does not affect the price will be swapped to ETH, with the remaining amount distributed in
+                  the next day’s rewards. After seven days, if we still have undistributed DYP rewards, the DeFi Yield
+                  protocol governance will vote on whether the remaining DYP will be distributed to the token holders or
+                  burned (all burned tokens are removed from circulation).
                 </TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
@@ -62,7 +74,7 @@ export default function Earn() {
                 href="https://uniswap.org/blog/uni/"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>Read more about UNI</TYPE.white>
+                <TYPE.white fontSize={14}>Read more about DYP</TYPE.white>
               </ExternalLink>
             </AutoColumn>
           </CardSection>
@@ -74,7 +86,7 @@ export default function Earn() {
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
         <DataRow style={{ alignItems: 'baseline' }}>
           <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
-          <Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />
+          {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
         </DataRow>
 
         <PoolSection>
