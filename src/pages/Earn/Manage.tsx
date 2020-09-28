@@ -161,7 +161,11 @@ export default function Manage({
         <TYPE.mediumHeader style={{ margin: 0 }}>
           {/*{currencyA?.symbol}*/} DYP-{currencyB?.symbol} Liquidity Mining
         </TYPE.mediumHeader>
-        <img src={LOGO} style={{ height: '39px', position: 'relative', left: '156px', margin: '4px 0px 0px 0px' }} />
+        <img
+          src={LOGO}
+          style={{ height: '39px', position: 'relative', left: '156px', margin: '4px 0px 0px 0px' }}
+          alt={'logo'}
+        />
         <DoubleCurrencyLogo currency0={currencyA ?? undefined} currency1={currencyB ?? undefined} size={24} />
       </RowBetween>
 
