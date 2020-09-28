@@ -30,6 +30,8 @@ import usePrevious from '../../hooks/usePrevious'
 import useUSDCPrice from '../../utils/useUSDCPrice'
 import { BIG_INT_ZERO } from '../../constants'
 
+import LOGO from '../../assets/svg/dyp_thicker.svg'
+
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
   width: 100%;
@@ -159,6 +161,7 @@ export default function Manage({
         <TYPE.mediumHeader style={{ margin: 0 }}>
           {/*{currencyA?.symbol}*/} DYP-{currencyB?.symbol} Liquidity Mining
         </TYPE.mediumHeader>
+        <img src={LOGO} style={{ height: '39px', position: 'relative', left: '156px', margin: '4px 0px 0px 0px' }} />
         <DoubleCurrencyLogo currency0={currencyA ?? undefined} currency1={currencyB ?? undefined} size={24} />
       </RowBetween>
 
