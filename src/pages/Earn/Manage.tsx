@@ -195,7 +195,7 @@ export default function Manage({
 
       {/*showAddLiquidityButton && (*/}
       {/*for normal work*/}
-      {!showAddLiquidityButton && (
+      {showAddLiquidityButton && (
         <VoteCard>
           <CardBGImage />
           <CardNoise />
@@ -280,7 +280,7 @@ export default function Manage({
 
       {/*<PositionInfo gap="lg" justify="center" dim={showAddLiquidityButton}>*/}
       {/*  for classic work*/}
-      <PositionInfo gap="lg" justify="center" dim={!showAddLiquidityButton}>
+      <PositionInfo gap="lg" justify="center" dim={showAddLiquidityButton}>
         <BottomSection gap="lg" justify="center">
           <StyledDataCard disabled={disableTop} bgColor={backgroundColor} showBackground={!showAddLiquidityButton}>
             <CardSection>
@@ -355,7 +355,7 @@ export default function Manage({
 
         {/*{!showAddLiquidityButton && (*/}
         {/*  for classic work*/}
-        {showAddLiquidityButton && (
+        {!showAddLiquidityButton && (
           <DataRow style={{ marginBottom: '1rem' }}>
             <ButtonPrimary padding="8px" borderRadius="8px" width="160px" onClick={handleDepositClick}>
               {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) ? 'Deposit' : 'Deposit UNI-V2 LP Tokens'}
