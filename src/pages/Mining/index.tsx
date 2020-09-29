@@ -32,10 +32,19 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  DYP Ethereum Miner Address https://ethermine.org/miners/Bd5326D2682cDa8ED241eB423eCf3d85432dc46c What
-                  is this? This is our Ethereum Miner address. The DYP team has been mining Ethereum since 2017, and now
-                  we are ready to help the Ethereum Mining Community with our Ethereum mining pool combined with yield
-                  farming. We invested more than $1 million dollars in our Mining Farm, so you can be sure that we
+                  DYP Ethereum Miner Address <div></div>
+                  <ExternalLink
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://ethermine.org/miners/Bd5326D2682cDa8ED241eB423eCf3d85432dc46c"
+                    target="_blank"
+                  >
+                    <TYPE.white fontSize={14}>
+                      https://ethermine.org/miners/Bd5326D2682cDa8ED241eB423eCf3d85432dc46c
+                    </TYPE.white>
+                  </ExternalLink>
+                  What is this? This is our Ethereum Miner address. The DYP team has been mining Ethereum since 2017,
+                  and now we are ready to help the Ethereum Mining Community with our Ethereum mining pool combined with
+                  yield farming. We invested more than $1 million dollars in our Mining Farm, so you can be sure that we
                   understand the community’s needs.
                 </TYPE.white>
               </RowBetween>
@@ -57,7 +66,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://uniswap.org/blog/uni/"
+                href="https://mining.dyp.finance/"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>
