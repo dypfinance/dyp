@@ -1,7 +1,7 @@
 import { ChainId, TokenAmount, JSBI } from '@uniswap/sdk'
 import React, { useState } from 'react'
 import { Text } from 'rebass'
-import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { darken } from 'polished'
 import { useTranslation } from 'react-i18next'
 
@@ -261,7 +261,7 @@ const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.KOVAN]: 'Kovan'
 }
 
-function Header({ history }: { history: any }) {
+export default function Header() {
   const { account, chainId } = useActiveWeb3React()
   const { t } = useTranslation()
 
@@ -295,15 +295,15 @@ function Header({ history }: { history: any }) {
           </UniIcon>
         </Title>
         <HeaderLinks>
-          <StyledNavLink id={`home-nav-link`} to={'/home'} isActive={() => history.location.pathname.includes('/home')}>
+          <StyledNavLink id={`home-nav-link`} to={'/home'}>
             {t('Home')}
           </StyledNavLink>
-          <StyledNavLink id={`earn-nav-link`} to={'/earn'} isActive={() => history.location.pathname.includes('/earn')}>
+          <StyledNavLink id={`earn-nav-link`} to={'/earn'}>
             {t('Stake')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+          <StyledNavLink id={`mining-nav-link`} to={'/mining'}>
             {t('ETH Mining Pool')}
-          </StyledExternalLink>
+          </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Earn')}
           </StyledExternalLink>
@@ -402,5 +402,3 @@ function Header({ history }: { history: any }) {
     </HeaderFrame>
   )
 }
-
-export default withRouter(Header)
