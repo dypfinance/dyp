@@ -316,7 +316,7 @@ export default function Header() {
             {t('Tokenomics')}
           </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`}>
-            <a onClick={popUpAlert}>{t('Get DYP')}</a>
+            <div onClick={popUpAlert}>{t('Get DYP')}</div>
           </StyledExternalLink>
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
             {t('Referral Program')}
