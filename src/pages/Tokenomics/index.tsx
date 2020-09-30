@@ -31,7 +31,7 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  DYP contract address: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 liquidity.
+                  DYP contract address: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
