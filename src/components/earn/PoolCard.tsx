@@ -33,7 +33,7 @@ const Wrapper = styled(AutoColumn)<{ showBackground: boolean; bgColor: any }>`
   width: 100%;
   overflow: hidden;
   position: relative;
-  opacity: ${({ showBackground }) => (showBackground ? '1' : '1')};
+  opacity: ${({ showBackground }) => (showBackground ? '0.6' : '1')};
   background: ${({ theme, bgColor, showBackground }) =>
     `radial-gradient(91.85% 100% at 1.84% 0%, ${bgColor} 0%, ${showBackground ? theme.black : theme.bg5} 100%) `};
   color: ${({ theme, showBackground }) => (showBackground ? theme.white : theme.text1)} !important;
@@ -80,6 +80,13 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   const currency1 = unwrappedToken(token1)
 
   const isStaking = Boolean(stakingInfo.stakedAmount.greaterThan('0'))
+  const hidePools = Boolean(
+    stakingInfo.tokens[1].symbol === 'USDC' ||
+      stakingInfo.tokens[1].symbol === 'USDT' ||
+      stakingInfo.tokens[1].symbol === 'WBTC'
+  )
+
+  //console.log(hidePools)
 
   // get the color of the token
   const token = currency0 === ETHER ? token1 : token0
@@ -111,7 +118,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     valueOfTotalStakedAmountInWETH && USDPrice?.quote(valueOfTotalStakedAmountInWETH)
 
   return (
-    <Wrapper showBackground={isStaking} bgColor={backgroundColor}>
+    <Wrapper showBackground={hidePools} bgColor={backgroundColor}>
       <CardBGImage desaturate />
       <CardNoise />
 
@@ -122,7 +129,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         </TYPE.white>
 
         <StyledInternalLink to={`/uni/${currencyId(currency0)}/${currencyId(currency1)}`} style={{ width: '100%' }}>
-          <ButtonPrimary padding="8px" borderRadius="8px">
+          <ButtonPrimary padding="8px" borderRadius="8px" disabled={hidePools}>
             {isStaking ? 'Manage' : 'Deposit'}
           </ButtonPrimary>
         </StyledInternalLink>

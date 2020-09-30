@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import { JSBI, TokenAmount, ETHER } from '@uniswap/sdk'
 import { RouteComponentProps } from 'react-router-dom'
@@ -23,7 +23,7 @@ import { useColor } from '../../hooks/useColor'
 import { CountUp } from 'use-count-up'
 
 import { wrappedCurrency } from '../../utils/wrappedCurrency'
-import { currencyId } from '../../utils/currencyId'
+// import { currencyId } from '../../utils/currencyId'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { usePair } from '../../data/Reserves'
 import usePrevious from '../../hooks/usePrevious'
@@ -139,6 +139,9 @@ export default function Manage({
 
   const countUpAmount = stakingInfo?.earnedAmount?.toFixed(6) ?? '0'
   const countUpAmountPrevious = usePrevious(countUpAmount) ?? '0'
+  function popUpAlert() {
+    alert('Will be available after Uniswap token listing')
+  }
 
   // get the USD value of staked WETH
   const USDPrice = useUSDCPrice(WETH)
@@ -213,8 +216,9 @@ export default function Manage({
                 padding="8px"
                 borderRadius="8px"
                 width={'fit-content'}
-                as={Link}
-                to={`/add/${currencyA && currencyId(currencyA)}/${currencyB && currencyId(currencyB)}`}
+                onClick={popUpAlert}
+                //as={Link}
+                //to={`/add/${currencyA && currencyId(currencyA)}/${currencyB && currencyId(currencyB)}`}
               >
                 {`Add DYP-${currencyB?.symbol} liquidity`}
               </ButtonPrimary>
@@ -241,11 +245,12 @@ export default function Manage({
                   </TYPE.white>
                 </RowBetween>
                 <ButtonPrimary
+                  disabled={true}
                   padding="8px"
                   borderRadius="8px"
                   width={'fit-content'}
-                  as={Link}
-                  to={`/add/${currencyA && currencyId(currencyA)}/${currencyB && currencyId(currencyB)}`}
+                  //as={Link}
+                  //to={`/add/${currencyA && currencyId(currencyA)}/${currencyB && currencyId(currencyB)}`}
                 >
                   {`Stake DYP-${currencyB?.symbol} UNI-V2 LP`}
                 </ButtonPrimary>

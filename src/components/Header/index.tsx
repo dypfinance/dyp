@@ -14,7 +14,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances, useAggregateUniBalance } from '../../state/wallet/hooks'
 import { CardNoise } from '../earn/styled'
 import { CountUp } from 'use-count-up'
-import { TYPE, ExternalLink } from '../../theme'
+import { TYPE } from '../../theme'
 
 import { YellowCard } from '../Card'
 
@@ -223,9 +223,7 @@ const StyledNavLink = styled(NavLink).attrs({
   }
 `
 
-const StyledExternalLink = styled(ExternalLink).attrs({
-  activeClassName
-})<{ isActive?: boolean }>`
+const StyledExternalLink = styled.div`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
   border-radius: 3rem;
@@ -282,6 +280,10 @@ export default function Header() {
   const countUpValue = aggregateBalance?.toFixed(0) ?? '0'
   const countUpValuePrevious = usePrevious(countUpValue) ?? '0'
 
+  function popUpAlert() {
+    alert('Will be available after Uniswap token listing')
+  }
+
   return (
     <HeaderFrame>
       <ClaimModal />
@@ -313,8 +315,8 @@ export default function Header() {
           <StyledNavLink id={`tokenomics-nav-link`} to={'/tokenomics'}>
             {t('Tokenomics')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
-            {t('Get DYP')}
+          <StyledExternalLink id={`stake-nav-link`}>
+            <a onClick={popUpAlert}>{t('Get DYP')}</a>
           </StyledExternalLink>
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
             {t('Referral Program')}
