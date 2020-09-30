@@ -304,9 +304,9 @@ export default function Header() {
           <StyledNavLink id={`mining-nav-link`} to={'/mining'}>
             {t('ETH Mining Pool')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+          <StyledNavLink id={`vault-nav-link`} to={'/vault'}>
             {t('Earn')}
-          </StyledExternalLink>
+          </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Vote')}
           </StyledExternalLink>
