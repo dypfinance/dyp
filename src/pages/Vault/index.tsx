@@ -25,6 +25,9 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
+                <TYPE.white fontWeight={600}>DYP Earn Vault</TYPE.white>
+              </RowBetween>
+              <RowBetween>
                 <TYPE.white fontSize={14}>
                   The DYP Earn Vault is an automated yield farming contract that allows users to deposit a particular
                   token, for which the protocol automates yield farming strategies by moving providers` funds between
