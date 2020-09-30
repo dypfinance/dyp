@@ -33,6 +33,7 @@ import Vault from './Vault'
 import Footer from './Footer'
 import Gov from './Gov'
 import Tokenomics from './Tokenomics'
+import Refferal from './Refferal'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 
 import Vote from './Vote'
@@ -110,6 +111,7 @@ export default function App() {
               <Route exact strict path="/mining" component={Mining} />
               <Route exact strict path="/vault" component={Vault} />
               <Route exact strict path="/gov" component={Gov} />
+              <Route exact strict path="/refferal" component={Refferal} />
               <Route exact strict path="/tokenomics" component={Tokenomics} />
               <Route exact strict path="/claim" component={OpenClaimAddressModalAndRedirectToSwap} />
               <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />

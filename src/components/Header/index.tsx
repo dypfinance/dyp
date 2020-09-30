@@ -316,9 +316,9 @@ export default function Header() {
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Get DYP')}
           </StyledExternalLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+          <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
             {t('Referral Program')}
-          </StyledExternalLink>
+          </StyledNavLink>
           {/*<StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>*/}
           {/*  {t('swap')}*/}
           {/*</StyledNavLink>*/}
