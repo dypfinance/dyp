@@ -65,7 +65,7 @@ export default function Earn() {
           <CardNoise />
         </DataCard>
       </TopSection>
-      <img src={Chart} />
+      <img src={Chart} alt={'logo'} />
     </PageWrapper>
   )
 }
