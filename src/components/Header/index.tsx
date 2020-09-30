@@ -307,12 +307,12 @@ export default function Header() {
           <StyledNavLink id={`vault-nav-link`} to={'/vault'}>
             {t('Earn')}
           </StyledNavLink>
-          <StyledNavLink id={`stake-nav-link`} to={'/gov'}>
+          <StyledNavLink id={`vote-nav-link`} to={'/gov'}>
             {t('Vote')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
+          <StyledNavLink id={`tokenomics-nav-link`} to={'/tokenomics'}>
             {t('Tokenomics')}
-          </StyledExternalLink>
+          </StyledNavLink>
           <StyledExternalLink id={`stake-nav-link`} href={'https://uniswap.info'}>
             {t('Get DYP')}
           </StyledExternalLink>
