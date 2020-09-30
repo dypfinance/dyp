@@ -45,7 +45,7 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  75.29% to DeFi Yield protocol community members: 22,588,800 DYP<div></div>
+                  75.30% to DeFi Yield protocol community members: 22,588,800 DYP<div></div>
                   16,588,800 DYP distributed for pool rewards over the next 60 days<div></div>
                   5,000,000 DYP distributed over the next 60-120 days to Ethereum mining pool<div></div>
                   1,000,000 DYP locked for one year to Uniswap liquidity on token launch<div></div>
