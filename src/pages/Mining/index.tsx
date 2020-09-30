@@ -35,12 +35,10 @@ export default function Earn() {
                   DYP Ethereum Miner Address <div></div>
                   <ExternalLink
                     style={{ color: 'white', textDecoration: 'underline' }}
-                    href="https://ethermine.org/miners/Bd5326D2682cDa8ED241eB423eCf3d85432dc46c"
+                    href="https://ethminer.dyp.finance/"
                     target="_blank"
                   >
-                    <TYPE.white fontSize={14}>
-                      https://ethermine.org/miners/Bd5326D2682cDa8ED241eB423eCf3d85432dc46c
-                    </TYPE.white>
+                    <TYPE.white fontSize={14}>DYP Ethereum Miner Address https://ethminer.dyp.finance/</TYPE.white>
                   </ExternalLink>
                   What is this? This is our Ethereum Miner address. The DYP team has been mining Ethereum since 2017,
                   and now we are ready to help the Ethereum Mining Community with our Ethereum mining pool combined with
@@ -61,7 +59,8 @@ export default function Earn() {
                 <TYPE.white fontSize={14}>
                   Ethereum mining pool & yield farming for miners will provide a 10% monthly DYP bonus + 0% mining fees
                   to all Ethereum miners. The Ethereum mining pool will be launched as soon as we get the hash rate
-                  required to mine a pool; currently we have XX hash rate from our miners, the required hash rate is XX.
+                  required to mine a pool; currently we have 35 GH/s hash rate from our miners, the required hash rate
+                  is 250 GH/s.
                 </TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
