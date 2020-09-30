@@ -30,10 +30,10 @@ export default function Earn() {
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   The DYP Earn Vault is an automated yield farming contract that allows users to deposit a particular
-                  token, for which the protocol automates yield farming strategies by moving providers` funds between
-                  the most profitable platforms. Of the profits, 75% is converted to ETH and distributed to the
-                  liquidity providers, while the remaining 25% is used to buy back our protocol governance token in
-                  order to add liquidity.
+                  token, for which the protocol automates yield farming strategies by moving providers funds between the
+                  most profitable platforms. Of the profits, 75% is converted to ETH and distributed to the liquidity
+                  providers, while the remaining 25% is used to buy back our protocol governance token in order to add
+                  liquidity.
                 </TYPE.white>
               </RowBetween>
             </AutoColumn>
