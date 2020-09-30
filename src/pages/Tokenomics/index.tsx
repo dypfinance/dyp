@@ -5,6 +5,8 @@ import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 
+import Chart from '../../assets/images/Charts2.png'
+
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
   width: 100%;
@@ -63,6 +65,7 @@ export default function Earn() {
           <CardNoise />
         </DataCard>
       </TopSection>
+      <img src={Chart} />
     </PageWrapper>
   )
 }
