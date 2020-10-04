@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
+import LOGO from '../../assets/images/soon.png'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -26,6 +27,7 @@ export default function Earn() {
             <AutoColumn gap="md">
               <RowBetween>
                 <TYPE.white fontWeight={600}>DYP Referral</TYPE.white>
+                <img src={LOGO} style={{ height: '39px' }} alt={'logo'} />
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
