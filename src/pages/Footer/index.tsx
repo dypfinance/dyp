@@ -25,28 +25,28 @@ const Footer: React.FC = () => (
     </StyledFooterInner>
     <StyledFooterInner>
       <StyledNav>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://github.com/dypfinance">
           <img width={'24px'} src={Github} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://medium.com/@dypfinance">
           <img width={'24px'} src={Medium} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://twitter.com/dypfinance">
           <img width={'24px'} src={Twitter} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://t.co/N5rPQ12obJ?amp=1">
           <img width={'24px'} src={Discord} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://t.me/dypfinance">
           <img width={'24px'} src={Telegram} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://t.me/dypannouncements">
           <img width={'24px'} src={Ann} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="https://gov.dyp.finance/">
           <img width={'24px'} src={Forum} alt="logo" />
         </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
+        <StyledLink target="_blank" href="mailto:contact@dyp.finance">
           <img width={'24px'} src={Email} alt="logo" />
         </StyledLink>
       </StyledNav>
