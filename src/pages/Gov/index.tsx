@@ -1,7 +1,7 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { TYPE, ExternalLink } from '../../theme'
+import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 
@@ -14,6 +14,10 @@ const TopSection = styled(AutoColumn)`
   max-width: 720px;
   width: 100%;
 `
+
+const popUpAlert = function() {
+  alert('Coming soon!')
+}
 
 export default function Earn() {
   return (
@@ -37,15 +41,13 @@ export default function Earn() {
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
-                <ExternalLink
-                  style={{ color: 'white', textDecoration: 'underline' }}
-                  href="https://gov.dyp.finance/"
-                  target="_blank"
-                >
-                  <TYPE.white fontSize={14}>
-                    Set up an account on gov.dyp.finance to start shaping and participating in protocol governance.
-                  </TYPE.white>
-                </ExternalLink>
+                <TYPE.white fontSize={14} onClick={popUpAlert}>
+                  Set up an account on{' '}
+                  <a style={{ color: 'white', textDecoration: 'underline' }} href="#gov">
+                    gov.dyp.finance
+                  </a>{' '}
+                  to start shaping and participating in protocol governance.
+                </TYPE.white>
               </RowBetween>{' '}
             </AutoColumn>
           </CardSection>
