@@ -14,7 +14,7 @@ const Footer: React.FC = () => (
   <StyledFooter>
     <StyledFooterInner>
       <StyledNav>
-        <StyledLink target="_blank" href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code">
+        <StyledLink target="_blank" href="https://etherscan.io/address/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17#code">
           Token Contract
         </StyledLink>
         <StyledLinkS>CoinMarketCap</StyledLinkS>

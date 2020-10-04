@@ -82,7 +82,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://uniswap.org/blog/uni/"
+                href="https://medium.com/@dypfinance/introducing-the-defi-yield-protocol-12ea2146d328"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about DYP</TYPE.white>

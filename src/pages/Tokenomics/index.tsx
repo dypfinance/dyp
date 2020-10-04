@@ -30,9 +30,7 @@ export default function Earn() {
                 <TYPE.white fontWeight={600}>Tokenomics</TYPE.white>
               </RowBetween>
               <RowBetween>
-                <TYPE.white fontSize={14}>
-                  DYP contract address: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984
-                </TYPE.white>
+                <TYPE.white fontSize={14}>DYP contract address: 0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>DYP Allocation</TYPE.white>
