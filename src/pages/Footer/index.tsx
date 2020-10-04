@@ -17,18 +17,10 @@ const Footer: React.FC = () => (
         <StyledLink target="_blank" href="https://etherscan.io/address/0xc2edad668740f1aa35e4d8f227fb8e17dca888cd#code">
           Token Contract
         </StyledLink>
-        <StyledLink target="_blank" href="https://uniswap.info/pair/0xce84867c3c02b05dc570d0135103d3fb9cc19433">
-          CoinMarketCap
-        </StyledLink>
-        <StyledLink target="_blank" href="https://discord.gg/hJ2p555">
-          CoinGecko
-        </StyledLink>
-        <StyledLink target="_blank" href="https://github.com/sushiswap">
-          Uniswap DYP-ETH
-        </StyledLink>
-        <StyledLink target="_blank" href="https://twitter.com/sushiswap">
-          Audit
-        </StyledLink>
+        <StyledLinkS>CoinMarketCap</StyledLinkS>
+        <StyledLinkS>CoinGecko</StyledLinkS>
+        <StyledLinkS>Uniswap DYP-ETH</StyledLinkS>
+        <StyledLinkS>Audit</StyledLinkS>
       </StyledNav>
     </StyledFooterInner>
     <StyledFooterInner>
@@ -86,6 +78,15 @@ const StyledNav = styled.nav`
 `
 
 const StyledLink = styled.a`
+  color: grey;
+  margin: 30px 15px;
+  -webkit-align-items: center;
+  text-decoration: none;
+  &:hover {
+    color: grey;
+  }
+`
+const StyledLinkS = styled.div`
   color: grey;
   margin: 30px 15px;
   -webkit-align-items: center;
