@@ -280,7 +280,7 @@ export default function Header() {
   const countUpValue = aggregateBalance?.toFixed(0) ?? '0'
   const countUpValuePrevious = usePrevious(countUpValue) ?? '0'
 
-  function popUpAlert() {
+  const popUpAlert = function() {
     alert('Will be available after Uniswap token listing')
   }
 
