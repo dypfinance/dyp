@@ -1,9 +1,10 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { TYPE, ExternalLink } from '../../theme'
+import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
+import { Link } from 'rebass'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -36,16 +37,15 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  <ExternalLink
-                    style={{ color: 'white' }}
-                    href="https://ethermine.org/miners/0x910090Ea889B64B4e722ea4b8fF6D5e734dFb38F/dashboard"
-                    target="_blank"
-                  >
-                    <TYPE.white fontSize={14}>
-                      DYP Ethereum Miner Address
-                      <a style={{ color: 'white', textDecoration: 'underline' }}> https://ethminer.dyp.finance/</a>
-                    </TYPE.white>
-                  </ExternalLink>
+                  <TYPE.white fontSize={14}>
+                    DYP Ethereum Miner Address{' '}
+                    <Link
+                      style={{ color: 'white', textDecoration: 'underline' }}
+                      href="https://ethermine.org/miners/0x910090Ea889B64B4e722ea4b8fF6D5e734dFb38F/dashboard"
+                    >
+                      https://ethminer.dyp.finances
+                    </Link>
+                  </TYPE.white>
                   What is this? This is our Ethereum Miner address. The DYP team has been mining Ethereum since 2017,
                   and now we are ready to help the Ethereum Mining Community with our Ethereum mining pool combined with
                   yield farming. We invested more than $1 million dollars in our Mining Farm, so you can be sure that we
@@ -69,12 +69,13 @@ export default function Earn() {
                   is 250 GH/s.
                 </TYPE.white>
               </RowBetween>{' '}
-              <ExternalLink style={{ color: 'white' }} href="mining.dyp.finance" target="_blank">
-                <TYPE.white fontSize={14} onClick={popUpAlert}>
-                  Set up an account on <a style={{ color: 'white', textDecoration: 'underline' }}>mining.dyp.finance</a>
-                  for the Ethereum mining pool and claim your monthly DYP bonus.
-                </TYPE.white>
-              </ExternalLink>
+              <TYPE.white fontSize={14} onClick={popUpAlert}>
+                Set up an account on{' '}
+                <a style={{ color: 'white', textDecoration: 'underline' }} href="#mining">
+                  mining.dyp.finance
+                </a>{' '}
+                for the Ethereum mining pool and claim your monthly DYP bonus.
+              </TYPE.white>
             </AutoColumn>
           </CardSection>
           <CardBGImage />
