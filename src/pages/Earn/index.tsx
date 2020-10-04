@@ -9,6 +9,7 @@ import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/
 // import { Countdown } from './Countdown'
 import Loader from '../../components/Loader'
 import { useActiveWeb3React } from '../../hooks'
+import Arrow from '../../assets/svg/arrow.svg'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -67,12 +68,16 @@ export default function Earn() {
                 <TYPE.white fontSize={14}>
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
                   DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
-                  providers. <div></div> Maintaining token price stability — every day at 00:00 UTC, the smart contract
-                  will automatically try to convert 276,480 DYP to ETH. If the DYP price is affected by more than -2.5%,
-                  then the maximum DYP amount that does not affect the price will be swapped to ETH, with the remaining
-                  amount distributed in the next day’s rewards. After seven days, if we still have undistributed DYP
-                  rewards, the DeFi Yield protocol governance will vote on whether the remaining DYP will be distributed
-                  to the token holders or burned (all burned tokens are removed from circulation).
+                  providers. <p>{'\n'}</p> Maintaining token price stability — every day at 00:00 UTC, the smart
+                  contract will automatically try to convert 276,480 DYP to ETH. If the DYP price is affected by more
+                  than
+                  <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
+                    <img src={Arrow} alt="icon"></img>2.5%
+                  </a>
+                  , then the maximum DYP amount that does not affect the price will be swapped to ETH, with the
+                  remaining amount distributed in the next day’s rewards. After seven days, if we still have
+                  undistributed DYP rewards, the DeFi Yield protocol governance will vote on whether the remaining DYP
+                  will be distributed to the token holders or burned (all burned tokens are removed from circulation).
                 </TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
