@@ -38,7 +38,7 @@ export default function Earn() {
                     href="https://ethermine.org/miners/0x910090Ea889B64B4e722ea4b8fF6D5e734dFb38F/dashboard"
                     target="_blank"
                   >
-                    <TYPE.white fontSize={14}>DYP Ethereum Miner Address https://ethminer.dyp.finance/</TYPE.white>
+                    <TYPE.white fontSize={14}>https://ethminer.dyp.finance/</TYPE.white>
                   </ExternalLink>
                   What is this? This is our Ethereum Miner address. The DYP team has been mining Ethereum since 2017,
                   and now we are ready to help the Ethereum Mining Community with our Ethereum mining pool combined with
@@ -63,15 +63,9 @@ export default function Earn() {
                   is 250 GH/s.
                 </TYPE.white>
               </RowBetween>{' '}
-              <ExternalLink
-                style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://mining.dyp.finance/"
-                target="_blank"
-              >
-                <TYPE.white fontSize={14}>
-                  Set up an account on mining.dyp.finance for the Ethereum mining pool and claim your monthly DYP bonus.
-                </TYPE.white>
-              </ExternalLink>
+              <TYPE.white fontSize={14}>
+                Set up an account on mining.dyp.finance for the Ethereum mining pool and claim your monthly DYP bonus.
+              </TYPE.white>
             </AutoColumn>
           </CardSection>
           <CardBGImage />
