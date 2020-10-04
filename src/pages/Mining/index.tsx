@@ -17,7 +17,7 @@ const TopSection = styled(AutoColumn)`
 `
 
 const popUpAlert = function() {
-  alert('Will be available after Uniswap token listing')
+  alert('Coming soon!')
 }
 
 export default function Earn() {
@@ -43,9 +43,10 @@ export default function Earn() {
                       style={{ color: 'white', textDecoration: 'underline' }}
                       href="https://ethermine.org/miners/0x910090Ea889B64B4e722ea4b8fF6D5e734dFb38F/dashboard"
                     >
-                      https://ethminer.dyp.finances
+                      https://ethminer.dyp.finance
                     </Link>
                   </TYPE.white>
+                  <p>{'\n'}</p>
                   What is this? This is our Ethereum Miner address. The DYP team has been mining Ethereum since 2017,
                   and now we are ready to help the Ethereum Mining Community with our Ethereum mining pool combined with
                   yield farming. We invested more than $1 million dollars in our Mining Farm, so you can be sure that we
