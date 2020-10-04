@@ -35,7 +35,7 @@ export default function Earn() {
                   DYP Ethereum Miner Address <div></div>
                   <ExternalLink
                     style={{ color: 'white', textDecoration: 'underline' }}
-                    href="https://ethminer.dyp.finance/"
+                    href="https://ethermine.org/miners/0x910090Ea889B64B4e722ea4b8fF6D5e734dFb38F/dashboard"
                     target="_blank"
                   >
                     <TYPE.white fontSize={14}>DYP Ethereum Miner Address https://ethminer.dyp.finance/</TYPE.white>
