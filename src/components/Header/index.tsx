@@ -249,7 +249,7 @@ const StyledExternalLink = styled.div`
   }
 
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-      display: none;
+      display: block;
 `}
 `
 
