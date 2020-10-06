@@ -133,8 +133,8 @@ export default function Earn() {
                       <RowBetween>
                         <TYPE.white fontWeight={600}>
                           ➫ Launch Ethereum mining pool & yield farming for miners<div></div>➫ Launch DYP Earn Vault
-                          <div></div>➫ Migration from Uniswap<div></div>➫ Partnerships<div></div>➫ DYP UX Platform &
-                          Apps Development<div></div>
+                          <div></div>➫ Migration from Uniswap<div></div>➫ Partnerships<div></div>➫ DYP Apps Development
+                          <div></div>
                         </TYPE.white>
                       </RowBetween>
                     </AutoColumn>
