@@ -25,17 +25,31 @@ const MidLine = styled(AutoColumn)`
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+      left: 0;
+`}
 `
 const DataCardLeft = styled(AutoColumn)`
   position: relative;
   width: 600px
-  max-width: 49%;
+  max-width: 48%;
+  left: 1%;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+      left: 1%;
+      position: relative;
+      max-width: 100%;
+`}
 `
 
 const DataCardRight = styled(AutoColumn)`
   left: 51%;
   position: relative;
   max-width: 48%;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+      left: 1%;
+      position: relative;
+      max-width: 100%;
+`}
 `
 
 export default function Earn() {
