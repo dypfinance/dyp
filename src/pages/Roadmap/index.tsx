@@ -38,6 +38,7 @@ const DataCardLeft = styled(AutoColumn)`
       left: 1%;
       position: relative;
       max-width: 80%;
+      width: 400px;
 `}
 `
 
@@ -48,6 +49,7 @@ const DataCardRight = styled(AutoColumn)`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
       left: 1%;
       position: relative;
+      width: 400px
       max-width: 80%;
 `}
 `
