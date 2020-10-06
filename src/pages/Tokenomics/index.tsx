@@ -63,7 +63,7 @@ export default function Earn() {
           <CardNoise />
         </DataCard>
       </TopSection>
-      <img src={Chart} alt={'logo'} />
+      <img src={Chart} alt={'logo'} style={{ width: '100%' }} />
     </PageWrapper>
   )
 }
