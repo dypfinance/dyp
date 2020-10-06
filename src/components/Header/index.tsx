@@ -313,6 +313,9 @@ export default function Header() {
           <StyledNavLink id={`vote-nav-link`} to={'/gov'}>
             {t('Vote')}
           </StyledNavLink>
+          <StyledNavLink id={`roadmap-nav-link`} to={'/roadmap'}>
+            {t('Roadmap')}
+          </StyledNavLink>
           <StyledNavLink id={`tokenomics-nav-link`} to={'/tokenomics'}>
             {t('Tokenomics')}
           </StyledNavLink>
