@@ -38,7 +38,7 @@ const DataCardLeft = styled(AutoColumn)`
       left: 1%;
       position: relative;
       max-width: 80%;
-      width: 400px;
+      width: 420px;
 `}
 `
 
@@ -49,7 +49,7 @@ const DataCardRight = styled(AutoColumn)`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
       left: 1%;
       position: relative;
-      width: 400px
+      width: 420px
       max-width: 80%;
 `}
 `
@@ -57,10 +57,10 @@ const DataCardRight = styled(AutoColumn)`
 export default function Earn() {
   return (
     <PageWrapper gap="lg" justify="center">
+      <TYPE.black fontWeight={500} fontSize={35}>
+        Roadmap Overview 2020 & 2021
+      </TYPE.black>
       <TopSection gap="md">
-        <TYPE.black fontWeight={600} fontSize={40}>
-          Roadmap Overview 2020 & 2021
-        </TYPE.black>
         <AutoColumn gap="md">
           <AutoColumn gap="md" style={{ position: 'relative' }}>
             <MidLine></MidLine>
