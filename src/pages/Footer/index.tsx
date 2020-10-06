@@ -75,6 +75,8 @@ const StyledNav = styled.nav`
   align-items: center;
   display: flex;
   -webkit-align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `
 
 const StyledLink = styled.a`

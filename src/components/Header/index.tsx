@@ -69,7 +69,7 @@ const HeaderControls = styled.div`
     width: 100%;
     max-width: 960px;
     padding: 1rem;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -102,6 +102,7 @@ const HeaderLinks = styled(Row)`
   ${({ theme }) => theme.mediaWidth.upToMedium`
     padding: 1rem 0 1rem 1rem;
     justify-content: flex-end;
+    flex-wrap: wrap;
 `};
 `
 
