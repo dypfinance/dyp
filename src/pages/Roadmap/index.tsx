@@ -107,7 +107,7 @@ export default function Earn() {
                           Liquidity Lock<div></div>➫ Listing DYP in other exchanges<div></div>➫ Building Smart Contract
                           for Liquidity Mining pools<div></div>➫ Building Smart Contract for miners<div></div>➫ Smart
                           Contract Security Audit<div></div>➫ Add Liquidity Participating Pools<div></div>➫ Ethereum
-                          mining pool Whitelist Launch<div></div>➫ Launch DYP Governace<div></div>➫ Launch DYP Referral
+                          mining pool Whitelist Launch<div></div>➫ Launch DYP Governance<div></div>➫ Launch DYP Referral
                           <div></div>
                         </TYPE.white>
                       </RowBetween>

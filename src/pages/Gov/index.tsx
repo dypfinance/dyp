@@ -29,7 +29,7 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>DYP Governace</TYPE.white>
+                <TYPE.white fontWeight={600}>DYP Governance</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
