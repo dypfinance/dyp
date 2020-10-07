@@ -17,6 +17,7 @@ import { CountUp } from 'use-count-up'
 import { TYPE } from '../../theme'
 
 import { YellowCard } from '../Card'
+import Menu from '../Menu'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
@@ -69,6 +70,7 @@ const HeaderControls = styled.div`
     width: 100%;
     max-width: 960px;
     padding: 1rem;
+    position: absolute;
     position: relative;
     bottom: 0px;
     left: 0px;
@@ -76,7 +78,24 @@ const HeaderControls = styled.div`
     z-index: 99;
     height: 72px;
     border-radius: 12px 12px 0 0;
-    background-color: ${({ theme }) => theme.bg1};
+    // background-color: ${({ theme }) => theme.bg1};
+  `};
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-self: center;
+    width: 100%;
+    max-width: 960px;
+    padding: 1rem;
+    position: absolute;
+    // position: relative;
+    bottom: auto;
+    left: 0px;
+    width: 100%;
+    z-index: 99;
+    height: 72px;
+    border-radius: 12px 12px 0 0;
+    // background-color: ${({ theme }) => theme.bg1};
   `};
 `
 
@@ -91,6 +110,14 @@ const HeaderElement = styled.div`
   `};
 `
 
+const HeaderElementWrap = styled.div`
+  display: none;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: flex;
+    align-items: center;
+`}
+`
+
 const HeaderRow = styled(RowFixed)`
   ${({ theme }) => theme.mediaWidth.upToMedium`
    width: 100%;
@@ -103,6 +130,9 @@ const HeaderLinks = styled(Row)`
     padding: 1rem 0 1rem 1rem;
     justify-content: flex-end;
     flex-wrap: wrap;
+`};
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: none;
 `};
 `
 
@@ -325,6 +355,7 @@ export default function Header() {
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
             {t('Referral Program')}
           </StyledNavLink>
+          {/*<img src={MenuLogo} alt="LOGO" />*/}
           {/*<StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>*/}
           {/*  {t('swap')}*/}
           {/*</StyledNavLink>*/}
@@ -404,6 +435,9 @@ export default function Header() {
             <Web3Status />
           </AccountElement>
         </HeaderElement>
+        <HeaderElementWrap>
+          <Menu />
+        </HeaderElementWrap>
       </HeaderControls>
     </HeaderFrame>
   )

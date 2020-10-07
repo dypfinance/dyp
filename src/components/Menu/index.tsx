@@ -1,19 +1,24 @@
 import React, { useRef } from 'react'
-import { BookOpen, Code, Info, MessageCircle, PieChart } from 'react-feather'
 import styled from 'styled-components'
-import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
+import { ReactComponent as MenuIcon } from '../../assets/svg/menu.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
+import { NavLink } from 'react-router-dom'
 
-import { ExternalLink } from '../../theme'
+// import { ExternalLink } from '../../theme'
 import { ButtonPrimary } from '../Button'
 
 const StyledMenuIcon = styled(MenuIcon)`
-  path {
-    stroke: ${({ theme }) => theme.text1};
-  }
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  -moz-user-select: none;
 `
 
 const StyledMenuButton = styled.button`
@@ -52,9 +57,9 @@ const StyledMenu = styled.div`
 `
 
 const MenuFlyout = styled.span`
-  min-width: 8.125rem;
+  min-width: 10rem;
   background-color: ${({ theme }) => theme.bg3};
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgb(0, 0, 0), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
   border-radius: 12px;
   padding: 0.5rem;
@@ -67,16 +72,17 @@ const MenuFlyout = styled.span`
   z-index: 100;
 
   ${({ theme }) => theme.mediaWidth.upToMedium`
-    top: -17.25rem;
+    // top: -17.25rem;
   `};
 `
 
-const MenuItem = styled(ExternalLink)`
+const MenuItem = styled(NavLink).attrs({})`
   flex: 1;
   padding: 0.5rem 0.5rem;
   color: ${({ theme }) => theme.text2};
+  text-decoration: none;
   :hover {
-    color: ${({ theme }) => theme.text1};
+    color: red;
     cursor: pointer;
     text-decoration: none;
   }
@@ -84,8 +90,6 @@ const MenuItem = styled(ExternalLink)`
     margin-right: 8px;
   }
 `
-
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
 
 export default function Menu() {
   const { account } = useActiveWeb3React()
@@ -105,25 +109,32 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://uniswap.org/">
-            <Info size={14} />
-            About
+          <MenuItem id={`home-nav-link`} to={'/home'}>
+            Home
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.org/docs/v2">
-            <BookOpen size={14} />
-            Docs
+          <MenuItem id={`earn-nav-link`} to={'/earn'}>
+            Stake
           </MenuItem>
-          <MenuItem id="link" href={CODE_LINK}>
-            <Code size={14} />
-            Code
+          <MenuItem id={`mining-nav-link`} to={'/mining'}>
+            ETH Mining Pool
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/EwFs3Pp">
-            <MessageCircle size={14} />
-            Discord
+          <MenuItem id={`vault-nav-link`} to={'/vault'}>
+            Earn
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.info/">
-            <PieChart size={14} />
-            Analytics
+          <MenuItem id={`vote-nav-link`} to={'/gov'}>
+            Vote
+          </MenuItem>
+          <MenuItem id={`roadmap-nav-link`} to={'/roadmap'}>
+            Roadmap
+          </MenuItem>
+          <MenuItem id={`tokenomics-nav-link`} to={'/tokenomics'}>
+            Tokenomics
+          </MenuItem>
+          <MenuItem id={`stake-nav-link`} to={'/tokenomics'}>
+            Get DYP
+          </MenuItem>
+          <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
+            Referral Program
           </MenuItem>
           {account && (
             <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
