@@ -100,6 +100,10 @@ export default function Menu() {
   useOnClickOutside(node, open ? toggle : undefined)
   const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
 
+  const popUpAlert = function() {
+    alert('Will be available after Uniswap token listing')
+  }
+
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
     <StyledMenu ref={node as any}>
@@ -130,8 +134,8 @@ export default function Menu() {
           <MenuItem id={`tokenomics-nav-link`} to={'/tokenomics'}>
             Tokenomics
           </MenuItem>
-          <MenuItem id={`stake-nav-link`} to={'/tokenomics'}>
-            Get DYP
+          <MenuItem id={`stake-nav-link`} to={'/home'}>
+            <div onClick={popUpAlert}>Get DYP</div>
           </MenuItem>
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
             Referral Program
