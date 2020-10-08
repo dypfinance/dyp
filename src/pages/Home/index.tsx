@@ -21,6 +21,24 @@ const TopSection = styled(AutoColumn)`
   justify-self: center;
 `
 
+const TypeFontTitle = styled.div`
+  font-weight: 600;
+  font-size: 45px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    font-weight: 400;
+    font-size: 35px;
+`};
+`
+
+const TypeFontSub = styled.div`
+  font-weight: 400;
+  font-size: 25px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    font-weight: 400;
+    font-size: 15px;
+`};
+`
+
 // const PoolSection = styled.div`
 //   display: grid;
 //   grid-template-columns: 1fr;
@@ -41,23 +59,26 @@ export default function Home() {
   // `
   //
   // const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
-
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
         <AutoColumn gap="md">
           <RowBetween>
-            <TYPE.black fontWeight={400} fontSize={35}>
-              DeFi Yield Farming with Automated Vaults, combined with Ethereum Mining Pool.
+            <TYPE.black>
+              <TypeFontTitle>
+                DeFi Yield Farming with Automated Vaults, combined with Ethereum Mining Pool
+              </TypeFontTitle>
             </TYPE.black>
           </RowBetween>
           <RowBetween></RowBetween>
           <RowBetween></RowBetween>
           <RowBetween>
-            <TYPE.black fontSize={15} fontWeight={400}>
-              The DeFi Yield Protocol (DYP) is developing a platform that allows anyone to provide liquidity and to be
-              rewarded with DYP tokens, at the same time maintaining both token price stability and secure and
-              simplified DeFi for end users
+            <TYPE.black>
+              <TypeFontSub>
+                The DeFi Yield Protocol (DYP) is developing a platform that allows anyone to provide liquidity and to be
+                rewarded with DYP tokens, at the same time maintaining both token price stability and secure and
+                simplified DeFi for end users
+              </TypeFontSub>
             </TYPE.black>
           </RowBetween>
           <RowBetween></RowBetween>
