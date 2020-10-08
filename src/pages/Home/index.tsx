@@ -23,7 +23,7 @@ const TopSection = styled(AutoColumn)`
 
 const TypeFontTitle = styled.div`
   font-weight: 600;
-  font-size: 45px;
+  font-size: 40px;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     font-weight: 400;
     font-size: 35px;
