@@ -312,7 +312,7 @@ export default function Header() {
   const countUpValuePrevious = usePrevious(countUpValue) ?? '0'
 
   const popUpAlert = function() {
-    alert('Will be available after Uniswap token listing')
+    alert('Will be available after Uniswap token listing!')
   }
 
   return (

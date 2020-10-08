@@ -47,29 +47,24 @@ export default function Home() {
       <TopSection gap="md">
         <AutoColumn gap="md">
           <RowBetween>
-            <TYPE.black fontWeight={600} fontSize={40}>
-              DeFi Yield Farming with Automated Vaults, combined
+            <TYPE.black fontWeight={400} fontSize={35}>
+              DeFi Yield Farming with Automated Vaults, combined with Ethereum Mining Pool.
             </TYPE.black>
           </RowBetween>
+          <RowBetween></RowBetween>
+          <RowBetween></RowBetween>
           <RowBetween>
-            <TYPE.black fontWeight={600} fontSize={40}>
-              with the best Ethereum (ETH) Mining Pool
+            <TYPE.black fontSize={15} fontWeight={400}>
+              The DeFi Yield Protocol (DYP) is developing a platform that allows anyone to provide liquidity and to be
+              rewarded with DYP tokens, at the same time maintaining both token price stability and secure and
+              simplified DeFi for end users
             </TYPE.black>
           </RowBetween>
           <RowBetween></RowBetween>
           <RowBetween>
-            <TYPE.black fontSize={25} fontWeight={300}>
-              The DeFi Yield Protocol (DYP) is developing a platform that allows anyone to provide liquidity
-            </TYPE.black>
-          </RowBetween>
-          <RowBetween>
-            <TYPE.black fontSize={25} fontWeight={300}>
-              and to be rewarded with DYP tokens, at the same time maintaining both token price stability and
-            </TYPE.black>
-          </RowBetween>
-          <RowBetween>
-            <TYPE.black fontSize={25} fontWeight={300}>
-              secure and simplified DeFi for end users
+            <TYPE.black fontSize={15} fontWeight={500}>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              Let's start earning DYP!
             </TYPE.black>
           </RowBetween>
           {/*<ExternalLink*/}
