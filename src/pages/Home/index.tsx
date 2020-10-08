@@ -6,6 +6,8 @@ import { TYPE } from '../../theme'
 // import { TYPE, ExternalLink } from '../../theme'
 // import PoolCard from '../../components/earn/PoolCard'
 import { RowBetween } from '../../components/Row'
+import { NavLink } from 'react-router-dom'
+// import { darken } from 'polished'
 // import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 // import Loader from '../../components/Loader'
 // import { useActiveWeb3React } from '../../hooks'
@@ -37,6 +39,23 @@ const TypeFontSub = styled.div`
     font-weight: 400;
     font-size: 15px;
 `};
+`
+
+const activeClassName = 'ACTIVE'
+
+const StyledNavLink = styled(NavLink).attrs({
+  activeClassName
+})`
+  ${({ theme }) => theme.flexRowNoWrap}
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+
+  :hover,
+  :focus {
+    color: red;
+  }
 `
 
 // const PoolSection = styled.div`
@@ -83,10 +102,10 @@ export default function Home() {
           </RowBetween>
           <RowBetween></RowBetween>
           <RowBetween>
-            <TYPE.black fontSize={15} fontWeight={500}>
+            <StyledNavLink id={`earn-nav-link`} to={'/earn'}>
               {/* eslint-disable-next-line react/no-unescaped-entities */}
               Let's start earning DYP!
-            </TYPE.black>
+            </StyledNavLink>
           </RowBetween>
           {/*<ExternalLink*/}
           {/*  style={{ color: 'black', textDecoration: 'underline' }}*/}
