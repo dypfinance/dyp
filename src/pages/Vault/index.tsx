@@ -16,7 +16,7 @@ const TopSection = styled(AutoColumn)`
   width: 100%;
 `
 
-export default function Earn() {
+export default function Vault() {
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">

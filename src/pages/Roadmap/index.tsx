@@ -54,123 +54,121 @@ const DataCardRight = styled(AutoColumn)`
 `}
 `
 
-export default function Earn() {
+export default function Roadmap() {
   return (
     <PageWrapper gap="lg" justify="center">
       <TYPE.black fontWeight={500} fontSize={35}>
         Roadmap Overview 2020 & 2021
       </TYPE.black>
       <TopSection gap="md">
-        <AutoColumn gap="md">
-          <AutoColumn gap="md" style={{ position: 'relative' }}>
-            <MidLine></MidLine>
-            <RowBetween>
-              <DataCardLeft>
-                <RowBetween>
-                  <TYPE.black fontWeight={600} fontSize={30}>
-                    Q3/2020
-                  </TYPE.black>
-                </RowBetween>
-                <DataCard>
-                  <CardBGImage />
-                  <CardNoise />
-                  <CardSection>
-                    <AutoColumn gap="md">
-                      <RowBetween>
-                        <TYPE.white fontWeight={600}>
-                          ✓ Creation of DeFi Yield Protocol platform<div></div>✓ DYP Documentation Release<div></div>✓
-                          Building DYP ERC-20 Token Smart Contract<div></div>✓ DYP Community Marketing<div></div>
-                        </TYPE.white>
-                      </RowBetween>
-                    </AutoColumn>
-                  </CardSection>
-                  <CardBGImage />
-                  <CardNoise />
-                </DataCard>
-              </DataCardLeft>
-            </RowBetween>
-            <RowBetween>
-              <DataCardRight>
-                <RowBetween>
-                  <TYPE.black fontWeight={600} fontSize={30}>
-                    Q4/2020
-                  </TYPE.black>
-                </RowBetween>
-                <DataCard>
-                  <CardBGImage />
-                  <CardNoise />
-                  <CardSection>
-                    <AutoColumn gap="md">
-                      <RowBetween>
-                        <TYPE.white fontWeight={600}>
-                          ➫ Token Crowdsale scheduled toward the end of October<div></div>➫ Uniswap Listing<div></div>➫
-                          Liquidity Lock<div></div>➫ Listing DYP in other exchanges<div></div>➫ Building Smart Contract
-                          for Liquidity Mining pools<div></div>➫ Building Smart Contract for miners<div></div>➫ Smart
-                          Contract Security Audit<div></div>➫ Add Liquidity Participating Pools<div></div>➫ Ethereum
-                          mining pool Whitelist Launch<div></div>➫ Launch DYP Governance<div></div>➫ Launch DYP Referral
-                          <div></div>
-                        </TYPE.white>
-                      </RowBetween>
-                    </AutoColumn>
-                  </CardSection>
-                  <CardBGImage />
-                  <CardNoise />
-                </DataCard>
-              </DataCardRight>
-            </RowBetween>
-            <RowBetween>
-              <DataCardLeft>
-                <RowBetween>
-                  <TYPE.black fontWeight={600} fontSize={30}>
-                    Q1/2021
-                  </TYPE.black>
-                </RowBetween>
-                <DataCard>
-                  <CardBGImage />
-                  <CardNoise />
-                  <CardSection>
-                    <AutoColumn gap="md">
-                      <RowBetween>
-                        <TYPE.white fontWeight={600}>
-                          ➫ Launch Ethereum mining pool & yield farming for miners<div></div>➫ Launch DYP Earn Vault
-                          <div></div>➫ Migration from Uniswap<div></div>➫ Partnerships<div></div>➫ DYP Apps Development
-                          <div></div>
-                        </TYPE.white>
-                      </RowBetween>
-                    </AutoColumn>
-                  </CardSection>
-                  <CardBGImage />
-                  <CardNoise />
-                </DataCard>
-              </DataCardLeft>
-            </RowBetween>
-            <RowBetween>
-              <DataCardRight>
-                <RowBetween>
-                  <TYPE.black fontWeight={600} fontSize={30}>
-                    Q2/2021 - Q4/2021
-                  </TYPE.black>
-                </RowBetween>
-                <DataCard>
-                  <CardBGImage />
-                  <CardNoise />
-                  <CardSection>
-                    <AutoColumn gap="md">
-                      <RowBetween>
-                        <TYPE.white fontWeight={600}>
-                          ➫ Launch New Ethereum mining pool after Ethereum move to PoS<div></div>➫ Built-in insurance
-                          for all DYP liquidity providers<div></div>➫ Further extension and project growth in different
-                          areas<div></div>
-                        </TYPE.white>
-                      </RowBetween>
-                    </AutoColumn>
-                  </CardSection>
-                  <CardBGImage />
-                  <CardNoise />
-                </DataCard>
-              </DataCardRight>
-            </RowBetween>
-          </AutoColumn>
+        <AutoColumn gap="md" style={{ position: 'relative' }}>
+          <MidLine></MidLine>
+          <RowBetween>
+            <DataCardLeft>
+              <RowBetween>
+                <TYPE.black fontWeight={600} fontSize={30}>
+                  Q3/2020
+                </TYPE.black>
+              </RowBetween>
+              <DataCard>
+                <CardBGImage />
+                <CardNoise />
+                <CardSection>
+                  <AutoColumn gap="md">
+                    <RowBetween>
+                      <TYPE.white fontWeight={600}>
+                        ✓ Creation of DeFi Yield Protocol platform<div></div>✓ DYP Documentation Release<div></div>✓
+                        Building DYP ERC-20 Token Smart Contract<div></div>✓ DYP Community Marketing<div></div>
+                      </TYPE.white>
+                    </RowBetween>
+                  </AutoColumn>
+                </CardSection>
+                <CardBGImage />
+                <CardNoise />
+              </DataCard>
+            </DataCardLeft>
+          </RowBetween>
+          <RowBetween>
+            <DataCardRight>
+              <RowBetween>
+                <TYPE.black fontWeight={600} fontSize={30}>
+                  Q4/2020
+                </TYPE.black>
+              </RowBetween>
+              <DataCard>
+                <CardBGImage />
+                <CardNoise />
+                <CardSection>
+                  <AutoColumn gap="md">
+                    <RowBetween>
+                      <TYPE.white fontWeight={600}>
+                        ➫ Token Crowdsale scheduled toward the end of October<div></div>➫ Uniswap Listing<div></div>➫
+                        Liquidity Lock<div></div>➫ Listing DYP in other exchanges<div></div>➫ Building Smart Contract
+                        for Liquidity Mining pools<div></div>➫ Building Smart Contract for miners<div></div>➫ Smart
+                        Contract Security Audit<div></div>➫ Add Liquidity Participating Pools<div></div>➫ Ethereum
+                        mining pool Whitelist Launch<div></div>➫ Launch DYP Governance<div></div>➫ Launch DYP Referral
+                        <div></div>
+                      </TYPE.white>
+                    </RowBetween>
+                  </AutoColumn>
+                </CardSection>
+                <CardBGImage />
+                <CardNoise />
+              </DataCard>
+            </DataCardRight>
+          </RowBetween>
+          <RowBetween>
+            <DataCardLeft>
+              <RowBetween>
+                <TYPE.black fontWeight={600} fontSize={30}>
+                  Q1/2021
+                </TYPE.black>
+              </RowBetween>
+              <DataCard>
+                <CardBGImage />
+                <CardNoise />
+                <CardSection>
+                  <AutoColumn gap="md">
+                    <RowBetween>
+                      <TYPE.white fontWeight={600}>
+                        ➫ Launch Ethereum mining pool & yield farming for miners<div></div>➫ Launch DYP Earn Vault
+                        <div></div>➫ Migration from Uniswap<div></div>➫ Partnerships<div></div>➫ DYP Apps Development
+                        <div></div>
+                      </TYPE.white>
+                    </RowBetween>
+                  </AutoColumn>
+                </CardSection>
+                <CardBGImage />
+                <CardNoise />
+              </DataCard>
+            </DataCardLeft>
+          </RowBetween>
+          <RowBetween>
+            <DataCardRight>
+              <RowBetween>
+                <TYPE.black fontWeight={600} fontSize={30}>
+                  Q2/2021 - Q4/2021
+                </TYPE.black>
+              </RowBetween>
+              <DataCard>
+                <CardBGImage />
+                <CardNoise />
+                <CardSection>
+                  <AutoColumn gap="md">
+                    <RowBetween>
+                      <TYPE.white fontWeight={600}>
+                        ➫ Launch New Ethereum mining pool after Ethereum move to PoS<div></div>➫ Built-in insurance for
+                        all DYP liquidity providers<div></div>➫ Further extension and project growth in different areas
+                        <div></div>
+                      </TYPE.white>
+                    </RowBetween>
+                  </AutoColumn>
+                </CardSection>
+                <CardBGImage />
+                <CardNoise />
+              </DataCard>
+            </DataCardRight>
+          </RowBetween>
         </AutoColumn>
       </TopSection>
     </PageWrapper>

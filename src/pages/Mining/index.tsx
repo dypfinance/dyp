@@ -20,7 +20,7 @@ const popUpAlert = function() {
   alert('Coming soon!')
 }
 
-export default function Earn() {
+export default function Mining() {
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
