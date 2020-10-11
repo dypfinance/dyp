@@ -277,8 +277,10 @@ export default function Bounty() {
                     https://t.me/dypfinance
                   </Link>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}, you are not allowed to add members with
-                  "Add members" function because this is considered Spam by telegram. You need to have at least 5
-                  members from the invited ones to post constructive messages in our group. If your members leave the{' '}
+                  "Add members" function because this is considered Spam by telegram. If you invite members with "Add{' '}
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
+                  members" function you will be banned from the campaign. You need to have at least 5 members from the
+                  invited ones to post constructive messages in our group. If your members leave the{' '}
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   DYP's Official telegram group before the campaign ends, your stakes will be deleted
                 </TYPE.white>
