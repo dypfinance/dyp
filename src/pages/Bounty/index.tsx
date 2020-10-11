@@ -30,7 +30,7 @@ export default function Bounty() {
             <AutoColumn gap="md">
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Bounty Campaign starts from October 12, 2020 and will go until November 12th, 2020.
+                  Bounty Campaign starts from October 12, 2020 and will go until November 12th, 2020
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
