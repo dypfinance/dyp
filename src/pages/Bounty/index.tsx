@@ -76,7 +76,7 @@ export default function Bounty() {
                 <TYPE.white fontSize={14}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   1. All the participants must join the DYP's Official Telegram Group and make at least 1 constructive
-                  comment. -{' '}
+                  comment -{' '}
                   <Link
                     style={{ color: 'white', textDecoration: 'underline' }}
                     href="https://t.me/dypfinance"
@@ -88,7 +88,7 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  2. All the participants must join the Bounty group. -{' '}
+                  2. All the participants must join the Bounty group -{' '}
                   <Link
                     style={{ color: 'white', textDecoration: 'underline' }}
                     href="https://t.me/dypbounty"
@@ -180,13 +180,13 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  2. Twitter account must have 2000+ followers and must be original (90% in Twitter audit).
+                  2. Twitter account must have minimum 2000+ followers and must be original (90% in Twitter audit).
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  3. User must Retweet 10 tweets from the DYP's Official Twitter Account -{' '}
+                  3. User must Retweet 5 tweets from the DYP's Official Twitter Account -{' '}
                   <Link
                     style={{ color: 'white', textDecoration: 'underline' }}
                     href="https://twitter.com/dypfinance"
@@ -199,7 +199,7 @@ export default function Bounty() {
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   4. Create at least 5 unique tweets about the DeFi Yield Protocol project per week, using these
-                  hashtags #defi #DefiYieldProtocol $DYP
+                  hashtags #defi #DeFiYieldProtocol $DYP
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -247,7 +247,7 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  2. Replace your profile picture with DeFi Yield Protocol Logo. -{' '}
+                  2. Replace your profile picture with DeFi Yield Protocol Logo -{' '}
                   <Link
                     style={{ color: 'white', textDecoration: 'underline' }}
                     href="https://dyp.finance/images/logo.png"
@@ -259,9 +259,9 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  3. Write at least 5 constructive messages in other crypto-related telegram groups. Posts/messages must
-                  be constructive, useful and in a way which will not be considered as spamming. Deleted messages will
-                  not be counted.
+                  3. Write at least 10 constructive messages in minimum 5 other crypto-related telegram groups.
+                  Posts/messages must be constructive, useful and in a way which will not be considered as spamming.
+                  Deleted messages will not be counted.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -333,7 +333,7 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  1. Replace your profile picture with DeFi Yield Protocol Logo.{' '}
+                  1. Replace your profile picture with DeFi Yield Protocol Logo -{' '}
                   <Link
                     style={{ color: 'white', textDecoration: 'underline' }}
                     href="https://dyp.finance/images/logo.png"
@@ -345,9 +345,9 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  2. Write at least 5 constructive messages in other crypto-related discord channels. Posts/messages
-                  must be constructive, useful and in a way which will not be considered as spamming. Deleted messages
-                  will not be counted.
+                  2. Write at least 10 constructive messages in minimum 5 other crypto-related discord channels.
+                  Posts/messages must be constructive, useful and in a way which will not be considered as spamming.
+                  Deleted messages will not be counted.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
