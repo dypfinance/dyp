@@ -282,7 +282,7 @@ export default function Bounty() {
                   members" function you will be banned from the campaign. You need to have at least 5 members from the
                   invited ones to post constructive messages in our group. If your members leave the{' '}
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  DYP's Official telegram group before the campaign ends, your stakes will be deleted
+                  DYP's Official telegram group before the campaign ends, your stakes will be deleted.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
