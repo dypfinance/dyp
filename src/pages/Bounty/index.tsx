@@ -303,9 +303,9 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14} fontWeight={600}>
-                  *** You will get extra 5% bonus in ETH from the investment of your invited members in DYP. Let’s look
-                  at the following example: You have 2 invited members that purchased DYP worth 10 ETH, that means you
-                  will get a bonus of 0.5 ETH.
+                  *** You will get extra 5% bonus in ETH from the DYP investment of your invited members. Let’s look at
+                  the following example: You have 2 invited members that purchased DYP worth 10 ETH, that means you will
+                  get a bonus of 0.5 ETH.
                 </TYPE.white>
               </RowBetween>
             </AutoColumn>
@@ -354,10 +354,10 @@ export default function Bounty() {
                 <TYPE.white fontSize={14}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   3. Invite at least 10 new members to DYP's Official discord channel. The new members must join our
-                  channel by the invite link that you generate with your username, under DeFi Yield Protocol server name{' '}
+                  channel by the invite link that you generate with your username, under DeFi Yield Protocol server{' '}
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  you click "Invite" and you get a "Copy Share Link", please note that the link expires in 1 day, so
-                  every 24 hours you need to generate a new one. You need to have at least 5 members from the invited{' '}
+                  name. You click "Invite" and you get a "Copy Share Link", please note that the link expires in 1 day,
+                  so every 24 hours you need to generate a new one. You need to have at least 5 members from the invited{' '}
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   ones to post constructive messages in our channel. If your members leave the DYP's Official discord
                   channel before the campaign ends, your stakes will be deleted.
@@ -384,9 +384,9 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14} fontWeight={600}>
-                  *** You will get extra 5% bonus in ETH from the investment of your invited members in DYP. Let’s look
-                  at the following example: You have 2 invited members that purchased DYP worth 10 ETH, that means you
-                  will get a bonus of 0.5 ETH.
+                  *** You will get extra 5% bonus in ETH from the DYP investment of your invited members. Let’s look at
+                  the following example: You have 2 invited members that purchased DYP worth 10 ETH, that means you will
+                  get a bonus of 0.5 ETH.
                 </TYPE.white>
               </RowBetween>
             </AutoColumn>
