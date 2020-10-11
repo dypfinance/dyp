@@ -51,7 +51,6 @@ const HeaderFrame = styled.div`
     width: calc(100%);
     position: relative;
   `};
-
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
         padding: 0.5rem 1rem;
   `}
@@ -62,7 +61,6 @@ const HeaderControls = styled.div`
   flex-direction: row;
   align-items: center;
   justify-self: flex-end;
-
   ${({ theme }) => theme.mediaWidth.upToMedium`
     flex-direction: row;
     justify-content: space-between;
@@ -103,7 +101,6 @@ const HeaderElement = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-
   ${({ theme }) => theme.mediaWidth.upToMedium`
    flex-direction: row-reverse;
     align-items: center;
@@ -145,7 +142,6 @@ const AccountElement = styled.div<{ active: boolean }>`
   white-space: nowrap;
   width: 100%;
   cursor: pointer;
-
   :focus {
     border: 1px solid blue;
   }
@@ -167,11 +163,9 @@ const UNIWrapper = styled.span`
   width: fit-content;
   position: relative;
   cursor: pointer;
-
   :hover {
     opacity: 0.8;
   }
-
   :active {
     opacity: 0.9;
   }
@@ -240,14 +234,12 @@ const StyledNavLink = styled(NavLink).attrs({
   width: fit-content;
   margin: 0 12px;
   font-weight: 500;
-
   &.${activeClassName} {
     // border-radius: 12px;
     border-bottom: 3px solid red;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
   }
-
   :hover,
   :focus {
     color: ${({ theme }) => darken(0.1, theme.text1)};
@@ -266,18 +258,15 @@ const StyledExternalLink = styled(ExternalLink)`
   width: fit-content;
   margin: 0 12px;
   font-weight: 500;
-
   &.${activeClassName} {
     border-radius: 12px;
     font-weight: 600;
     color: ${({ theme }) => theme.text1};
   }
-
   :hover,
   :focus {
     color: ${({ theme }) => darken(0.1, theme.text1)};
   }
-
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
       display: block;
 `}

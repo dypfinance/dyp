@@ -7,12 +7,12 @@ import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/
 import { Link } from 'rebass'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
+  max-width: 100%;
   width: 100%;
 `
 
 const TopSection = styled(AutoColumn)`
-  max-width: 720px;
+  max-width: 640px;
   width: 100%;
 `
 
