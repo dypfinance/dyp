@@ -333,7 +333,14 @@ export default function Bounty() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  1. Replace your profile picture with DeFi Yield Protocol Logo. Download DYP LOGO
+                  1. Replace your profile picture with DeFi Yield Protocol Logo.{' '}
+                  <Link
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://dyp.finance/images/logo.png"
+                    target="_blank"
+                  >
+                    Download DYP LOGO
+                  </Link>{' '}
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
