@@ -11,9 +11,10 @@ import { NavLink } from 'react-router-dom'
 // import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 // import Loader from '../../components/Loader'
 // import { useActiveWeb3React } from '../../hooks'
+import Whitelist from '../../components/Whitelist'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
 `
 
@@ -80,6 +81,7 @@ export default function Home() {
   // const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
   return (
     <PageWrapper gap="lg" justify="center">
+      <Whitelist />
       <TopSection gap="md">
         <AutoColumn gap="md">
           <RowBetween>
