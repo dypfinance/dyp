@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
+import Whitelist from '../../components/Whitelist'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 1000px;
+  max-width: 100%;
   width: 100%;
 `
 
@@ -57,6 +58,7 @@ const DataCardRight = styled(AutoColumn)`
 export default function Roadmap() {
   return (
     <PageWrapper gap="lg" justify="center">
+      <Whitelist />
       <TYPE.black fontWeight={500} fontSize={35}>
         Roadmap Overview 2020 & 2021
       </TYPE.black>

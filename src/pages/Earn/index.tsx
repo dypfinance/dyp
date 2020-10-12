@@ -10,9 +10,10 @@ import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/
 import Loader from '../../components/Loader'
 import { useActiveWeb3React } from '../../hooks'
 import Arrow from '../../assets/svg/arrow.svg'
+import Whitelist from '../../components/Whitelist'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
+  max-width: 100%;
   width: 100%;
 `
 
@@ -50,6 +51,7 @@ export default function Earn() {
 
   return (
     <PageWrapper gap="lg" justify="center">
+      <Whitelist />
       <TopSection gap="md">
         <DataCard>
           <CardBGImage />

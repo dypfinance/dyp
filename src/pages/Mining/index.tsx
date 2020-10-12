@@ -5,9 +5,10 @@ import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 import { Link } from 'rebass'
+import Whitelist from '../../components/Whitelist'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
+  max-width: 100%;
   width: 100%;
 `
 
@@ -23,6 +24,7 @@ const popUpAlert = function() {
 export default function Mining() {
   return (
     <PageWrapper gap="lg" justify="center">
+      <Whitelist />
       <TopSection gap="md">
         <DataCard>
           <CardBGImage />

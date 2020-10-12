@@ -6,9 +6,10 @@ import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 
 import Chart from '../../assets/images/Charts2.png'
+import Whitelist from '../../components/Whitelist'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
+  max-width: 100%;
   width: 100%;
 `
 
@@ -17,9 +18,14 @@ const TopSection = styled(AutoColumn)`
   width: 100%;
 `
 
+const IMGs = styled.div`
+  max-width: 720px;
+`
+
 export default function Tokenomics() {
   return (
     <PageWrapper gap="lg" justify="center">
+      <Whitelist />
       <TopSection gap="md">
         <DataCard>
           <CardBGImage />
@@ -63,7 +69,9 @@ export default function Tokenomics() {
           <CardNoise />
         </DataCard>
       </TopSection>
-      <img src={Chart} alt={'logo'} style={{ width: '100%' }} />
+      <IMGs>
+        <img src={Chart} alt={'logo'} style={{ width: '100%' }} />
+      </IMGs>
     </PageWrapper>
   )
 }
