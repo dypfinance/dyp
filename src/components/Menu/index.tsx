@@ -7,7 +7,7 @@ import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 import { NavLink } from 'react-router-dom'
 
-// import { ExternalLink } from '../../theme'
+import { ExternalLink } from '../../theme'
 import { ButtonPrimary } from '../Button'
 
 const StyledMenuIcon = styled(MenuIcon)`
@@ -91,6 +91,21 @@ const MenuItem = styled(NavLink).attrs({})`
   }
 `
 
+const MenuItemExternal = styled(ExternalLink).attrs({})`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  color: ${({ theme }) => theme.text2};
+  text-decoration: none;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+`
+
 export default function Menu() {
   const { account } = useActiveWeb3React()
 
@@ -99,10 +114,6 @@ export default function Menu() {
   const toggle = useToggleModal(ApplicationModal.MENU)
   useOnClickOutside(node, open ? toggle : undefined)
   const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
-
-  const popUpAlert = function() {
-    alert('Will be available after Uniswap token listing')
-  }
 
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
@@ -134,9 +145,9 @@ export default function Menu() {
           <MenuItem id={`tokenomics-nav-link`} to={'/tokenomics'}>
             Tokenomics
           </MenuItem>
-          <MenuItem id={`stake-nav-link`} to={'/home'}>
-            <div onClick={popUpAlert}>Get DYP</div>
-          </MenuItem>
+          <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+            Get DYP
+          </MenuItemExternal>
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
             Referral Program
           </MenuItem>
