@@ -36,6 +36,7 @@ import Roadmap from './Roadmap'
 import Tokenomics from './Tokenomics'
 import Refferal from './Refferal'
 import Bounty from './Bounty'
+import Feature from './Feature'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 
 import Vote from './Vote'
@@ -67,7 +68,7 @@ const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 100px;
   align-items: center;
   flex: 1;
   overflow-y: auto;
@@ -117,6 +118,7 @@ export default function App() {
               <Route exact strict path="/refferal" component={Refferal} />
               <Route exact strict path="/tokenomics" component={Tokenomics} />
               <Route exact strict path="/bounty" component={Bounty} />
+              <Route exact strict path="/feature" component={Feature} />
               <Route exact strict path="/claim" component={OpenClaimAddressModalAndRedirectToSwap} />
               <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
               <Route exact strict path="/send" component={RedirectPathToSwapOnly} />

@@ -1,9 +1,10 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { ExternalLink, TYPE } from '../../theme'
+import { TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import Whitelist from '../../components/Whitelist'
+import { NavLink } from 'react-router-dom'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -86,7 +87,7 @@ const WhitelistForm = styled.div`
   `}
 `
 
-const MenuItemExternal = styled(ExternalLink).attrs({})`
+const MenuItemExternal = styled(NavLink).attrs({})`
   flex: 1;
   padding: 0.5rem 0.5rem;
   color: ${({ theme }) => theme.text1};
@@ -135,9 +136,9 @@ export default function Home() {
           <RowBetween>
             <TYPE.black>
               <TypeFontSub>
-                The DeFi Yield Protocol (DYP) is developing a platform that allows anyone to provide liquidity and to be
-                rewarded with DYP tokens, at the same time maintaining both token price stability and secure and
-                simplified DeFi for end users
+                The DeFi Yield Protocol (DYP) is developing a unique platform that allows anyone to provide liquidity
+                and to be rewarded with DYP tokens, at the same time maintaining both token price stability and secure
+                and simplified DeFi for end users
               </TypeFontSub>
             </TYPE.black>
           </RowBetween>
@@ -145,14 +146,14 @@ export default function Home() {
           <RowBetween>
             <WhitelistForm>
               <PageWrapperLinks>
-                <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+                <MenuItemExternal id={`stake-nav-link`} to={'/earn'}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Let's start earning DYP!
                 </MenuItemExternal>
-                <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+                <MenuItemExternal id={`stake-nav-link`} to={'/feature'}>
                   DYP Anti-Manipulation Feature
                 </MenuItemExternal>
-                <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+                <MenuItemExternal id={`stake-nav-link`} to={'/mining'}>
                   Ethereum Mining Pool
                 </MenuItemExternal>
               </PageWrapperLinks>
