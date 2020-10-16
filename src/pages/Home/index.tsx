@@ -17,11 +17,11 @@ const TopSection = styled(AutoColumn)`
 `
 
 const TypeFontTitle = styled.div`
-  font-size: 62px;
-  margin: 0px 0px 3rem;
+  font-size: 56px;
+  margin: 0px 0px 2rem;
   pointer-events: none;
   overflow-wrap: normal;
-  max-width: 890px;
+  max-width: 800px;
   letter-spacing: -0.05em;
   font-family: 'Inferi Light', 'Times New Roman', serif;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -32,7 +32,7 @@ const TypeFontTitle = styled.div`
 
 const TypeFontSub = styled.div`
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     font-weight: 400;
     font-size: 15px;
@@ -69,7 +69,7 @@ const WhitelistForm = styled.div`
   top: 0;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 0.5rem;
   z-index: 2;
   margin-bottom: 50px;
   border-radius: 12px;
