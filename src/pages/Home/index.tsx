@@ -106,6 +106,9 @@ const MenuItemExternal = styled(NavLink).attrs({})`
   > svg {
     margin-right: 8px;
   }
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 10px;
+  `}
 `
 
 export default function Home() {

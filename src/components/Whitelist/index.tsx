@@ -58,6 +58,15 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
   > svg {
     margin-right: 8px;
   }
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 15px;
+  `}
+`
+
+const TextFont = styled.div`
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 15px;
+  `}
 `
 
 export default function Whitelist() {
@@ -65,7 +74,7 @@ export default function Whitelist() {
     <WhitelistForm>
       <PageWrapper>
         <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
-          DeFi Yield Protocol Community Crowdsale Whitelist application form is live!
+          <TextFont>DeFi Yield Protocol Community Crowdsale Whitelist application form is live!</TextFont>
         </TYPE.white>
         <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
           Subscribe
