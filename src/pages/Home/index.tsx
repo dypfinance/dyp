@@ -17,13 +17,15 @@ const TopSection = styled(AutoColumn)`
 `
 
 const TypeFontTitle = styled.div`
+  font-weight: 600;
   font-size: 35px;
-  margin: 0px 0px 1rem;
-  pointer-events: none;
-  overflow-wrap: normal;
-  max-width: 800px;
-  letter-spacing: -0.05em;
-  font-family: 'Inferi Light', 'Times New Roman', serif;
+  // font-size: 35px;
+  // margin: 0px 0px 1rem;
+  // pointer-events: none;
+  // overflow-wrap: normal;
+  // max-width: 800px;
+  // letter-spacing: -0.05em;
+  // font-family: 'Inferi Light', 'Times New Roman', serif;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     font-weight: 400;
     font-size: 35px;
