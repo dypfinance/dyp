@@ -50,6 +50,7 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
   border-radius: 12px;
   margin: auto 5px;
   padding: 5px;
+  max-width: 100px;
   :hover {
     color: red;
     cursor: pointer;
@@ -64,7 +65,7 @@ export default function Whitelist() {
   return (
     <WhitelistForm>
       <PageWrapper>
-        <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
+        <TYPE.white fontWeight={500} fontSize={22} style={{ margin: 'auto' }}>
           DeFi Yield Protocol Community Crowdsale Whitelist application form is live!
         </TYPE.white>
         <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
