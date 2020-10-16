@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/interface",
-  "description": "Uniswap Interface",
+  "name": "@dypfinance/dyp",
+  "description": "DYP Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {
