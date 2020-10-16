@@ -47,12 +47,12 @@ export default function Feature() {
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   By providing liquidity to any of this DYP pair pool on Uniswap (DYP/ETH, DYP/USDC, DYP/USDT and
-                  DYP/WBTC POOL), you’ll be able to experience a feature which you’ll only experience with DYP. I’m
-                  talking about the anti-manipulation feature wherein all pool rewards are automatically converted from
-                  DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
-                  providers. It means that from that time, no one can move their funds yet unless the auto-conversion
-                  has done. Cool feature, right? No whales will be able to sell their DYP profit that will cause the
-                  volatility on its price.
+                  DYP/WBTC POOL), you’ll be able to use a feature which you’ll only experience with DYP. I’m talking
+                  about the anti-manipulation feature wherein all pool rewards are automatically converted from DYP to
+                  ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity providers.
+                  It means that from that time, no one can move their funds yet unless the auto-conversion has done.
+                  Cool feature, right? No whales will be able to sell their DYP profit that will cause the volatility on
+                  its price.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
