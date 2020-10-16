@@ -61,7 +61,7 @@ const PageWrapperLinks = styled(AutoColumn)`
 const WhitelistForm = styled.div`
   // Header Color
   background-color: red;
-  display: grid;
+  //display: grid;
   grid-template-columns: 1fr 120px;
   align-items: center;
   justify-content: space-between;
