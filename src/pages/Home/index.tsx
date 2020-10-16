@@ -18,7 +18,7 @@ const TopSection = styled(AutoColumn)`
 
 const TypeFontTitle = styled.div`
   font-weight: 600;
-  font-size: 35px;
+  font-size: 40px;
   // font-size: 35px;
   // margin: 0px 0px 1rem;
   // pointer-events: none;
