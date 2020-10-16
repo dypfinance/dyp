@@ -1,16 +1,8 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-// import { STAKING_REWARDS_INFO, useStakingInfo } from '../../state/stake/hooks'
-import { TYPE } from '../../theme'
-// import { TYPE, ExternalLink } from '../../theme'
-// import PoolCard from '../../components/earn/PoolCard'
+import { ExternalLink, TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
-import { NavLink } from 'react-router-dom'
-// import { darken } from 'polished'
-// import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
-// import Loader from '../../components/Loader'
-// import { useActiveWeb3React } from '../../hooks'
 import Whitelist from '../../components/Whitelist'
 
 const PageWrapper = styled(AutoColumn)`
@@ -25,8 +17,13 @@ const TopSection = styled(AutoColumn)`
 `
 
 const TypeFontTitle = styled.div`
-  font-weight: 600;
-  font-size: 40px;
+  font-size: 62px;
+  margin: 0px 0px 3rem;
+  pointer-events: none;
+  overflow-wrap: normal;
+  max-width: 890px;
+  letter-spacing: -0.05em;
+  font-family: 'Inferi Light', 'Times New Roman', serif;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     font-weight: 400;
     font-size: 35px;
@@ -42,23 +39,6 @@ const TypeFontSub = styled.div`
 `};
 `
 
-const activeClassName = 'ACTIVE'
-
-const StyledNavLink = styled(NavLink).attrs({
-  activeClassName
-})`
-  ${({ theme }) => theme.flexRowNoWrap}
-  font-weight: 500;
-  font-size: 15px;
-  text-decoration: none;
-  color: black;
-
-  :hover,
-  :focus {
-    color: red;
-  }
-`
-
 // const PoolSection = styled.div`
 //   display: grid;
 //   grid-template-columns: 1fr;
@@ -67,6 +47,63 @@ const StyledNavLink = styled(NavLink).attrs({
 //   width: 100%;
 //   justify-self: center;
 // `
+
+const PageWrapperLinks = styled(AutoColumn)`
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  margin: auto;
+`
+
+const WhitelistForm = styled.div`
+  // Header Color
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  top: 0;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 2;
+  margin-bottom: 50px;
+  border-radius: 12px;
+  ${({ theme }) => theme.mediaWidth.upToMedium`
+    grid-template-columns: 1fr;
+    //padding: 0 1rem;
+    width: calc(100%);
+    position: relative;
+  `};
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        padding: 0.5rem 1rem;
+  `}
+`
+
+const MenuItemExternal = styled(ExternalLink).attrs({})`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  color: ${({ theme }) => theme.text1};
+  text-decoration: none;
+  background-color: white;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 12px;
+  margin: auto 5px;
+  padding: 5px;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+`
 
 export default function Home() {
   // const { chainId } = useActiveWeb3React()
@@ -104,10 +141,20 @@ export default function Home() {
           </RowBetween>
           <RowBetween></RowBetween>
           <RowBetween>
-            <StyledNavLink id={`earn-nav-link`} to={'/earn'}>
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
-              Let's start earning DYP!
-            </StyledNavLink>
+            <WhitelistForm>
+              <PageWrapperLinks>
+                <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
+                  Let's start earning DYP!
+                </MenuItemExternal>
+                <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+                  DYP Anti-Manipulation Feature
+                </MenuItemExternal>
+                <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+                  Ethereum Mining Pool
+                </MenuItemExternal>
+              </PageWrapperLinks>
+            </WhitelistForm>
           </RowBetween>
           {/*<ExternalLink*/}
           {/*  style={{ color: 'black', textDecoration: 'underline' }}*/}
