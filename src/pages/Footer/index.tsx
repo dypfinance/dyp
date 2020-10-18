@@ -77,7 +77,9 @@ const Footer: React.FC = () => (
         <StyledLinkS>CoinMarketCap</StyledLinkS>
         <StyledLinkS>CoinGecko</StyledLinkS>
         <StyledLinkS>Uniswap DYP-ETH</StyledLinkS>
-        <StyledLinkS>Audit</StyledLinkS>
+        <StyledLink target="_blank" href="https://github.com/dypfinance/contract-security-audit">
+          Audit
+        </StyledLink>
       </StyledNav>
     </StyledFooterInner>
     <StyledFooterInner>
