@@ -1,7 +1,7 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { TYPE } from '../../theme'
+import { ExternalLink, TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 import Whitelist from '../../components/Whitelist'
@@ -46,13 +46,15 @@ export default function Feature() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  By providing liquidity to any of this DYP pair pool on Uniswap (DYP/ETH, DYP/USDC, DYP/USDT and
-                  DYP/WBTC POOL), you’ll be able to use a feature which you’ll only experience with DYP. I’m talking
-                  about the anti-manipulation feature wherein all pool rewards are automatically converted from DYP to
-                  ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity providers.
-                  It means that from that time, no one can move their funds yet unless the auto-conversion has done.
-                  Cool feature, right? No whales will be able to sell their DYP profit that will cause the volatility on
-                  its price.
+                  DeFi Yield protocol (DYP) is changing the way you earn through liquidity on Ethereum smart contract.
+                  The argument against DeFi is that whales have the power to control the network. The Sushi dump is the
+                  most remarkable example, there was a flash crash in the tokens when anonymous founder Chef Nomi
+                  swapped his Sushi tokens for Ethereum. DeFi Yield protocol (DYP) prevents the whale advantage in DeFi.
+                  DYP anti-manipulation feature ensures that all pool (DYP/ETH, DYP/USDC, DYP/USDT, and DYP/WBTC POOL)
+                  rewards are automatically converted from DYP to ETH at 00:00 UTC, and the system automatically
+                  distributes the rewards to the liquidity providers. This feature is excellent because the network’s
+                  liquidity will be fair to all participants; no whale will be able to manipulate the price of DYP to
+                  their advantage.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -64,15 +66,27 @@ export default function Feature() {
                   reward per day, per DYP pool mentioned above) to ETH. If the DYP price is affected by more than 2.5%,
                   then the maximum DYP amount that does not affect the price will be swapped to ETH, with the remaining
                   amount distributed in the next day’s rewards. After seven days, if there are still undistributed DYP
-                  rewards, the DeFi Yield protocol governance will vote on whether the remaining DYP will be distributed
-                  to the token holders or burned, which removes them from circulation.
+                  rewards, the DeFi Yield protocol (DYP) governance will vote on whether the remaining DYP will be
+                  distributed to the token holders or burned removes them from circulation.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Knowing that there will be anti-manipulation feature for every DYP pair pool, plankton or shrimp users
-                  (in opposed to whales) can now enjoy getting profit without worrying whales will move the market,
-                  affecting the DYP’s prices.
+                  Smart contracts are the engine room of any DeFi project. The advantage of smart contracts is that the
+                  community writes the rules; they can work without human interaction. Unlike the centralized world in
+                  which a set of rules are interpreted by a few experts who make decisions. Cool feature, Right. Not
+                  really. There is a significant disadvantage of smart contract risk, which happens when there is a bug
+                  in a smart contract. YAM finance is the greatest example of a smart contract risk. The team discovered
+                  a bug that prevented a vote from being executed. Yam tokens were dumped by users causing the tokens to
+                  plunge overnight. DYP prevents smart contract risk by ensuring that all their small contracts are{' '}
+                  <ExternalLink
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://github.com/dypfinance/contract-security-audit"
+                    target="_blank"
+                  >
+                    audited
+                  </ExternalLink>
+                  , and the codes are secured from participants who try to take advantage of the system.
                 </TYPE.white>
               </RowBetween>
             </AutoColumn>
