@@ -1,10 +1,15 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { TYPE } from '../../theme'
+import { ExternalLink, TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import Whitelist from '../../components/Whitelist'
 import { NavLink } from 'react-router-dom'
+
+import CoinTelegraph from '../../assets/images/cointelegraph.png'
+import NewsBTC from '../../assets/images/newsbtc.jpg'
+import UpTrennd from '../../assets/images/uptrennd.png'
+import YouTube from '../../assets/images/youtube.png'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -111,6 +116,34 @@ const MenuItemExternal = styled(NavLink).attrs({})`
   `}
 `
 
+const StyledNav = styled.nav`
+  align-items: center;
+  display: flex;
+  -webkit-align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        justify-content: space-between;
+  `}
+`
+
+const TextNews = styled.div`
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 10px;
+        font-weight: 500;
+  `}
+`
+
+const Item = styled.div`
+  display: grid;
+  justify-items: center;
+`
+
 export default function Home() {
   // const { chainId } = useActiveWeb3React()
   // const stakingInfos = useStakingInfo()
@@ -161,6 +194,50 @@ export default function Home() {
                 </MenuItemExternal>
               </PageWrapperLinks>
             </WhitelistForm>
+          </RowBetween>
+          <RowBetween>
+            <StyledNav>
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"
+                target="_blank"
+              >
+                <Item>
+                  <img src={CoinTelegraph} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>COINTELEGRAPH</TextNews>
+                </Item>
+              </ExternalLink>
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://www.newsbtc.com/press-releases/defi-yield-protocol-takes-yield-farming-to-the-next-level/"
+                target="_blank"
+              >
+                <Item>
+                  <img src={NewsBTC} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>NEWSBTC</TextNews>
+                </Item>
+              </ExternalLink>
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://www.uptrennd.com/post-detail/defi-yield-protocol-your-new-on-the-go-defi~NzcxNzk0"
+                target="_blank"
+              >
+                <Item>
+                  <img src={UpTrennd} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>uptrennd</TextNews>
+                </Item>
+              </ExternalLink>
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://www.youtube.com/watch?v=cJMMBR41Rxs"
+                target="_blank"
+              >
+                <Item>
+                  <img src={YouTube} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>YouTube</TextNews>
+                </Item>
+              </ExternalLink>
+            </StyledNav>
           </RowBetween>
           {/*<ExternalLink*/}
           {/*  style={{ color: 'black', textDecoration: 'underline' }}*/}
