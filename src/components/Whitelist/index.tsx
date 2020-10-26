@@ -5,7 +5,7 @@ import { ExternalLink, TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 1000px;
+  max-width: 700px;
   width: 100%;
   display: flex;
   justify-self: center;
@@ -74,10 +74,10 @@ export default function Whitelist() {
     <WhitelistForm>
       <PageWrapper>
         <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
-          <TextFont>DeFi Yield Protocol Community Crowdsale Whitelist application form is live!</TextFont>
+          <TextFont>DeFi Yield Protocol Community Crowdsale is live!</TextFont>
         </TYPE.white>
         <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
-          Subscribe
+          JOIN NOW
         </MenuItemExternal>
       </PageWrapper>
     </WhitelistForm>
