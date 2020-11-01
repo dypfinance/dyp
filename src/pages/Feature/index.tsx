@@ -78,7 +78,7 @@ export default function Feature() {
                   really. There is a significant disadvantage of smart contract risk, which happens when there is a bug
                   in a smart contract. YAM finance is the greatest example of a smart contract risk. The team discovered
                   a bug that prevented a vote from being executed. Yam tokens were dumped by users causing the tokens to
-                  plunge overnight. DYP prevents smart contract risk by ensuring that all their small contracts are{' '}
+                  plunge overnight. DYP prevents smart contract risk by ensuring that all their smart contracts are{' '}
                   <ExternalLink
                     style={{ color: 'white', textDecoration: 'underline' }}
                     href="https://github.com/dypfinance/contract-security-audit"
