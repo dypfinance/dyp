@@ -340,6 +340,9 @@ export default function Header() {
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
             {t('Referral Program')}
           </StyledNavLink>
+          <StyledNavLink id={`about-nav-link`} to={'/about'}>
+            {t('About')}
+          </StyledNavLink>
           {/*<img src={MenuLogo} alt="LOGO" />*/}
           {/*<StyledNavLink id={`swap-nav-link`} to={'/swap'} isActive={() => history.location.pathname.includes('/swap')}>*/}
           {/*  {t('swap')}*/}

@@ -151,6 +151,9 @@ export default function Menu() {
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
             Referral Program
           </MenuItem>
+          <MenuItem id={`about-nav-link`} to={'/about'}>
+            About
+          </MenuItem>
           {account && (
             <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
               Claim UNI

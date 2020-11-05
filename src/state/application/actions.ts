@@ -24,7 +24,11 @@ export enum ApplicationModal {
   SELF_CLAIM,
   ADDRESS_CLAIM,
   CLAIM_POPUP,
-  MENU
+  MENU,
+  BIO,
+  BIO2,
+  BIO3,
+  BIO4
 }
 
 export const updateBlockNumber = createAction<{ chainId: number; blockNumber: number }>('application/updateBlockNumber')

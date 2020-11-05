@@ -35,6 +35,22 @@ export function useWalletModalToggle(): () => void {
   return useToggleModal(ApplicationModal.WALLET)
 }
 
+export function useBioModalToggle(): () => void {
+  return useToggleModal(ApplicationModal.BIO)
+}
+
+export function useBioModalToggle2(): () => void {
+  return useToggleModal(ApplicationModal.BIO2)
+}
+
+export function useBioModalToggle3(): () => void {
+  return useToggleModal(ApplicationModal.BIO3)
+}
+
+export function useBioModalToggle4(): () => void {
+  return useToggleModal(ApplicationModal.BIO4)
+}
+
 export function useToggleSettingsMenu(): () => void {
   return useToggleModal(ApplicationModal.SETTINGS)
 }
