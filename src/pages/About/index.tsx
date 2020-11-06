@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { ExternalLink, TYPE } from '../../theme'
@@ -11,13 +11,11 @@ import Rig3 from '../../assets/images/rig3.jpg'
 import Rig4 from '../../assets/images/rig4.jpg'
 import Rig5 from '../../assets/images/rig5.jpg'
 
-import Logo from '../../assets/svg/logo.svg'
+import Logo from '../../assets/images/sample1.png'
 import LinkedinSvg from '../../assets/svg/linkedin_2.svg'
 import TwitterSvg from '../../assets/svg/twitter_2.svg'
 import GithubSvg from '../../assets/svg/github_black.svg'
 
-import Modal from '../../components/Modal'
-import UniBalanceContent from '../../components/Header/UniBalanceContent'
 import Bio, { Bio2, Bio3, Bio4 } from '../../components/Bio'
 import CoinTelegraph from '../../assets/images/cointelegraph.png'
 import NewsBTC from '../../assets/images/newsbtc.jpg'
@@ -137,22 +135,38 @@ const IMGs = styled.div`
   `}
 `
 
+const TextTitleMobile = styled.div`
+  font-size: 50px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    text-align: center;
+    font-size: 35px;
+  `}
+`
+
+const TextSubMobile = styled.div`
+  font-size: 25px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    text-align: center;
+    font-size: 20px;
+  `}
+`
+
 export default function About() {
-  const [showUniBalanceModal, setShowUniBalanceModal] = useState(false)
   return (
     <PageWrapper gap="lg" justify="center">
-      <Modal isOpen={showUniBalanceModal} onDismiss={() => setShowUniBalanceModal(false)}>
-        <UniBalanceContent setShowUniBalanceModal={setShowUniBalanceModal} />
-      </Modal>
       <Whitelist />
-      <TYPE.black fontWeight={600} fontSize={50}>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        Hi. We're DeFi Yield Protocol.
-      </TYPE.black>
-      <TYPE.black fontWeight={400} fontSize={25}>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        We're on a quest to create a unique Decentralized experience
-      </TYPE.black>
+      <TextTitleMobile>
+        <TYPE.black fontWeight={600}>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          Hi. We're DeFi Yield Protocol.
+        </TYPE.black>
+      </TextTitleMobile>
+      <TextSubMobile>
+        <TYPE.black fontWeight={400}>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          We're on a quest to create a unique Decentralized experience
+        </TYPE.black>
+      </TextSubMobile>
       <RowBetween />
       <TopSection gap="md">
         <AutoColumn gap="md" style={{ position: 'relative' }}>
@@ -226,13 +240,13 @@ export default function About() {
               <NewRow>
                 <DataCardLeft>
                   <RowBetween>
-                    <TYPE.black fontWeight={600} fontSize={40}>
+                    <TYPE.black fontWeight={600} fontSize={35}>
                       What We Do
                     </TYPE.black>
                   </RowBetween>
                   <RowBetween />
                   <RowBetween>
-                    <TYPE.black fontWeight={400}>
+                    <TYPE.black fontWeight={400} marginTop={10}>
                       DeFi Yield protocol (DYP) is changing the way you earn through liquidity on Ethereum smart
                       contract. The argument against DeFi is that whales have the power to control the network. DeFi
                       Yield protocol (DYP) prevents the whale advantage in DeFi. DYP anti-manipulation feature ensures
@@ -244,7 +258,7 @@ export default function About() {
                   </RowBetween>
                 </DataCardLeft>
                 <RowBetween>
-                  <img src={Logo} alt={'logo'} />
+                  <img src={Logo} alt={'logo'} style={{ maxWidth: '360px', width: '100%' }} />
                 </RowBetween>
               </NewRow>
             </AutoColumn>
@@ -256,7 +270,7 @@ export default function About() {
           <RowBetween />
         </AutoColumn>
       </TopSection>
-      <TYPE.black fontWeight={600} fontSize={40}>
+      <TYPE.black fontWeight={600} fontSize={35} textAlign={'center'}>
         Our Leadership Team
       </TYPE.black>
       <RowBetween />
@@ -321,7 +335,7 @@ export default function About() {
           </TeamStyle>
         </AutoColumn>
       </TopSection>
-      <TYPE.black fontWeight={600} fontSize={40} marginTop={25}>
+      <TYPE.black fontWeight={600} fontSize={35} marginTop={25}>
         Working with
       </TYPE.black>
       <RowBetween />
@@ -369,7 +383,7 @@ export default function About() {
           </ExternalLink>
         </StyledNav>
       </RowBetween>
-      <TYPE.black fontWeight={600} fontSize={40} marginTop={25}>
+      <TYPE.black fontWeight={600} fontSize={35} marginTop={25}>
         Press Highlights
       </TYPE.black>
       <RowBetween />
