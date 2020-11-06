@@ -91,15 +91,6 @@ const TeamStyle = styled.div`
  `}
 `
 
-const ImageLeft = styled(AutoColumn)`
-  max-width: 64%;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-      left: 1%;
-      position: relative;
-      max-width: 64%;
-`}
-`
-
 const DataCardLeft = styled(AutoColumn)`
   max-width: 64%;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -137,6 +128,15 @@ const TextNews = styled.div`
   `}
 `
 
+const IMGs = styled.div`
+  max-width: 64%;
+  display: grid;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: grid;
+    max-width: 100%;
+  `}
+`
+
 export default function About() {
   const [showUniBalanceModal, setShowUniBalanceModal] = useState(false)
   return (
@@ -157,56 +157,64 @@ export default function About() {
       <TopSection gap="md">
         <AutoColumn gap="md" style={{ position: 'relative' }}>
           <RowBetween>
-            <ImageLeft>
-              <RowBetween>
-                <img
-                  src={Rig1}
-                  alt={'logo'}
-                  style={{
-                    borderRadius: '12px',
-                    marginRight: '5px'
-                  }}
-                />
-                <img
-                  src={Rig2}
-                  alt={'logo'}
-                  style={{
-                    borderRadius: '12px',
-                    marginRight: '5px'
-                  }}
-                />
-              </RowBetween>
-              <RowBetween>
-                <img
-                  src={Rig3}
-                  alt={'logo'}
-                  style={{
-                    borderRadius: '12px',
-                    marginRight: '5px',
-                    marginTop: '5px'
-                  }}
-                />
-                <img
-                  src={Rig4}
-                  alt={'logo'}
-                  style={{
-                    borderRadius: '12px',
-                    marginRight: '5px',
-                    marginTop: '5px'
-                  }}
-                />
-              </RowBetween>
-            </ImageLeft>
-            <RowBetween>
+            <IMGs>
+              <img
+                src={Rig1}
+                alt={'logo'}
+                style={{
+                  borderRadius: '12px',
+                  marginRight: '5px',
+                  width: '100%',
+                  maxWidth: '379px',
+                  marginBottom: '5px'
+                }}
+              />
+              <img
+                src={Rig2}
+                alt={'logo'}
+                style={{
+                  borderRadius: '12px',
+                  marginRight: '5px',
+                  width: '100%',
+                  maxWidth: '379px'
+                }}
+              />
+            </IMGs>
+            <IMGs>
+              <img
+                src={Rig3}
+                alt={'logo'}
+                style={{
+                  borderRadius: '12px',
+                  marginRight: '5px',
+                  width: '100%',
+                  maxWidth: '379px'
+                }}
+              />
+              <img
+                src={Rig4}
+                alt={'logo'}
+                style={{
+                  borderRadius: '12px',
+                  marginRight: '5px',
+                  marginTop: '5px',
+                  width: '100%',
+                  maxWidth: '379px'
+                }}
+              />
+            </IMGs>
+            <div style={{ maxWidth: '36%' }}>
               <img
                 src={Rig5}
                 alt={'logo'}
                 style={{
                   borderRadius: '12px',
-                  alignItems: 'unset'
+                  alignItems: 'unset',
+                  width: '100%',
+                  maxWidth: '432px'
                 }}
               />
-            </RowBetween>
+            </div>
           </RowBetween>
           <TopSection gap="md">
             <AutoColumn gap="md" style={{ position: 'relative' }}>
