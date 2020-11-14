@@ -10,6 +10,7 @@ import CoinTelegraph from '../../assets/images/cointelegraph.png'
 import NewsBTC from '../../assets/images/newsbtc.jpg'
 import UpTrennd from '../../assets/images/uptrennd.png'
 import YouTube from '../../assets/images/youtube.png'
+import BitcoinCom from '../../assets/images/bitcoincom.png'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -209,12 +210,22 @@ export default function Home() {
               </ExternalLink>
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://www.newsbtc.com/press-releases/defi-yield-protocol-takes-yield-farming-to-the-next-level/"
+                href="https://www.newsbtc.com/news/company/dyp-finance-a-unique-yield-farming-platform/"
                 target="_blank"
               >
                 <Item>
                   <img src={NewsBTC} style={{ width: '50px' }} alt={'logo'} />
                   <TextNews>NEWSBTC</TextNews>
+                </Item>
+              </ExternalLink>
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://news.bitcoin.com/defi-yield-protocol-is-a-massive-boost-for-yield-farmers-and-the-defi-space/"
+                target="_blank"
+              >
+                <Item>
+                  <img src={BitcoinCom} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>Bitcoin.com</TextNews>
                 </Item>
               </ExternalLink>
               <ExternalLink
