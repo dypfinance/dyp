@@ -71,10 +71,8 @@ const TextFont = styled.div`
 `
 
 const TextFont2 = styled.div`
-  padding-left: 50px;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-        font-size: 15px;
-        padding-left: 0px;
+        font-size: 13px;
   `}
 `
 
@@ -90,15 +88,14 @@ export default function Whitelist() {
             JOIN NOW
           </MenuItemExternal>
         </PageWrapper>
-        <TYPE.white fontWeight={400} fontSize={20} style={{ margin: 'auto' }}>
+        <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto' }}>
           <TextFont2>
             <ExternalLink
               style={{ color: 'white', textDecoration: 'underline' }}
               href="https://github.com/dypfinance/DYP-staking-governance-dapp"
               target="_blank"
             >
-              Staking and Governance Contracts Ready (GITHUB LOGO) Launch Within 2 Weeks (security audits results
-              pending)
+              Staking and Governance Contracts Ready - Launch Within 2 Weeks (security audits results pending)
             </ExternalLink>
           </TextFont2>
         </TYPE.white>
