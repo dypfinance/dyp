@@ -66,20 +66,43 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
 const TextFont = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
         font-size: 15px;
+        padding-left: 0px;
+  `}
+`
+
+const TextFont2 = styled.div`
+  padding-left: 50px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 15px;
+        padding-left: 0px;
   `}
 `
 
 export default function Whitelist() {
   return (
     <WhitelistForm>
-      <PageWrapper>
-        <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
-          <TextFont>DeFi Yield Protocol Community Crowdsale is live!</TextFont>
+      <AutoColumn gap="md">
+        <PageWrapper>
+          <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
+            <TextFont>DeFi Yield Protocol Community Crowdsale is live!</TextFont>
+          </TYPE.white>
+          <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+            JOIN NOW
+          </MenuItemExternal>
+        </PageWrapper>
+        <TYPE.white fontWeight={400} fontSize={20} style={{ margin: 'auto' }}>
+          <TextFont2>
+            <ExternalLink
+              style={{ color: 'white', textDecoration: 'underline' }}
+              href="https://github.com/dypfinance/DYP-staking-governance-dapp"
+              target="_blank"
+            >
+              Staking and Governance Contracts Ready (GITHUB LOGO) Launch Within 2 Weeks (security audits results
+              pending)
+            </ExternalLink>
+          </TextFont2>
         </TYPE.white>
-        <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
-          JOIN NOW
-        </MenuItemExternal>
-      </PageWrapper>
+      </AutoColumn>
     </WhitelistForm>
   )
 }
