@@ -95,7 +95,7 @@ export default function Whitelist() {
               href="https://github.com/dypfinance/DYP-staking-governance-dapp"
               target="_blank"
             >
-              Staking and Governance Contracts Ready - Launch Within 2 Weeks (security audits results pending)
+              Staking and Governance Contracts Ready - Launch Within Two Weeks (security audit results pending)
             </ExternalLink>
           </TextFont2>
         </TYPE.white>
