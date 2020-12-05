@@ -41,7 +41,7 @@ const TypeFontTitle = styled.div`
 
 const TypeFontSub = styled.div`
   font-weight: 400;
-  font-size: 25px;
+  font-size: 23px;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     font-weight: 400;
     font-size: 15px;
