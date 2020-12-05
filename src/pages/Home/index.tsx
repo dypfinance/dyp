@@ -173,9 +173,10 @@ export default function Home() {
           <RowBetween>
             <TYPE.black>
               <TypeFontSub>
-                The DeFi Yield Protocol (DYP) is developing a unique platform that allows anyone to provide liquidity
-                and to be rewarded for the first time with Ethereum, at the same time maintaining both token price
-                stability, and secure and simplified DeFi for end users by integrating a DYP anti-manipulation feature
+                The DeFi Yield Protocol is developing a unique platform that allows anyone to provide liquidity and to
+                be rewarded for the first time with Ethereum. At the same time, the platform maintains both token price
+                stability as well as secure and simplified DeFi for end users by integrating a DYP anti-manipulation
+                feature
               </TypeFontSub>
             </TYPE.black>
           </RowBetween>
