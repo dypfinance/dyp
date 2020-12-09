@@ -5,18 +5,25 @@ import { ExternalLink, TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import Whitelist from '../../components/Whitelist'
 
+import Michael from '../../assets/images/team/michael.png'
+import Ion from '../../assets/images/team/ion.png'
+import Tek from '../../assets/images/team/tek.png'
+import Const from '../../assets/images/team/const.png'
+import Gino from '../../assets/images/team/gianni.png'
+import Daniel from '../../assets/images/team/daniel.png'
+
 import Rig1 from '../../assets/images/rig1.jpg'
 import Rig2 from '../../assets/images/rig2.jpg'
 import Rig3 from '../../assets/images/rig3.jpg'
 import Rig4 from '../../assets/images/rig4.jpg'
 import Rig5 from '../../assets/images/rig5.jpg'
 
-import Logo from '../../assets/images/sample1.png'
+// import Logo from '../../assets/images/sample1.png'
 import LinkedinSvg from '../../assets/svg/linkedin_2.svg'
 import TwitterSvg from '../../assets/svg/twitter_2.svg'
 import GithubSvg from '../../assets/svg/github_black.svg'
 
-import Bio, { Bio2, Bio3, Bio4 } from '../../components/Bio'
+import Bio, { Bio2, Bio3, Bio4, Bio5, Bio6 } from '../../components/Bio'
 import CoinTelegraph from '../../assets/images/cointelegraph.png'
 import NewsBTC from '../../assets/images/newsbtc.jpg'
 import UpTrennd from '../../assets/images/uptrennd.png'
@@ -35,22 +42,6 @@ const TopSection = styled(AutoColumn)`
   max-width: 1200px;
   width: 100%;
   padding-top: 25px;
-`
-
-const NewRow = styled.div`
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  display: flex;
-  padding: 0;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  justify-self: center;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    flex-wrap: wrap;
- `}
 `
 
 const TeamRow = styled(AutoColumn)`
@@ -88,15 +79,6 @@ const TeamStyle = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     flex-wrap: wrap;
  `}
-`
-
-const DataCardLeft = styled(AutoColumn)`
-  max-width: 64%;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-      left: 1%;
-      position: relative;
-      max-width: 100%;
-`}
 `
 
 const StyledNav = styled.nav`
@@ -238,30 +220,24 @@ export default function About() {
           </TopSection>
           <TopSection gap="md">
             <AutoColumn gap="md" style={{ position: 'relative' }}>
-              <NewRow>
-                <DataCardLeft>
-                  <RowBetween>
-                    <TYPE.black fontWeight={600} fontSize={35}>
-                      What We Do
-                    </TYPE.black>
-                  </RowBetween>
-                  <RowBetween />
-                  <RowBetween>
-                    <TYPE.black fontWeight={400} marginTop={10}>
-                      DeFi Yield protocol (DYP) is changing the way you earn through liquidity on Ethereum smart
-                      contract. The argument against DeFi is that whales have the power to control the network. DeFi
-                      Yield protocol (DYP) prevents the whale advantage in DeFi. DYP anti-manipulation feature ensures
-                      that all pool rewards are automatically converted from DYP to ETH at 00:00 UTC, and the system
-                      automatically distributes the rewards to the liquidity providers. This feature is excellent
-                      because the network’s liquidity will be fair to all participants; no whale will be able to
-                      manipulate the price of DYP to their advantage.
-                    </TYPE.black>
-                  </RowBetween>
-                </DataCardLeft>
-                <RowBetween>
-                  <img src={Logo} alt={'logo'} style={{ maxWidth: '360px', width: '100%' }} />
-                </RowBetween>
-              </NewRow>
+              <TYPE.black fontWeight={600} fontSize={35} textAlign={'center'}>
+                What We Do
+              </TYPE.black>
+              <RowBetween />
+              <TYPE.black
+                fontWeight={400}
+                marginTop={10}
+                textAlign={'center'}
+                maxWidth={800}
+                style={{ justifySelf: 'center' }}
+              >
+                DeFi Yield protocol (DYP) is changing the way you earn through liquidity on Ethereum smart contract. The
+                argument against DeFi is that whales have the power to control the network. DeFi Yield protocol (DYP)
+                prevents the whale advantage in DeFi. DYP anti-manipulation feature ensures that all pool rewards are
+                automatically converted from DYP to ETH at 00:00 UTC, and the system automatically distributes the
+                rewards to the liquidity providers. This feature is excellent because the network’s liquidity will be
+                fair to all participants; no whale will be able to manipulate the price of DYP to their advantage.
+              </TYPE.black>
             </AutoColumn>
           </TopSection>
         </AutoColumn>
@@ -280,9 +256,10 @@ export default function About() {
           <TeamStyle>
             <div>
               <TeamRow>
+                <img src={Michael} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
                 <TYPE.black fontSize={20}>Michael Nikolas</TYPE.black>
                 <TYPE.black fontSize={14} marginBottom={16}>
-                  Chief Executive Officer
+                  CEO & Product Manager
                 </TYPE.black>
                 <Justify>
                   <ExternalLink style={{ color: 'black' }} href="https://twitter.com/m_BMN_" target="_blank">
@@ -293,34 +270,23 @@ export default function About() {
               </TeamRow>
             </div>
             <div>
-              <TYPE.black fontSize={20}>Gianni Vizin</TYPE.black>
-              <TYPE.black fontSize={14} marginBottom={16}>
-                Software Developer & SA
-              </TYPE.black>
-              <Justify>
-                <ExternalLink style={{ color: 'black' }} href="https://github.com/gianviz">
-                  <img src={GithubSvg} alt="" height={37} />
-                </ExternalLink>
-                <Bio3 />
-              </Justify>
-            </div>
-          </TeamStyle>
-          <RowBetween />
-          <TeamStyle>
-            <div>
-              <TYPE.black fontSize={20}>Daniel Provak</TYPE.black>
-              <TYPE.black fontSize={14} marginBottom={16}>
-                Software Developer
-              </TYPE.black>
-              <Justify>
-                <ExternalLink style={{ color: 'black' }} href="https://github.com/doyledyp">
-                  <img src={GithubSvg} alt="" height={37} />
-                </ExternalLink>
-                <Bio2 />
-              </Justify>
+              <div>
+                <img src={Ion} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
+                <TYPE.black fontSize={20}>Razvan Ion</TYPE.black>
+                <TYPE.black fontSize={14} marginBottom={16}>
+                  Chief Technical Officer
+                </TYPE.black>
+                <Justify>
+                  <ExternalLink style={{ color: 'black' }} href="https://www.linkedin.com/in/razvan-ion-b455ba95/">
+                    <img src={LinkedinSvg} alt="" />
+                  </ExternalLink>
+                  <Bio5 />
+                </Justify>
+              </div>
             </div>
             <div>
               <div>
+                <img src={Tek} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
                 <TYPE.black fontSize={20}>Teki Kolaneci</TYPE.black>
                 <TYPE.black fontSize={14} marginBottom={16}>
                   Digital Strategy Manager
@@ -332,6 +298,53 @@ export default function About() {
                   <Bio4 />
                 </Justify>
               </div>
+            </div>
+          </TeamStyle>
+          <RowBetween />
+          <TeamStyle>
+            <div>
+              <div>
+                <img src={Const} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
+                <TYPE.black fontSize={20}>Constantin Bogdan</TYPE.black>
+                <TYPE.black fontSize={14} marginBottom={16}>
+                  Marketing Manager
+                </TYPE.black>
+                <Justify>
+                  <ExternalLink
+                    style={{ color: 'black' }}
+                    href="https://www.linkedin.com/in/bogdan-constantin-1105b7201/"
+                  >
+                    <img src={LinkedinSvg} alt="" />
+                  </ExternalLink>
+                  <Bio6 />
+                </Justify>
+              </div>
+            </div>
+            <div>
+              <img src={Gino} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
+              <TYPE.black fontSize={20}>Gino Vizint</TYPE.black>
+              <TYPE.black fontSize={14} marginBottom={16}>
+                Chief Ecosystem Officer
+              </TYPE.black>
+              <Justify>
+                <ExternalLink style={{ color: 'black' }} href="https://github.com/gianviz">
+                  <img src={GithubSvg} alt="" height={37} />
+                </ExternalLink>
+                <Bio3 />
+              </Justify>
+            </div>
+            <div>
+              <img src={Daniel} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
+              <TYPE.black fontSize={20}>Daniel Provak</TYPE.black>
+              <TYPE.black fontSize={14} marginBottom={16}>
+                Software Developer
+              </TYPE.black>
+              <Justify>
+                <ExternalLink style={{ color: 'black' }} href="https://github.com/doyledyp">
+                  <img src={GithubSvg} alt="" height={37} />
+                </ExternalLink>
+                <Bio2 />
+              </Justify>
             </div>
           </TeamStyle>
         </AutoColumn>

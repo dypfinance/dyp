@@ -7,6 +7,8 @@ import {
   useBioModalToggle2,
   useBioModalToggle3,
   useBioModalToggle4,
+  useBioModalToggle5,
+  useBioModalToggle6,
   useModalOpen
 } from '../../state/application/hooks'
 
@@ -259,6 +261,86 @@ export function BioModal4() {
 
   return (
     <Modal isOpen={bioModalOpen4} onDismiss={toggleBioModal4} minHeight={false} maxHeight={90}>
+      <Wrapper>{getModalContent()}</Wrapper>
+    </Modal>
+  )
+}
+
+export function BioModal5() {
+  const bioModalOpen5 = useModalOpen(ApplicationModal.BIO5)
+  const toggleBioModal5 = useBioModalToggle5()
+
+  // get wallets user can switch too, depending on device/browser
+  function getOptions() {
+    return (
+      <TYPE.black fontSize={16}>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
+        Razvan holds a Bachelor's degree from Politehnica University of Bucharest, Faculty of Automatic Control and
+        Computer Science. Prior to his role at DeFi Yield Protocol, Razvan worked on implementing and maintaining data
+        security plans, Database Design and Programming with SQL, Oracle Academy. He also received a CISCO Networking
+        Academy reward. Razvan is committed to driving the innovation and research of Defi, as well the real use case
+        for DYP token.
+      </TYPE.black>
+    )
+  }
+
+  function getModalContent() {
+    return (
+      <UpperSection>
+        <CloseIcon onClick={toggleBioModal5}>
+          <CloseColor />
+        </CloseIcon>
+        <HeaderRow>
+          <HoverText>Some info about Razvan</HoverText>
+        </HeaderRow>
+        <ContentWrapper>
+          <OptionGrid>{getOptions()}</OptionGrid>
+        </ContentWrapper>
+      </UpperSection>
+    )
+  }
+
+  return (
+    <Modal isOpen={bioModalOpen5} onDismiss={toggleBioModal5} minHeight={false} maxHeight={90}>
+      <Wrapper>{getModalContent()}</Wrapper>
+    </Modal>
+  )
+}
+
+export function BioModal6() {
+  const bioModalOpen6 = useModalOpen(ApplicationModal.BIO6)
+  const toggleBioModal6 = useBioModalToggle6()
+
+  // get wallets user can switch too, depending on device/browser
+  function getOptions() {
+    return (
+      <TYPE.black fontSize={16}>
+        Constantin Bogdan graduated from the University of Bucharest in 2007 and he holds a Master in Human Resource
+        Psychology. Bogdan has ten years of experience in enterprise in a variety of roles at startups, private
+        companies, and ANOFM Bucharest including product management, product marketing, and sales management, and is the
+        Marketing Manager for DeFi Yield Protocol.
+      </TYPE.black>
+    )
+  }
+
+  function getModalContent() {
+    return (
+      <UpperSection>
+        <CloseIcon onClick={toggleBioModal6}>
+          <CloseColor />
+        </CloseIcon>
+        <HeaderRow>
+          <HoverText>Some info about Bogdan</HoverText>
+        </HeaderRow>
+        <ContentWrapper>
+          <OptionGrid>{getOptions()}</OptionGrid>
+        </ContentWrapper>
+      </UpperSection>
+    )
+  }
+
+  return (
+    <Modal isOpen={bioModalOpen6} onDismiss={toggleBioModal6} minHeight={false} maxHeight={90}>
       <Wrapper>{getModalContent()}</Wrapper>
     </Modal>
   )

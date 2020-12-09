@@ -51,6 +51,14 @@ export function useBioModalToggle4(): () => void {
   return useToggleModal(ApplicationModal.BIO4)
 }
 
+export function useBioModalToggle5(): () => void {
+  return useToggleModal(ApplicationModal.BIO5)
+}
+
+export function useBioModalToggle6(): () => void {
+  return useToggleModal(ApplicationModal.BIO6)
+}
+
 export function useToggleSettingsMenu(): () => void {
   return useToggleModal(ApplicationModal.SETTINGS)
 }

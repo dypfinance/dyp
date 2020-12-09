@@ -6,10 +6,12 @@ import {
   useBioModalToggle,
   useBioModalToggle2,
   useBioModalToggle3,
-  useBioModalToggle4
+  useBioModalToggle4,
+  useBioModalToggle5,
+  useBioModalToggle6
 } from '../../state/application/hooks'
 import { ButtonSecondary } from '../Button'
-import BioModal, { BioModal2, BioModal3, BioModal4 } from '../BioModal'
+import BioModal, { BioModal2, BioModal3, BioModal4, BioModal5, BioModal6 } from '../BioModal'
 
 const Web3StatusGeneric = styled(ButtonSecondary)`
   ${({ theme }) => theme.flexRowNoWrap}
@@ -107,6 +109,28 @@ function Web3StatusInner4() {
   )
 }
 
+function Web3StatusInner5() {
+  const { t } = useTranslation()
+  const toggleBioModal = useBioModalToggle5()
+
+  return (
+    <Web3StatusConnect id="connect-wallet" onClick={toggleBioModal} faded={true}>
+      <Text>{t('Bio')}</Text>
+    </Web3StatusConnect>
+  )
+}
+
+function Web3StatusInner6() {
+  const { t } = useTranslation()
+  const toggleBioModal = useBioModalToggle6()
+
+  return (
+    <Web3StatusConnect id="connect-wallet" onClick={toggleBioModal} faded={true}>
+      <Text>{t('Bio')}</Text>
+    </Web3StatusConnect>
+  )
+}
+
 export default function Bio() {
   return (
     <>
@@ -139,6 +163,24 @@ export function Bio4() {
     <>
       <Web3StatusInner4 />
       <BioModal4 />
+    </>
+  )
+}
+
+export function Bio5() {
+  return (
+    <>
+      <Web3StatusInner5 />
+      <BioModal5 />
+    </>
+  )
+}
+
+export function Bio6() {
+  return (
+    <>
+      <Web3StatusInner6 />
+      <BioModal6 />
     </>
   )
 }
