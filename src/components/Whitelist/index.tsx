@@ -66,6 +66,7 @@ const WhitelistForm = styled.div`
 const TextFont = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
         font-size: 15px;
+        text-align: center;
   `}
 `
 
