@@ -404,7 +404,7 @@ export default function About() {
       <RowBetween style={{ maxWidth: '1100px' }}>
         <StyledNav>
           <ExternalLink
-            style={{ color: 'white', textDecoration: 'underline' }}
+            style={{ color: 'whit-  e', textDecoration: 'underline' }}
             href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"
             target="_blank"
           >
