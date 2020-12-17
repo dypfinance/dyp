@@ -59,11 +59,11 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>DYP Liquidity Mining</TYPE.white>
+                <TYPE.white fontWeight={600}>DYP Staking Pools</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Deposit your liquidity provider tokens to receive DYP, the DeFi Yield protocol governance token.
+                  Deposit your liquidity provider tokens to receive Ethereum rewards.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -71,8 +71,8 @@ export default function Earn() {
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
                   DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
                   providers. <p>{'\n'}</p> Maintaining token price stability — every day at 00:00 UTC, the smart
-                  contract will automatically try to convert 276,480 DYP to ETH. If the DYP price is affected by more
-                  than
+                  contract will automatically try to convert the DYP rewards to ETH. If the DYP price is affected by
+                  more
                   <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
                     <img src={Arrow} alt="icon"></img>2.5%
                   </a>

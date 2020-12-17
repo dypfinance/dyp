@@ -2,13 +2,13 @@ import React from 'react'
 import { AutoColumn } from '../Column'
 import { RowBetween } from '../Row'
 import styled from 'styled-components'
-import { TYPE, StyledInternalLink } from '../../theme'
+import { TYPE, ExternalLink } from '../../theme'
 import DoubleCurrencyLogo from '../DoubleLogo'
 import { ETHER, JSBI, TokenAmount } from '@uniswap/sdk'
 import { ButtonPrimary } from '../Button'
 import { StakingInfo } from '../../state/stake/hooks'
 import { useColor } from '../../hooks/useColor'
-import { currencyId } from '../../utils/currencyId'
+//import { currencyId } from '../../utils/currencyId'
 import { Break, CardNoise, CardBGImage } from './styled'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 import { useTotalSupply } from '../../data/TotalSupply'
@@ -80,12 +80,21 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   const currency1 = unwrappedToken(token1)
 
   const isStaking = Boolean(stakingInfo.stakedAmount.greaterThan('0'))
-  const hidePools = Boolean(
-    stakingInfo.tokens[1].symbol === 'USDC' ||
-      stakingInfo.tokens[1].symbol === 'USDT' ||
-      stakingInfo.tokens[1].symbol === 'WBTC'
-  )
-
+  // const hidePools = Boolean(
+  //   stakingInfo.tokens[1].symbol === 'USDC' ||
+  //     stakingInfo.tokens[1].symbol === 'USDT' ||
+  //     stakingInfo.tokens[1].symbol === 'WBTC'
+  // )
+  let link = 'staking-eth'
+  if (stakingInfo.tokens[1].symbol === 'USDC') {
+    link = 'staking-usdc'
+  }
+  if (stakingInfo.tokens[1].symbol === 'USDT') {
+    link = 'staking-usdt'
+  }
+  if (stakingInfo.tokens[1].symbol === 'WBTC') {
+    link = 'staking-wbtc'
+  }
   //console.log(hidePools)
 
   // get the color of the token
@@ -118,7 +127,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     valueOfTotalStakedAmountInWETH && USDPrice?.quote(valueOfTotalStakedAmountInWETH)
 
   return (
-    <Wrapper showBackground={hidePools} bgColor={backgroundColor}>
+    <Wrapper showBackground={false} bgColor={backgroundColor}>
       <CardBGImage desaturate />
       <CardNoise />
 
@@ -128,17 +137,23 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           {currency0.symbol}-{currency1.symbol}
         </TYPE.white>
 
-        <StyledInternalLink to={`/uni/${currencyId(currency0)}/${currencyId(currency1)}`} style={{ width: '100%' }}>
-          <ButtonPrimary padding="8px" borderRadius="8px" disabled={hidePools}>
+        <ExternalLink
+          style={{
+            width: '100%'
+          }}
+          href={`https://app.dyp.finance/${link}`}
+          target="_blank"
+        >
+          <ButtonPrimary padding="8px" borderRadius="8px">
             {isStaking ? 'Manage' : 'Deposit'}
           </ButtonPrimary>
-        </StyledInternalLink>
+        </ExternalLink>
       </TopSection>
 
       <StatContainer>
         <RowBetween>
-          <TYPE.white> Total deposited</TYPE.white>
-          <TYPE.white>
+          <TYPE.white display={'none'}> Total deposited</TYPE.white>
+          <TYPE.white display={'none'}>
             {valueOfTotalStakedAmountInUSDC
               ? `$${valueOfTotalStakedAmountInUSDC.toFixed(0, { groupSeparator: ',' })}`
               : `${valueOfTotalStakedAmountInWETH?.toSignificant(4, { groupSeparator: ',' }) ?? '-'} ETH`}
@@ -149,7 +164,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
           {/*  ?.multiply(`${60 * 60 * 24 * 7}`)*/}
           {/*  ?.toFixed(0, { groupSeparator: ',' })} DYP / week`}</TYPE.white>*/}
-          <TYPE.white>{` 69,120 DYP / day`}</TYPE.white>
+          <TYPE.white>{` 250,000 DYP / month`}</TYPE.white>
           {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
           {/*  ?.multiply(`${60 * 60 * 24 * 7 * 0 + 69120 * 7}`)*/}
           {/*  ?.toFixed(0, { groupSeparator: ',' })} DYP / week`}</TYPE.white>*/}
