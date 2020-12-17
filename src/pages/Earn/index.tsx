@@ -72,7 +72,7 @@ export default function Earn() {
                   DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
                   providers. <p>{'\n'}</p> Maintaining token price stability — every day at 00:00 UTC, the smart
                   contract will automatically try to convert the DYP rewards to ETH. If the DYP price is affected by
-                  more
+                  more than{' '}
                   <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
                     <img src={Arrow} alt="icon"></img>2.5%
                   </a>
@@ -82,6 +82,14 @@ export default function Earn() {
                   will be distributed to the token holders or burned (all burned tokens are removed from circulation).
                 </TYPE.white>
               </RowBetween>{' '}
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://dypfinance.medium.com/dyp-staking-pools-tutorial-82bd49e65527"
+                target="_blank"
+              >
+                <TYPE.white fontSize={14}>DYP Staking Pools Tutorial</TYPE.white>
+              </ExternalLink>
+              <RowBetween />{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
                 href="https://medium.com/@dypfinance/introducing-the-defi-yield-protocol-12ea2146d328"
