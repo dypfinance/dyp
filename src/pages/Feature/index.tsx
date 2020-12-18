@@ -37,8 +37,9 @@ export default function Feature() {
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   DeFi Yield Protocol (DYP) will provide a solution to the risk Yield Farming brought in. How? – The DYP
-                  is developing a platform that allows anyone to provide liquidity and be rewarded with DYP tokens, and
-                  at the same time maintaining both token price stability and secure and simplified DeFi for end users.
+                  is developing a platform that allows anyone to provide liquidity and to be rewarded for the first time
+                  with Ethereum. At the same time, the platform maintains both token price stability as well as secure
+                  and simplified DeFi for end users by integrating a DYP anti-manipulation feature.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -62,12 +63,12 @@ export default function Feature() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Every day at 00:00 UTC, the smart contract will automatically try to convert 276,480 DYP (69,120 DYP
-                  reward per day, per DYP pool mentioned above) to ETH. If the DYP price is affected by more than 2.5%,
-                  then the maximum DYP amount that does not affect the price will be swapped to ETH, with the remaining
-                  amount distributed in the next day’s rewards. After seven days, if there are still undistributed DYP
-                  rewards, the DeFi Yield protocol (DYP) governance will vote on whether the remaining DYP will be
-                  distributed to the token holders or burned removes them from circulation.
+                  Every day at 00:00 UTC, the smart contract will automatically try to convert the DYP rewards to ETH.
+                  If the DYP price is affected by more than -2.5%, then the maximum DYP amount that does not affect the
+                  price will be swapped to ETH, with the remaining amount distributed in the next day’s rewards. After
+                  seven days, if there are still undistributed DYP rewards, the DeFi Yield protocol (DYP) governance
+                  will vote on whether the remaining DYP will be distributed to the token holders or burned (all burned
+                  tokens are removed from circulation).
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -81,7 +82,7 @@ export default function Feature() {
                   plunge overnight. DYP prevents smart contract risk by ensuring that all their smart contracts are{' '}
                   <ExternalLink
                     style={{ color: 'white', textDecoration: 'underline' }}
-                    href="https://github.com/dypfinance/contract-security-audit"
+                    href="https://github.com/dypfinance/staking-governance-security-audits"
                     target="_blank"
                   >
                     audited

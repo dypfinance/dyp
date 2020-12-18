@@ -16,9 +16,18 @@ const TopSection = styled(AutoColumn)`
   width: 100%;
 `
 
-const popUpAlert = function() {
-  alert('Coming soon!')
-}
+const StyledLink = styled.a`
+  color: grey;
+  -webkit-align-items: center;
+  text-decoration: none;
+  &:hover {
+    color: grey;
+  }
+`
+
+// const popUpAlert = function() {
+//   alert('Coming soon!')
+// }
 
 export default function Gov() {
   return (
@@ -39,15 +48,19 @@ export default function Gov() {
                   serves this purpose, enabling shared community ownership and a vibrant, diverse, and dedicated
                   governance system, which will actively guide the protocol toward the future. <div></div>
                   DYP holders through governance can vote to add more pools, burn tokens, or allocate DYP toward grants,
-                  strategic partnerships, governance initiatives, additional liquidity mining pools, and other programs.
+                  strategic partnerships, governance initiatives, and other programs.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
-                <TYPE.white fontSize={14} onClick={popUpAlert}>
-                  Set up an account on{' '}
-                  <a style={{ color: 'white', textDecoration: 'underline' }} href="#gov">
+                <TYPE.white fontSize={14}>
+                  Visit{' '}
+                  <StyledLink
+                    target="_blank"
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://gov.dyp.finance/"
+                  >
                     gov.dyp.finance
-                  </a>{' '}
+                  </StyledLink>{' '}
                   to start shaping and participating in protocol governance.
                 </TYPE.white>
               </RowBetween>{' '}

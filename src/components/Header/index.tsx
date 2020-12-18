@@ -334,7 +334,10 @@ export default function Header() {
           <StyledNavLink id={`tokenomics-nav-link`} to={'/tokenomics'}>
             {t('Tokenomics')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+          <StyledExternalLink
+            id={`getdyp-nav-link`}
+            href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
+          >
             {t('Get DYP')}
           </StyledExternalLink>
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>

@@ -39,6 +39,9 @@ export default function Tokenomics() {
                 <TYPE.white fontSize={13}>DYP contract address: 0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17</TYPE.white>
               </RowBetween>
               <RowBetween>
+                <TYPE.white fontSize={14}>Initial Circulating Supply: 958,984</TYPE.white>
+              </RowBetween>
+              <RowBetween>
                 <TYPE.white fontSize={14}>DYP Allocation</TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -49,10 +52,12 @@ export default function Tokenomics() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  75.30% to DeFi Yield protocol community members: 22,588,800 DYP<div></div>
-                  16,588,800 DYP distributed for pool rewards over the next 60 days<div></div>
-                  5,000,000 DYP distributed over the next 60-120 days to Ethereum mining pool<div></div>
-                  1,000,000 DYP locked for one year to Uniswap liquidity on token launch<div></div>
+                  75.30% to DeFi Yield protocol community members:<div></div>
+                  12,000,000 DYP distributed for pool rewards over the next 12 months<div></div>
+                  5,000,000 DYP distributed to Ethereum mining pool after launch (Q1/2021) - locked on smart contract
+                  <div></div>
+                  5,181,152 DYP reserved for other staking pools - locked on smart contract<div></div>
+                  200,000 DYP locked for one year to Uniswap liquidity on token launch
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -61,7 +66,13 @@ export default function Tokenomics() {
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
-                <TYPE.white fontSize={14}>16.67% to investors: 5,000,000 DYP</TYPE.white>
+                <TYPE.white fontSize={14}>
+                  16.67% to investors: 5,000,000 DYP - 4,348,469 BURNED & REMOVED from the total supply TH
+                  0x69d1faef4d41752c200dfe68b103c2823f94f225c502b455321bae0d94ebf8a5
+                </TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>No Additional Tokens Can Be Minted!</TYPE.white>
               </RowBetween>
             </AutoColumn>
           </CardSection>

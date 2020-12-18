@@ -104,11 +104,11 @@ export default function Roadmap() {
                   <AutoColumn gap="md">
                     <RowBetween>
                       <TYPE.white fontWeight={600}>
-                        ➫ Token Crowdsale scheduled toward the end of October<div></div>➫ Uniswap Listing<div></div>➫
-                        Liquidity Lock<div></div>➫ Listing DYP in other exchanges<div></div>➫ Building Smart Contract
-                        for Liquidity Mining pools<div></div>➫ Building Smart Contract for miners<div></div>➫ Smart
-                        Contract Security Audit<div></div>➫ Add Liquidity Participating Pools<div></div>➫ Ethereum
-                        mining pool Whitelist Launch<div></div>➫ Launch DYP Governance<div></div>➫ Launch DYP Referral
+                        ✓ Token Crowdsale scheduled toward the end of October<div></div>✓ Uniswap Listing<div></div>✓
+                        Liquidity Lock<div></div>➫ Listing DYP in other exchanges<div></div>✓ Building Smart Contract
+                        for Liquidity Mining pools<div></div>✓ Building Smart Contract for miners<div></div>✓ Smart
+                        Contract Security Audit<div></div>✓ Add Liquidity Participating Pools<div></div>➫ Ethereum
+                        mining pool Whitelist Launch<div></div>✓ Launch DYP Governance<div></div>➫ Launch DYP Referral
                         <div></div>
                       </TYPE.white>
                     </RowBetween>

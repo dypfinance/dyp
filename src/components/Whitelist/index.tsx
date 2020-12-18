@@ -5,7 +5,7 @@ import { ExternalLink, TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 700px;
+  max-width: 900px;
   width: 100%;
   display: flex;
   justify-self: center;
@@ -39,29 +39,29 @@ const WhitelistForm = styled.div`
   `}
 `
 
-// const MenuItemExternal = styled(ExternalLink).attrs({})`
-//   flex: 1;
-//   padding: 0.5rem 0.5rem;
-//   color: ${({ theme }) => theme.text1};
-//   text-decoration: none;
-//   background-color: white;
-//   text-align: center;
-//   margin-left: 5px;
-//   border-radius: 12px;
-//   margin: auto 5px;
-//   padding: 5px;
-//   :hover {
-//     color: red;
-//     cursor: pointer;
-//     text-decoration: none;
-//   }
-//   > svg {
-//     margin-right: 8px;
-//   }
-//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-//         font-size: 15px;
-//   `}
-// `
+const MenuItemExternal = styled(ExternalLink).attrs({})`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  color: ${({ theme }) => theme.text1};
+  text-decoration: none;
+  background-color: white;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 12px;
+  margin: auto 5px;
+  padding: 5px;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 10px;
+  `}
+`
 
 const TextFont = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -70,11 +70,11 @@ const TextFont = styled.div`
   `}
 `
 
-const TextFont2 = styled.div`
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-        font-size: 13px;
-  `}
-`
+// const TextFont2 = styled.div`
+//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+//         font-size: 13px;
+//   `}
+// `
 
 export default function Whitelist() {
   return (
@@ -82,27 +82,12 @@ export default function Whitelist() {
       <AutoColumn gap="md">
         <PageWrapper>
           <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
-            <TextFont>Token Sale has ENDED!</TextFont>
+            <TextFont>DeFi Yield Protocol staking dApp is live! </TextFont>
           </TYPE.white>
+          <MenuItemExternal id={`stake-nav-link`} href={'https://app.dyp.finance/'}>
+            JOIN NOW AND START EARNING ETH REWARDS
+          </MenuItemExternal>
         </PageWrapper>
-        <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto' }}>
-          <TextFont2>
-            <ExternalLink
-              style={{
-                color: 'white',
-                textDecoration: 'underline',
-                textAlign: 'center',
-                maxWidth: '800px',
-                display: 'block'
-              }}
-              href="https://t.me/dypannouncements"
-              target="_blank"
-            >
-              Within 24 hours we will add the liquidity on Uniswap, lock it for 1 year, and launch the staking &
-              governance Dapp! FOLLOW US ON TELEGRAM FOR THE LATEST ANNOUNCEMENTS!
-            </ExternalLink>
-          </TextFont2>
-        </TYPE.white>
       </AutoColumn>
     </WhitelistForm>
   )

@@ -145,7 +145,10 @@ export default function Menu() {
           <MenuItem id={`tokenomics-nav-link`} to={'/tokenomics'}>
             Tokenomics
           </MenuItem>
-          <MenuItemExternal id={`stake-nav-link`} href={'https://crowdsale.dyp.finance/'}>
+          <MenuItemExternal
+            id={`getdyp-nav-link`}
+            href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
+          >
             Get DYP
           </MenuItemExternal>
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
