@@ -11,6 +11,7 @@ import Loader from '../../components/Loader'
 import { useActiveWeb3React } from '../../hooks'
 import Arrow from '../../assets/svg/arrow.svg'
 import Whitelist from '../../components/Whitelist'
+import getFormattedNumber from '../../components/Function/get-formatted-number'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -35,18 +36,31 @@ const PoolSection = styled.div`
 //   display: block;
 // `
 
+const window1 = window
+
 export default function Earn() {
   const { chainId } = useActiveWeb3React()
   const stakingInfos = useStakingInfo()
-
-  //console.log(stakingInfos)
 
   const DataRow = styled(RowBetween)`
     ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-direction: column;
   `};
   `
-
+  // eslint-disable-next-line
+  //@ts-ignore
+  const [tvl, setTvl] = React.useState(0)
+  // eslint-disable-next-line
+  //@ts-ignore
+  tvl === 0 &&
+    window1
+      // eslint-disable-next-line
+      //@ts-ignore
+      .getCombinedTvlUsd()
+      // eslint-disable-next-line
+      //@ts-ignore
+      .then(tvl => setTvl(tvl))
+      .catch(console.error)
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
 
   return (
@@ -74,7 +88,8 @@ export default function Earn() {
                   contract will automatically try to convert the DYP rewards to ETH. If the DYP price is affected by
                   more than{' '}
                   <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
-                    <img src={Arrow} alt="icon"></img>2.5%
+                    <img src={Arrow} alt="icon" />
+                    2.5%
                   </a>
                   , then the maximum DYP amount that does not affect the price will be swapped to ETH, with the
                   remaining amount distributed in the next day’s rewards. After seven days, if we still have
@@ -108,6 +123,7 @@ export default function Earn() {
         <DataRow style={{ alignItems: 'baseline' }}>
           <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
           {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
+          <TYPE.black>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TYPE.black>
         </DataRow>
 
         <PoolSection>

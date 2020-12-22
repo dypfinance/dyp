@@ -14,6 +14,7 @@ import { unwrappedToken } from '../../utils/wrappedCurrency'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { usePair } from '../../data/Reserves'
 import useUSDCPrice from '../../utils/useUSDCPrice'
+import getFormattedNumber from '../Function/get-formatted-number'
 
 const StatContainer = styled.div`
   display: flex;
@@ -71,6 +72,11 @@ const BottomSection = styled.div<{ showBackground: boolean }>`
   justify-content: space-between;
   z-index: 1;
 `
+const window1 = window
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/camelcase
+const { LP_IDs } = window1
 
 export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) {
   const token0 = stakingInfo.tokens[0]
@@ -86,16 +92,113 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   //     stakingInfo.tokens[1].symbol === 'WBTC'
   // )
   let link = 'staking-eth'
+  let tvlPools = 0
+  // eslint-disable-next-line
+  //@ts-ignore
+  if (window1.the_graph_result.lp_data) {
+    // eslint-disable-next-line
+    //@ts-ignore
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    tvlPools =
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      window1.the_graph_result.lp_data[LP_IDs.eth[0]].tvl_usd +
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      window1.the_graph_result.lp_data[LP_IDs.eth[1]].tvl_usd +
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      window1.the_graph_result.lp_data[LP_IDs.eth[2]].tvl_usd +
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      window1.the_graph_result.lp_data[LP_IDs.eth[3]].tvl_usd
+  }
   if (stakingInfo.tokens[1].symbol === 'USDC') {
     link = 'staking-usdc'
+    // eslint-disable-next-line
+    //@ts-ignore
+    if (window1.the_graph_result.lp_data) {
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      tvlPools =
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdc[0]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdc[1]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdc[2]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdc[3]].tvl_usd
+    }
   }
   if (stakingInfo.tokens[1].symbol === 'USDT') {
     link = 'staking-usdt'
+    // eslint-disable-next-line
+    //@ts-ignore
+    if (window1.the_graph_result.lp_data) {
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      tvlPools =
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdt[0]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdt[1]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdt[2]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.usdt[3]].tvl_usd
+    }
   }
   if (stakingInfo.tokens[1].symbol === 'WBTC') {
     link = 'staking-wbtc'
+    // eslint-disable-next-line
+    //@ts-ignore
+    if (window1.the_graph_result.lp_data) {
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      tvlPools =
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.wbtc[0]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.wbtc[1]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.wbtc[2]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result.lp_data[LP_IDs.wbtc[3]].tvl_usd
+    }
   }
-  //console.log(hidePools)
+  console.log('aaa+ ', tvlPools)
 
   // get the color of the token
   const token = currency0 === ETHER ? token1 : token0
@@ -160,6 +263,16 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           </TYPE.white>
         </RowBetween>
         <RowBetween>
+          <TYPE.white> Total Value Locked </TYPE.white>
+          {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
+          {/*  ?.multiply(`${60 * 60 * 24 * 7}`)*/}
+          {/*  ?.toFixed(0, { groupSeparator: ',' })} DYP / week`}</TYPE.white>*/}
+          <TYPE.white>${getFormattedNumber(tvlPools, 2)}</TYPE.white>
+          {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
+          {/*  ?.multiply(`${60 * 60 * 24 * 7 * 0 + 69120 * 7}`)*/}
+          {/*  ?.toFixed(0, { groupSeparator: ',' })} DYP / week`}</TYPE.white>*/}
+        </RowBetween>
+        <RowBetween>
           <TYPE.white> Pool rate </TYPE.white>
           {/*<TYPE.white>{`${stakingInfo.totalRewardRate*/}
           {/*  ?.multiply(`${60 * 60 * 24 * 7}`)*/}
@@ -183,9 +296,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
               <span role="img" aria-label="wizard-icon" style={{ marginRight: '0.5rem' }}>
                 ⚡
               </span>
-              {`${stakingInfo.rewardRate
-                ?.multiply(`${60 * 60 * 24 * 7 * 0 + 69120}`)
-                ?.toSignificant(4, { groupSeparator: ',' })} UNI / week`}
+              {`${stakingInfo.rewardRate?.multiply(`${69120}`)?.toSignificant(4, { groupSeparator: ',' })} UNI / week`}
             </TYPE.black>
           </BottomSection>
         </>

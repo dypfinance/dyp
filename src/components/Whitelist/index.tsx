@@ -4,18 +4,21 @@ import styled from 'styled-components'
 import { ExternalLink, TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 
+import getFormattedNumber from '../Function/get-formatted-number'
+
 const PageWrapper = styled(AutoColumn)`
   max-width: 900px;
   width: 100%;
   display: flex;
   justify-self: center;
   margin: auto;
+  justify-content: center;
 `
 
 const WhitelistForm = styled.div`
   // Header Color
   background-color: red;
-  display: grid;
+  //display: grid;
   grid-template-columns: 1fr 120px;
   align-items: center;
   justify-content: space-between;
@@ -60,6 +63,32 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
   }
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
         font-size: 10px;
+        display: none;
+  `}
+`
+const MenuItemExternalMobile = styled(ExternalLink).attrs({})`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  color: ${({ theme }) => theme.text1};
+  text-decoration: none;
+  background-color: white;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 12px;
+  margin: auto 5px;
+  padding: 5px;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+  display: none;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 10px;
+        display: block;
   `}
 `
 
@@ -75,8 +104,23 @@ const TextFont = styled.div`
 //         font-size: 13px;
 //   `}
 // `
+const window1 = window
 
 export default function Whitelist() {
+  // eslint-disable-next-line
+  //@ts-ignore
+  const [tvl, setTvl] = React.useState(0)
+  // eslint-disable-next-line
+  //@ts-ignore
+  tvl === 0 &&
+    window1
+      // eslint-disable-next-line
+      //@ts-ignore
+      .getCombinedTvlUsd()
+      // eslint-disable-next-line
+      //@ts-ignore
+      .then(tvl => setTvl(tvl))
+      .catch(console.error)
   return (
     <WhitelistForm>
       <AutoColumn gap="md">
@@ -87,7 +131,13 @@ export default function Whitelist() {
           <MenuItemExternal id={`stake-nav-link`} href={'https://app.dyp.finance/'}>
             JOIN NOW AND START EARNING ETH REWARDS
           </MenuItemExternal>
+          <MenuItemExternalMobile id={`stake-nav-link`} href={'https://app.dyp.finance/'}>
+            JOIN NOW
+          </MenuItemExternalMobile>
         </PageWrapper>
+        <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
+          <TextFont>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TextFont>
+        </TYPE.white>
       </AutoColumn>
     </WhitelistForm>
   )
