@@ -26,9 +26,9 @@ import GithubSvg from '../../assets/svg/github_black.svg'
 import Bio, { Bio2, Bio3, Bio4, Bio5, Bio6 } from '../../components/Bio'
 import CoinTelegraph from '../../assets/images/cointelegraph.png'
 import NewsBTC from '../../assets/images/newsbtc.jpg'
-import UpTrennd from '../../assets/images/uptrennd.png'
-import YouTube from '../../assets/images/youtube.png'
-import Gokhshtein from '../../assets/svg/gokhshtein.svg'
+import Yahoo from '../../assets/images/yahoo.png'
+import Bitcoinist from '../../assets/images/bitcoinist.jpeg'
+import Certik from '../../assets/images/certik.png'
 import Peckshield from '../../assets/images/peckshield.png'
 import Consilium from '../../assets/images/consilium.png'
 import BitcoinCom from '../../assets/images/bitcoincom.png'
@@ -377,22 +377,12 @@ export default function About() {
           </ExternalLink>
           <ExternalLink
             style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://gokhshtein.com"
+            href="https://certik.foundation/"
             target="_blank"
           >
             <Item>
-              <img
-                src={Gokhshtein}
-                style={{
-                  borderStyle: 'solid',
-                  borderColor: 'black',
-                  backgroundColor: 'black',
-                  borderWidth: '8px',
-                  marginBottom: '10px'
-                }}
-                alt={'logo'}
-              />
-              <TextNews>Marketing Campaign</TextNews>
+              <img src={Certik} style={{ width: '70px' }} alt={'logo'} />
+              <TextNews>Certik Foundation</TextNews>
             </Item>
           </ExternalLink>
         </StyledNav>
@@ -415,7 +405,7 @@ export default function About() {
           </ExternalLink>
           <ExternalLink
             style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://www.newsbtc.com/news/company/dyp-finance-a-unique-yield-farming-platform/"
+            href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
             target="_blank"
           >
             <Item>
@@ -425,7 +415,7 @@ export default function About() {
           </ExternalLink>
           <ExternalLink
             style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://news.bitcoin.com/defi-yield-protocol-is-a-massive-boost-for-yield-farmers-and-the-defi-space/"
+            href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"
             target="_blank"
           >
             <Item>
@@ -435,22 +425,22 @@ export default function About() {
           </ExternalLink>
           <ExternalLink
             style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://www.uptrennd.com/post-detail/defi-yield-protocol-your-new-on-the-go-defi~NzcxNzk0"
+            href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"
             target="_blank"
           >
             <Item>
-              <img src={UpTrennd} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>uptrennd</TextNews>
+              <img src={Yahoo} style={{ width: '70px' }} alt={'logo'} />
+              <TextNews>Yahoo Finance</TextNews>
             </Item>
           </ExternalLink>
           <ExternalLink
             style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://www.youtube.com/watch?v=cJMMBR41Rxs"
+            href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"
             target="_blank"
           >
             <Item>
-              <img src={YouTube} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>YouTube</TextNews>
+              <img src={Bitcoinist} style={{ width: '70px' }} alt={'logo'} />
+              <TextNews>Bitcoinist</TextNews>
             </Item>
           </ExternalLink>
         </StyledNav>

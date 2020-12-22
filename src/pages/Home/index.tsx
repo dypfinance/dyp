@@ -8,8 +8,8 @@ import { NavLink } from 'react-router-dom'
 
 import CoinTelegraph from '../../assets/images/cointelegraph.png'
 import NewsBTC from '../../assets/images/newsbtc.jpg'
-import UpTrennd from '../../assets/images/uptrennd.png'
-import YouTube from '../../assets/images/youtube.png'
+import Yahoo from '../../assets/images/yahoo.png'
+import Bitcoinist from '../../assets/images/bitcoinist.jpeg'
 import BitcoinCom from '../../assets/images/bitcoincom.png'
 
 const PageWrapper = styled(AutoColumn)`
@@ -211,7 +211,7 @@ export default function Home() {
               </ExternalLink>
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://www.newsbtc.com/news/company/dyp-finance-a-unique-yield-farming-platform/"
+                href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
                 target="_blank"
               >
                 <Item>
@@ -221,7 +221,7 @@ export default function Home() {
               </ExternalLink>
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://news.bitcoin.com/defi-yield-protocol-is-a-massive-boost-for-yield-farmers-and-the-defi-space/"
+                href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"
                 target="_blank"
               >
                 <Item>
@@ -231,22 +231,22 @@ export default function Home() {
               </ExternalLink>
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://www.uptrennd.com/post-detail/defi-yield-protocol-your-new-on-the-go-defi~NzcxNzk0"
+                href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"
                 target="_blank"
               >
                 <Item>
-                  <img src={UpTrennd} style={{ width: '50px' }} alt={'logo'} />
-                  <TextNews>uptrennd</TextNews>
+                  <img src={Yahoo} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>Yahoo Finance</TextNews>
                 </Item>
               </ExternalLink>
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://www.youtube.com/watch?v=cJMMBR41Rxs"
+                href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"
                 target="_blank"
               >
                 <Item>
-                  <img src={YouTube} style={{ width: '50px' }} alt={'logo'} />
-                  <TextNews>YouTube</TextNews>
+                  <img src={Bitcoinist} style={{ width: '50px' }} alt={'logo'} />
+                  <TextNews>Bitcoinist</TextNews>
                 </Item>
               </ExternalLink>
             </StyledNav>
