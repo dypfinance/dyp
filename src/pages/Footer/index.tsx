@@ -74,7 +74,9 @@ const Footer: React.FC = () => (
         <StyledLink target="_blank" href="https://etherscan.io/address/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17#code">
           Token Contract
         </StyledLink>
-        <StyledLinkS>CoinMarketCap</StyledLinkS>
+        <StyledLink target="_blank" href="https://coinmarketcap.com/currencies/defi-yield-protocol/">
+          CoinMarketCap
+        </StyledLink>
         <StyledLinkS>CoinGecko</StyledLinkS>
         <StyledLink
           target="_blank"
