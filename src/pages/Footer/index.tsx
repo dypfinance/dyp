@@ -86,7 +86,7 @@ const Footer: React.FC = () => (
         >
           Uniswap DYP-ETH
         </StyledLink>
-        <StyledLink target="_blank" href="https://github.com/dypfinance/contract-security-audit">
+        <StyledLink target="_blank" href="https://github.com/dypfinance/staking-governance-security-audits">
           Audit
         </StyledLink>
       </StyledNav>
