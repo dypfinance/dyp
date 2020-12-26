@@ -47,18 +47,18 @@ const StyledLink = styled.a`
         margin: 5px 12px;
   `}
 `
-const StyledLinkS = styled.div`
-  color: grey;
-  margin: 30px 15px;
-  -webkit-align-items: center;
-  text-decoration: none;
-  &:hover {
-    color: grey;
-  }
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-        margin: 5px 12px;
-  `}
-`
+// const StyledLinkS = styled.div`
+//   color: grey;
+//   margin: 30px 15px;
+//   -webkit-align-items: center;
+//   text-decoration: none;
+//   &:hover {
+//     color: grey;
+//   }
+//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+//         margin: 5px 12px;
+//   `}
+// `
 
 // const StyledSpace = styled.div`
 //   width: 100px;
@@ -77,7 +77,9 @@ const Footer: React.FC = () => (
         <StyledLink target="_blank" href="https://coinmarketcap.com/currencies/defi-yield-protocol/">
           CoinMarketCap
         </StyledLink>
-        <StyledLinkS>CoinGecko</StyledLinkS>
+        <StyledLink target="_blank" href="https://www.coingecko.com/en/coins/defi-yield-protocol/">
+          CoinGecko
+        </StyledLink>
         <StyledLink
           target="_blank"
           href="https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17"
