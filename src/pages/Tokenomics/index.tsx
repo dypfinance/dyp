@@ -8,6 +8,8 @@ import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/
 import Chart from '../../assets/images/Charts2.png'
 import Whitelist from '../../components/Whitelist'
 
+import getFormattedNumber from '../../components/Function/get-formatted-number'
+
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
   width: 100%;
@@ -22,7 +24,13 @@ const IMGs = styled.div`
   max-width: 720px;
 `
 
+const window1 = window
+
 export default function Tokenomics() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  const circulatingSupply = window1.get_circulating_supply
+  //console.log('aaa+ ', circulatingSupply)
   return (
     <PageWrapper gap="lg" justify="center">
       <Whitelist />
@@ -39,7 +47,9 @@ export default function Tokenomics() {
                 <TYPE.white fontSize={13}>DYP contract address: 0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17</TYPE.white>
               </RowBetween>
               <RowBetween>
-                <TYPE.white fontSize={14}>Initial Circulating Supply: 958,984</TYPE.white>
+                <TYPE.white fontSize={14}>
+                  Initial Circulating Supply: ${getFormattedNumber(circulatingSupply, 2)}
+                </TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>DYP Allocation</TYPE.white>

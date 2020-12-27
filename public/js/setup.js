@@ -2301,3 +2301,22 @@ const getCombinedTvlUsd = async () => {
   return tvl
 }
 window.getCombinedTvlUsd = getCombinedTvlUsd
+
+function getData(ajaxurl) {
+  return $.ajax({
+    url: ajaxurl,
+    type: 'GET',
+  });
+};
+
+async function test() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/circulating-supply')
+    window.get_circulating_supply = res
+    console.log(res)
+  } catch(err) {
+    console.log(err);
+  }
+}
+window.get_circulating_supply = 0
+test();
