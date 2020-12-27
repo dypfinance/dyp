@@ -48,7 +48,7 @@ export default function Tokenomics() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Initial Circulating Supply: ${getFormattedNumber(circulatingSupply, 2)}
+                  Initial Circulating Supply: {getFormattedNumber(circulatingSupply, 2)} DYP
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
