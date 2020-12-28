@@ -9,6 +9,7 @@ import Telegram from '../../assets/svg/telegram.svg'
 import Ann from '../../assets/svg/ann.png'
 import Email from '../../assets/svg/email.svg'
 import Forum from '../../assets/svg/forum.svg'
+import Linkedin from '../../assets/images/linkedin.png'
 
 const StyledFooter = styled.footer`
   background-color: #1e272f;
@@ -98,6 +99,9 @@ const Footer: React.FC = () => (
         </StyledLink>
         <StyledLink target="_blank" href="https://medium.com/@dypfinance">
           <img width={'24px'} src={Medium} alt="logo" />
+        </StyledLink>
+        <StyledLink target="_blank" href="https://www.linkedin.com/company/defi-yield-protocol">
+          <img width={'20px'} src={Linkedin} alt="logo" style={{ backgroundColor: 'white', borderRadius: '2px' }} />
         </StyledLink>
         <StyledLink target="_blank" href="https://twitter.com/dypfinance">
           <img width={'24px'} src={Twitter} alt="logo" />

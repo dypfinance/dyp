@@ -30,7 +30,10 @@ export enum ApplicationModal {
   BIO3,
   BIO4,
   BIO5,
-  BIO6
+  BIO6,
+  MENUDYP,
+  MENUDYP2,
+  GETDYP
 }
 
 export const updateBlockNumber = createAction<{ chainId: number; blockNumber: number }>('application/updateBlockNumber')

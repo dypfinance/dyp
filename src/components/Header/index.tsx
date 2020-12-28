@@ -14,10 +14,11 @@ import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances, useAggregateUniBalance } from '../../state/wallet/hooks'
 import { CardNoise } from '../earn/styled'
 import { CountUp } from 'use-count-up'
-import { ExternalLink, TYPE } from '../../theme'
+import { TYPE } from '../../theme'
 
 import { YellowCard } from '../Card'
 import Menu from '../Menu'
+import MenuDyp from '../MenuDyp'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
@@ -112,6 +113,12 @@ const HeaderElementWrap = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: flex;
     align-items: center;
+`}
+`
+const HeaderElementWrap2 = styled.div`
+  margin-right: 5px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: none;
 `}
 `
 
@@ -246,31 +253,31 @@ const StyledNavLink = styled(NavLink).attrs({
   }
 `
 
-const StyledExternalLink = styled(ExternalLink)`
-  ${({ theme }) => theme.flexRowNoWrap}
-  align-items: left;
-  border-radius: 3rem;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: ${({ theme }) => theme.text2};
-  font-size: 1rem;
-  width: fit-content;
-  margin: 0 12px;
-  font-weight: 500;
-  &.${activeClassName} {
-    border-radius: 12px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text1};
-  }
-  :hover,
-  :focus {
-    color: ${({ theme }) => darken(0.1, theme.text1)};
-  }
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-      display: block;
-`}
-`
+// const StyledExternalLink = styled(ExternalLink)`
+//   ${({ theme }) => theme.flexRowNoWrap}
+//   align-items: left;
+//   border-radius: 3rem;
+//   outline: none;
+//   cursor: pointer;
+//   text-decoration: none;
+//   color: ${({ theme }) => theme.text2};
+//   font-size: 1rem;
+//   width: fit-content;
+//   margin: 0 12px;
+//   font-weight: 500;
+//   &.${activeClassName} {
+//     border-radius: 12px;
+//     font-weight: 600;
+//     color: ${({ theme }) => theme.text1};
+//   }
+//   :hover,
+//   :focus {
+//     color: ${({ theme }) => darken(0.1, theme.text1)};
+//   }
+//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+//       display: block;
+// `}
+// `
 
 const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.RINKEBY]: 'Rinkeby',
@@ -334,12 +341,15 @@ export default function Header() {
           <StyledNavLink id={`tokenomics-nav-link`} to={'/tokenomics'}>
             {t('Tokenomics')}
           </StyledNavLink>
-          <StyledExternalLink
-            id={`getdyp-nav-link`}
-            href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
-          >
-            {t('Get DYP')}
-          </StyledExternalLink>
+          {/*<StyledExternalLink*/}
+          {/*  id={`getdyp-nav-link`}*/}
+          {/*  href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}*/}
+          {/*>*/}
+          {/*  {t('Get DYP')}*/}
+          {/*</StyledExternalLink>*/}
+          <HeaderElementWrap2>
+            <MenuDyp />
+          </HeaderElementWrap2>
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
             {t('Referral Program')}
           </StyledNavLink>

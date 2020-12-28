@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/svg/menu.svg'
-import { useActiveWeb3React } from '../../hooks'
+//import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 import { NavLink } from 'react-router-dom'
 
-import { ExternalLink } from '../../theme'
+//import { ExternalLink } from '../../theme'
 import { ButtonPrimary } from '../Button'
 
 const StyledMenuIcon = styled(MenuIcon)`
@@ -91,23 +91,30 @@ const MenuItem = styled(NavLink).attrs({})`
   }
 `
 
-const MenuItemExternal = styled(ExternalLink).attrs({})`
-  flex: 1;
-  padding: 0.5rem 0.5rem;
-  color: ${({ theme }) => theme.text2};
-  text-decoration: none;
-  :hover {
-    color: red;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  > svg {
-    margin-right: 8px;
-  }
-`
+// const MenuItemExternal = styled(ExternalLink).attrs({})`
+//   flex: 1;
+//   padding: 0.5rem 0.5rem;
+//   color: ${({ theme }) => theme.text2};
+//   text-decoration: none;
+//   :hover {
+//     color: red;
+//     cursor: pointer;
+//     text-decoration: none;
+//   }
+//   > svg {
+//     margin-right: 8px;
+//   }
+// `
+// const HeaderElementWrap = styled.div`
+//   display: none;
+//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+//     display: flex;
+//     align-items: center;
+// `}
+// `
 
 export default function Menu() {
-  const { account } = useActiveWeb3React()
+  //const { account } = useActiveWeb3React()
 
   const node = useRef<HTMLDivElement>()
   const open = useModalOpen(ApplicationModal.MENU)
@@ -145,23 +152,21 @@ export default function Menu() {
           <MenuItem id={`tokenomics-nav-link`} to={'/tokenomics'}>
             Tokenomics
           </MenuItem>
-          <MenuItemExternal
-            id={`getdyp-nav-link`}
-            href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
-          >
+          {/*<MenuItemExternal*/}
+          {/*  id={`getdyp-nav-link`}*/}
+          {/*  href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}*/}
+          {/*>*/}
+          {/*  Get DYP*/}
+          {/*</MenuItemExternal>*/}
+          <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
             Get DYP
-          </MenuItemExternal>
+          </ButtonPrimary>
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
             Referral Program
           </MenuItem>
           <MenuItem id={`about-nav-link`} to={'/about'}>
             About
           </MenuItem>
-          {account && (
-            <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
-              Claim UNI
-            </ButtonPrimary>
-          )}
         </MenuFlyout>
       )}
     </StyledMenu>

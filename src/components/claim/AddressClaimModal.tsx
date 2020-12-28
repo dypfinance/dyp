@@ -5,15 +5,12 @@ import styled from 'styled-components'
 import { DataCard, CardSection, Break } from '../earn/styled'
 import { RowBetween } from '../Row'
 import { TYPE, ExternalLink, CloseIcon, CustomLightSpinner, UniTokenAnimated } from '../../theme'
-import { ButtonPrimary } from '../Button'
-import { useClaimCallback, useUserUnclaimedAmount, useUserHasAvailableClaim } from '../../state/claim/hooks'
+import { useUserUnclaimedAmount } from '../../state/claim/hooks'
 import tokenLogo from '../../assets/images/token-logo.png'
 import Circle from '../../assets/images/blue-loader.svg'
 import { Text } from 'rebass'
-import AddressInputPanel from '../AddressInputPanel'
 import useENS from '../../hooks/useENS'
 import { useActiveWeb3React } from '../../hooks'
-import { isAddress } from 'ethers/lib/utils'
 import Confetti from '../Confetti'
 import { CardNoise, CardBGImage, CardBGImageSmaller } from '../earn/styled'
 import { useIsTransactionPending } from '../../state/transactions/hooks'
@@ -41,15 +38,26 @@ const ConfirmOrLoadingWrapper = styled.div<{ activeBG: boolean }>`
 const ConfirmedIcon = styled(ColumnCenter)`
   padding: 60px 0;
 `
+const MenuItemExternal = styled(ExternalLink).attrs({})`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  color: ${({ theme }) => theme.text2};
+  text-decoration: none;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+`
 
 export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boolean; onDismiss: () => void }) {
   const { chainId } = useActiveWeb3React()
 
   // state for smart contract input
   const [typed, setTyped] = useState('')
-  function handleRecipientType(val: string) {
-    setTyped(val)
-  }
 
   // monitor for third party recipient of claim
   const { address: parsedAddress } = useENS(typed)
@@ -58,11 +66,9 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
   const [attempting, setAttempting] = useState<boolean>(false)
 
   // monitor the status of the claim from contracts and txns
-  const { claimCallback } = useClaimCallback(parsedAddress)
   const unclaimedAmount: TokenAmount | undefined = useUserUnclaimedAmount(parsedAddress)
 
   // check if the user has something available
-  const hasAvailableClaim = useUserHasAvailableClaim(parsedAddress)
 
   const [hash, setHash] = useState<string | undefined>()
 
@@ -71,19 +77,6 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
   const claimConfirmed = hash && !claimPending
 
   // use the hash to monitor this txn
-
-  function onClaim() {
-    setAttempting(true)
-    claimCallback()
-      .then(hash => {
-        setHash(hash)
-      })
-      // reset modal and log error
-      .catch(error => {
-        setAttempting(false)
-        console.log(error)
-      })
-  }
 
   function wrappedOnDismiss() {
     setAttempting(false)
@@ -102,34 +95,28 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
             <CardNoise />
             <CardSection gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={500}>Claim UNI Token</TYPE.white>
+                <TYPE.white fontWeight={500}>Get DYP Token</TYPE.white>
                 <CloseIcon onClick={wrappedOnDismiss} style={{ zIndex: 99 }} stroke="white" />
               </RowBetween>
-              <TYPE.white fontWeight={700} fontSize={36}>
-                {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} UNI
-              </TYPE.white>
             </CardSection>
             <Break />
           </ModalUpper>
-          <AutoColumn gap="md" style={{ padding: '1rem', paddingTop: '0' }} justify="center">
-            <TYPE.subHeader fontWeight={500}>
-              Enter an address to trigger a UNI claim. If the address has any claimable UNI it will be sent to them on
-              submission.
-            </TYPE.subHeader>
-            <AddressInputPanel value={typed} onChange={handleRecipientType} />
-            {parsedAddress && !hasAvailableClaim && (
-              <TYPE.error error={true}>Address has no available claim</TYPE.error>
-            )}
-            <ButtonPrimary
-              disabled={!isAddress(parsedAddress ?? '') || !hasAvailableClaim}
-              padding="16px 16px"
-              width="100%"
-              borderRadius="12px"
-              mt="1rem"
-              onClick={onClaim}
+          <AutoColumn gap="md" justify={'center'}>
+            <MenuItemExternal
+              id={`getdyp-uniswap-nav-link`}
+              href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
             >
-              Claim UNI
-            </ButtonPrimary>
+              Uniswap
+            </MenuItemExternal>
+            <MenuItemExternal
+              id={`getdyp-bithump-nav-link`}
+              href={
+                'https://support.bithumb.pro/hc/en-us/articles/360061100413-DeFi-Yield-Protocol-DYP-Listing-Dec-25-2020'
+              }
+            >
+              Bithumb
+            </MenuItemExternal>
+            <RowBetween />
           </AutoColumn>
         </ContentWrapper>
       )}
