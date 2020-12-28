@@ -2282,9 +2282,21 @@ window.get_apy_and_tvl = get_apy_and_tvl
 window.get_number_of_stakers = get_number_of_stakers
 window.refresh_the_graph_result = refresh_the_graph_result
 
+async function test() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/circulating-supply')
+    window.get_circulating_supply = res
+    console.log(res)
+  } catch(err) {
+    console.log(err);
+  }
+}
+window.get_circulating_supply = 0
+
 window.COMBINED_TVL = 0
 window.CALLED_ONCE = false
 const getCombinedTvlUsd = async () => {
+  test();
   if (window.CALLED_ONCE) {
     return window.COMBINED_TVL
   }
@@ -2308,15 +2320,3 @@ function getData(ajaxurl) {
     type: 'GET',
   });
 };
-
-async function test() {
-  try {
-    const res = await getData('https://api.dyp.finance/api/circulating-supply')
-    window.get_circulating_supply = res
-    console.log(res)
-  } catch(err) {
-    console.log(err);
-  }
-}
-window.get_circulating_supply = 0
-test();
