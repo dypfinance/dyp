@@ -110,9 +110,7 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
             </MenuItemExternal>
             <MenuItemExternal
               id={`getdyp-bithump-nav-link`}
-              href={
-                'https://support.bithumb.pro/hc/en-us/articles/360061100413-DeFi-Yield-Protocol-DYP-Listing-Dec-25-2020'
-              }
+              href={'https://www.bithumb.pro/en-us/spot/trade?q=DYP-USDT'}
             >
               Bithumb
             </MenuItemExternal>

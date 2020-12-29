@@ -127,12 +127,7 @@ export default function Menu() {
           >
             Uniswap
           </MenuItemExternal>
-          <MenuItemExternal
-            id={`getdyp-bithump-nav-link`}
-            href={
-              'https://support.bithumb.pro/hc/en-us/articles/360061100413-DeFi-Yield-Protocol-DYP-Listing-Dec-25-2020'
-            }
-          >
+          <MenuItemExternal id={`getdyp-bithump-nav-link`} href={'https://www.bithumb.pro/en-us/spot/trade?q=DYP-USDT'}>
             Bithumb
           </MenuItemExternal>
         </MenuFlyout>
