@@ -13,6 +13,9 @@ const PageWrapper = styled(AutoColumn)`
   justify-self: center;
   margin: auto;
   justify-content: center;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        display: grid;
+  `}
 `
 
 const WhitelistForm = styled.div`
@@ -89,6 +92,7 @@ const MenuItemExternalMobile = styled(ExternalLink).attrs({})`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
         font-size: 10px;
         display: block;
+        margin-top: 5px;
   `}
 `
 
@@ -132,7 +136,7 @@ export default function Whitelist() {
             JOIN NOW AND START EARNING ETH REWARDS
           </MenuItemExternal>
           <MenuItemExternalMobile id={`stake-nav-link`} href={'https://app.dyp.finance/'}>
-            JOIN NOW
+            JOIN NOW AND START EARNING ETH REWARDS
           </MenuItemExternalMobile>
         </PageWrapper>
         <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
