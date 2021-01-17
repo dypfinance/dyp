@@ -9,7 +9,7 @@ import { ButtonPrimary } from '../Button'
 import { StakingInfo } from '../../state/stake/hooks'
 import { useColor } from '../../hooks/useColor'
 //import { currencyId } from '../../utils/currencyId'
-import { Break, CardNoise, CardBGImage } from './styled'
+import { CardNoise, CardBGImage } from './styled'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { usePair } from '../../data/Reserves'
@@ -62,16 +62,16 @@ const TopSection = styled.div`
 //   justify-content: flex-end;
 // `
 
-const BottomSection = styled.div<{ showBackground: boolean }>`
-  padding: 12px 16px;
-  opacity: ${({ showBackground }) => (showBackground ? '1' : '0.4')};
-  border-radius: 0 0 12px 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  z-index: 1;
-`
+// const BottomSection = styled.div<{ showBackground: boolean }>`
+//   padding: 12px 16px;
+//   opacity: ${({ showBackground }) => (showBackground ? '1' : '0.4')};
+//   border-radius: 0 0 12px 12px;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: baseline;
+//   justify-content: space-between;
+//   z-index: 1;
+// `
 const window1 = window
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
@@ -85,7 +85,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   const currency0 = unwrappedToken(token0)
   const currency1 = unwrappedToken(token1)
 
-  const isStaking = Boolean(stakingInfo.stakedAmount.greaterThan('0'))
+  //const isStaking = Boolean(stakingInfo.stakedAmount.greaterThan('0'))
   // const hidePools = Boolean(
   //   stakingInfo.tokens[1].symbol === 'USDC' ||
   //     stakingInfo.tokens[1].symbol === 'USDT' ||
@@ -247,7 +247,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           target="_blank"
         >
           <ButtonPrimary padding="8px" borderRadius="8px">
-            {isStaking ? 'Manage' : 'Deposit'}
+            Deposit
+            {/*{isStaking ? 'Manage' : 'Deposit'}*/}
           </ButtonPrimary>
         </ExternalLink>
       </TopSection>
@@ -283,23 +284,23 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         </RowBetween>
       </StatContainer>
 
-      {isStaking && (
-        <>
-          <Break />
-          <BottomSection showBackground={true}>
-            <TYPE.black color={'white'} fontWeight={500}>
-              <span>Your rate</span>
-            </TYPE.black>
+      {/*{isStaking && (*/}
+      {/*  <>*/}
+      {/*    <Break />*/}
+      {/*    <BottomSection showBackground={true}>*/}
+      {/*      <TYPE.black color={'white'} fontWeight={500}>*/}
+      {/*        <span>Your rate</span>*/}
+      {/*      </TYPE.black>*/}
 
-            <TYPE.black style={{ textAlign: 'right' }} color={'white'} fontWeight={500}>
-              <span role="img" aria-label="wizard-icon" style={{ marginRight: '0.5rem' }}>
-                ⚡
-              </span>
-              {`${stakingInfo.rewardRate?.multiply(`${69120}`)?.toSignificant(4, { groupSeparator: ',' })} UNI / week`}
-            </TYPE.black>
-          </BottomSection>
-        </>
-      )}
+      {/*      <TYPE.black style={{ textAlign: 'right' }} color={'white'} fontWeight={500}>*/}
+      {/*        <span role="img" aria-label="wizard-icon" style={{ marginRight: '0.5rem' }}>*/}
+      {/*          ⚡*/}
+      {/*        </span>*/}
+      {/*        {`${stakingInfo.rewardRate?.multiply(`${69120}`)?.toSignificant(4, { groupSeparator: ',' })} UNI / week`}*/}
+      {/*      </TYPE.black>*/}
+      {/*    </BottomSection>*/}
+      {/*  </>*/}
+      {/*)}*/}
     </Wrapper>
   )
 }
