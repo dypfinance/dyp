@@ -16,25 +16,35 @@ export const STAKING_REWARDS_INFO: {
   [chainId in ChainId]?: {
     tokens: [Token, Token]
     stakingRewardAddress: string
+    apr: string
+    days: string
   }[]
 } = {
   [ChainId.MAINNET]: [
     {
       // stakingRewardAddress: address of liq pool
       tokens: [DYP, WETH[ChainId.MAINNET]],
-      stakingRewardAddress: '0xa1484C3aa22a66C62b77E0AE78E15258bd0cB711'
+      stakingRewardAddress: '0xa1484C3aa22a66C62b77E0AE78E15258bd0cB711',
+      apr: '20%',
+      days: '30 Days'
     },
     {
       tokens: [DYP, USDC],
-      stakingRewardAddress: '0x7FBa4B8Dc5E7616e59622806932DBea72537A56b'
+      stakingRewardAddress: '0x7FBa4B8Dc5E7616e59622806932DBea72537A56b',
+      apr: '25%',
+      days: '60 Days'
     },
     {
       tokens: [DYP, USDT],
-      stakingRewardAddress: '0x6C3e4cb2E96B01F4b866965A91ed4437839A121a'
+      stakingRewardAddress: '0x6C3e4cb2E96B01F4b866965A91ed4437839A121a',
+      apr: '30%',
+      days: '90 Days'
     },
     {
       tokens: [DYP, WBTC],
-      stakingRewardAddress: '0xCA35e32e7926b96A9988f61d510E038108d8068e'
+      stakingRewardAddress: '0xCA35e32e7926b96A9988f61d510E038108d8068e',
+      apr: '35%',
+      days: '120 Days'
     }
     // {
     //   // stakingRewardAddress: address of liq pool
@@ -62,6 +72,10 @@ export interface StakingInfo {
   rewardRate: TokenAmount
   // when the period ends
   periodFinish: Date | undefined
+  //apr
+  apr: string
+  //days
+  days: string
   // calculates a hypothetical amount of token distributed to the active account per second.
   getHypotheticalRewardRate: (
     stakedAmount: TokenAmount,
@@ -92,6 +106,8 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
   const uni = chainId ? UNI[chainId] : undefined
 
   const rewardsAddresses = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
+  const aprs = useMemo(() => info.map(({ apr }) => apr), [info])
+  const dayss = useMemo(() => info.map(({ days }) => days), [info])
 
   const accountArg = useMemo(() => [account ?? undefined], [account])
 
@@ -178,8 +194,9 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
         const individualRewardRate = getHypotheticalRewardRate(stakedAmount, totalStakedAmount, totalRewardRate)
 
         const periodFinishMs = periodFinishState.result?.[0]?.mul(1000)?.toNumber()
-
         memo.push({
+          days: dayss[index],
+          apr: aprs[index],
           stakingRewardAddress: rewardsAddress,
           tokens: info[index].tokens,
           periodFinish: periodFinishMs > 0 ? new Date(periodFinishMs) : undefined,
@@ -193,7 +210,19 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
       }
       return memo
     }, [])
-  }, [balances, chainId, earnedAmounts, info, periodFinishes, rewardRates, rewardsAddresses, totalSupplies, uni])
+  }, [
+    aprs,
+    balances,
+    chainId,
+    dayss,
+    earnedAmounts,
+    info,
+    periodFinishes,
+    rewardRates,
+    rewardsAddresses,
+    totalSupplies,
+    uni
+  ])
 }
 
 export function useTotalUniEarned(): TokenAmount | undefined {

@@ -18,6 +18,7 @@ import {
   RedirectToAddLiquidity
 } from './AddLiquidity/redirects'
 import Earn from './Earn'
+import Farm from './Farm'
 import Home from './Home'
 import Manage from './Earn/Manage'
 import MigrateV1 from './MigrateV1'
@@ -127,6 +128,7 @@ export default function App() {
               <Route exact strict path="/pool" component={Pool} />
               <Route exact strict path="/uni" component={Earn} />
               <Route exact strict path="/earn" component={Earn} />
+              <Route exact strict path="/farm" component={Farm} />
               <Route exact strict path="/vote" component={Vote} />
               <Route exact strict path="/about" component={About} />
               <Route exact strict path="/create" component={RedirectToAddLiquidity} />

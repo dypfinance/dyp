@@ -137,6 +137,9 @@ export default function Menu() {
           <MenuItem id={`earn-nav-link`} to={'/earn'}>
             Stake
           </MenuItem>
+          <MenuItem id={`earn-nav-link`} to={'/farm'}>
+            Farm
+          </MenuItem>
           <MenuItem id={`mining-nav-link`} to={'/mining'}>
             ETH Mining Pool
           </MenuItem>
