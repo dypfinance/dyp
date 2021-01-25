@@ -65,7 +65,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
 
   const currency0 = unwrappedToken(token0)
 
-  let link = 'staking-eth'
+  let link = 'constant-staking-30'
   let tvlPools = 0
   // eslint-disable-next-line
   //@ts-ignore
@@ -73,103 +73,39 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     // eslint-disable-next-line
     //@ts-ignore
     // eslint-disable-next-line @typescript-eslint/camelcase
-    tvlPools =
-      // eslint-disable-next-line
-      //@ts-ignore
-      // eslint-disable-next-line @typescript-eslint/camelcase
-      window1.the_graph_result.lp_data[LP_IDs.eth[0]].tvl_usd +
-      // eslint-disable-next-line
-      //@ts-ignore
-      // eslint-disable-next-line @typescript-eslint/camelcase
-      window1.the_graph_result.lp_data[LP_IDs.eth[1]].tvl_usd +
-      // eslint-disable-next-line
-      //@ts-ignore
-      // eslint-disable-next-line @typescript-eslint/camelcase
-      window1.the_graph_result.lp_data[LP_IDs.eth[2]].tvl_usd +
-      // eslint-disable-next-line
-      //@ts-ignore
-      // eslint-disable-next-line @typescript-eslint/camelcase
-      window1.the_graph_result.lp_data[LP_IDs.eth[3]].tvl_usd
+    tvlPools = window1._tvl30
   }
   if (stakingInfo.tokens[1].symbol === 'USDC') {
-    link = 'staking-usdc'
+    link = 'constant-staking-60'
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result.lp_data) {
       // eslint-disable-next-line
       //@ts-ignore
       // eslint-disable-next-line @typescript-eslint/camelcase
-      tvlPools =
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdc[0]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdc[1]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdc[2]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdc[3]].tvl_usd
+      tvlPools = window1._tvl60
     }
   }
   if (stakingInfo.tokens[1].symbol === 'USDT') {
-    link = 'staking-usdt'
+    link = 'constant-staking-90'
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result.lp_data) {
       // eslint-disable-next-line
       //@ts-ignore
       // eslint-disable-next-line @typescript-eslint/camelcase
-      tvlPools =
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdt[0]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdt[1]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdt[2]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.usdt[3]].tvl_usd
+      tvlPools = window1._tvl90
     }
   }
   if (stakingInfo.tokens[1].symbol === 'WBTC') {
-    link = 'staking-wbtc'
+    link = 'constant-staking-120'
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result.lp_data) {
       // eslint-disable-next-line
       //@ts-ignore
       // eslint-disable-next-line @typescript-eslint/camelcase
-      tvlPools =
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.wbtc[0]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.wbtc[1]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.wbtc[2]].tvl_usd +
-        // eslint-disable-next-line
-        //@ts-ignore
-        // eslint-disable-next-line @typescript-eslint/camelcase
-        window1.the_graph_result.lp_data[LP_IDs.wbtc[3]].tvl_usd
+      tvlPools = window1._tvl120
     }
   }
 

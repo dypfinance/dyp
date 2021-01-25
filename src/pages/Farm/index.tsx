@@ -56,7 +56,7 @@ export default function Earn() {
     window1
       // eslint-disable-next-line
       // @ts-ignore
-      .getCombinedTvlUsd()
+      .FarmingTvl()
       // eslint-disable-next-line
       //@ts-ignore
       .then(tvl => setTvl(tvl))
@@ -84,9 +84,9 @@ export default function Earn() {
                   Each pool will have four different staking options, with rewards starting from 20% APR up to 35% APR,
                   depending on the lock time from a minimum of thirty days up to 120 days. <br />
                   The staking pools have the REINVEST function integrated, it means you are able to automatically add
-                  your daily rewards to the staking pool with 0% fees. Also, the DYP Referral is integrated. Should you
-                  refer DYP to your friends, 5% of your friends rewards will be automatically sent to you whenever your
-                  friends stake DYP. You do not need to stake, it’s automatically sent to you, free of gas fee.
+                  your daily rewards to the staking pool. Also, the DYP Referral is integrated. Should you refer DYP to
+                  your friends, 5% of your friends rewards will be automatically sent to you whenever your friends stake
+                  DYP. You do not need to stake, it’s automatically sent to you, free of gas fee.
                 </TYPE.white>
               </RowBetween>{' '}
               {/*<ExternalLink*/}
