@@ -53,10 +53,6 @@ const TopSection = styled.div`
 `
 
 const window1 = window
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-// @ts-ignore
-// eslint-disable-next-line @typescript-eslint/camelcase
-const { LP_IDs } = window1
 
 export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) {
   const token0 = stakingInfo.tokens[0]
