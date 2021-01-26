@@ -18,7 +18,7 @@ import { TYPE } from '../../theme'
 
 import { YellowCard } from '../Card'
 import Menu from '../Menu'
-//import MenuDyp from '../MenuDyp'
+import MenuDyp from '../MenuDyp'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
@@ -115,12 +115,12 @@ const HeaderElementWrap = styled.div`
     align-items: center;
 `}
 `
-// const HeaderElementWrap2 = styled.div`
-//   margin-right: 5px;
-//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-//     display: none;
-// `}
-// `
+const HeaderElementWrap2 = styled.div`
+  margin-right: 5px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: none;
+`}
+`
 
 const HeaderRow = styled(RowFixed)`
   ${({ theme }) => theme.mediaWidth.upToMedium`
@@ -330,7 +330,7 @@ export default function Header() {
             {t('Farm')}
           </StyledNavLink>
           <StyledNavLink id={`mining-nav-link`} to={'/mining'}>
-            {t('ETH Mining Pool')}
+            {t('Pool')}
           </StyledNavLink>
           <StyledNavLink id={`vault-nav-link`} to={'/vault'}>
             {t('Earn')}
@@ -350,11 +350,11 @@ export default function Header() {
           {/*>*/}
           {/*  {t('Get DYP')}*/}
           {/*</StyledExternalLink>*/}
-          {/*<HeaderElementWrap2>*/}
-          {/*  <MenuDyp />*/}
-          {/*</HeaderElementWrap2>*/}
+          <HeaderElementWrap2>
+            <MenuDyp />
+          </HeaderElementWrap2>
           <StyledNavLink id={`refferal-nav-link`} to={'/refferal'}>
-            {t('Referral Program')}
+            {t('Referral')}
           </StyledNavLink>
           <StyledNavLink id={`about-nav-link`} to={'/about'}>
             {t('About')}

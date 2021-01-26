@@ -141,7 +141,7 @@ export default function Menu() {
             Farm
           </MenuItem>
           <MenuItem id={`mining-nav-link`} to={'/mining'}>
-            ETH Mining Pool
+            Pool
           </MenuItem>
           <MenuItem id={`vault-nav-link`} to={'/vault'}>
             Earn
@@ -165,7 +165,7 @@ export default function Menu() {
             Get DYP
           </ButtonPrimary>
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
-            Referral Program
+            Referral
           </MenuItem>
           <MenuItem id={`about-nav-link`} to={'/about'}>
             About
