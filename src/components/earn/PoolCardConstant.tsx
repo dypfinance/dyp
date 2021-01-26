@@ -52,6 +52,17 @@ const TopSection = styled.div`
   `};
 `
 
+const AprMobile = styled.div`
+  display: none;
+  font-weight=300; 
+   font-size=14px;
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    display: block;
+    font-weight=300; 
+    font-size=14px;
+  `};
+`
+
 const window1 = window
 
 export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) {
@@ -120,6 +131,11 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         <DoubleCurrencyLogo currency0={currency0} size={24} />
         <TYPE.white fontWeight={600} fontSize={24}>
           {currency0.symbol}
+          <AprMobile>
+            <TYPE.white fontWeight={500} fontSize={14}>
+              APR: {apr}
+            </TYPE.white>
+          </AprMobile>
         </TYPE.white>
 
         <ExternalLink
