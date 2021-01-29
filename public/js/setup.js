@@ -2949,7 +2949,7 @@ async function test() {
   try {
     const res = await getData('https://api.dyp.finance/api/circulating-supply')
     window.get_circulating_supply = res
-    console.log(res)
+    //console.log(res)
   } catch(err) {
     console.log(err);
   }
