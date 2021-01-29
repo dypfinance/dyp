@@ -113,6 +113,20 @@ const window1 = window
 export default function Whitelist() {
   // eslint-disable-next-line
   //@ts-ignore
+  const [tvlFarming, setTvlFarming] = React.useState(0)
+  // eslint-disable-next-line
+  //@ts-ignore
+  tvlFarming === 0 &&
+    window1
+      // eslint-disable-next-line
+      // @ts-ignore
+      .FarmingTvl()
+      // eslint-disable-next-line
+      //@ts-ignore
+      .then(tvlFarming => setTvlFarming(tvlFarming))
+      .catch(console.error)
+  // eslint-disable-next-line
+  //@ts-ignore
   const [tvl, setTvl] = React.useState(0)
   // eslint-disable-next-line
   //@ts-ignore
@@ -125,6 +139,16 @@ export default function Whitelist() {
       //@ts-ignore
       .then(tvl => setTvl(tvl))
       .catch(console.error)
+  let tvlPoolsTotal = 0
+  // eslint-disable-next-line
+  //@ts-ignore
+  if (window1.the_graph_result.lp_data) {
+    // eslint-disable-next-line
+    //@ts-ignore
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    tvlPoolsTotal = tvl + tvlFarming
+    //tvl = tvlPoolsTotal
+  }
   return (
     <WhitelistForm>
       <AutoColumn gap="md">
@@ -140,7 +164,7 @@ export default function Whitelist() {
           </MenuItemExternalMobile>
         </PageWrapper>
         <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
-          <TextFont>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TextFont>
+          <TextFont>Total Value Locked: ${getFormattedNumber(tvlPoolsTotal, 2)}</TextFont>
         </TYPE.white>
       </AutoColumn>
     </WhitelistForm>

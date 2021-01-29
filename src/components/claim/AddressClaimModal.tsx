@@ -114,6 +114,9 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
             >
               Bithumb
             </MenuItemExternal>
+            <MenuItemExternal id={`getdyp-fiat-nav-link`} href={'https://www.mycointainer.com/dashboard/invest/dyp/'}>
+              Fiat
+            </MenuItemExternal>
             <RowBetween />
           </AutoColumn>
         </ContentWrapper>
