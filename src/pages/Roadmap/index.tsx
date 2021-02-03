@@ -134,8 +134,8 @@ export default function Roadmap() {
                     <RowBetween>
                       <TYPE.white fontWeight={600}>
                         ➫ Launch Ethereum mining pool & yield farming for miners<div></div>➫ Launch DYP Earn Vault
-                        <div></div>➫ Migration from Uniswap<div></div>➫ Partnerships<div></div>➫ DYP Apps Development
-                        <div></div>
+                        <div></div>➫ Launch DYP Tools<div></div>➫ Launch DYP Lending<div></div>➫ Migration from Uniswap
+                        <div></div>➫ Partnerships<div></div>➫ DYP Apps Development<div></div>
                       </TYPE.white>
                     </RowBetween>
                   </AutoColumn>
