@@ -39,6 +39,7 @@ import Refferal from './Refferal'
 import Bounty from './Bounty'
 import Feature from './Feature'
 import About from './About'
+import Audit from './Audit'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 
 import Vote from './Vote'
@@ -131,6 +132,7 @@ export default function App() {
               <Route exact strict path="/farm" component={Farm} />
               <Route exact strict path="/vote" component={Vote} />
               <Route exact strict path="/about" component={About} />
+              <Route exact strict path="/audit" component={Audit} />
               <Route exact strict path="/create" component={RedirectToAddLiquidity} />
               <Route exact path="/add" component={AddLiquidity} />
               <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />

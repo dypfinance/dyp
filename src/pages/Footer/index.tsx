@@ -10,6 +10,7 @@ import Ann from '../../assets/svg/ann.png'
 import Email from '../../assets/svg/email.svg'
 import Forum from '../../assets/svg/forum.svg'
 import Linkedin from '../../assets/images/linkedin.png'
+import { NavLink } from 'react-router-dom'
 
 const StyledFooter = styled.footer`
   background-color: #1e272f;
@@ -48,6 +49,20 @@ const StyledLink = styled.a`
         margin: 5px 12px;
   `}
 `
+
+const StyledNavLink = styled(NavLink)`
+  color: grey;
+  margin: 30px 15px;
+  -webkit-align-items: center;
+  text-decoration: none;
+  &:hover {
+    color: grey;
+  }
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        margin: 5px 12px;
+  `}
+`
+
 // const StyledLinkS = styled.div`
 //   color: grey;
 //   margin: 30px 15px;
@@ -87,9 +102,10 @@ const Footer: React.FC = () => (
         >
           Uniswap DYP-ETH
         </StyledLink>
-        <StyledLink target="_blank" href="https://github.com/dypfinance/staking-governance-security-audits">
+        {/*<StyledLink href="/audit"></StyledLink>*/}
+        <StyledNavLink id={`about-nav-link`} to={'/audit'}>
           Audit
-        </StyledLink>
+        </StyledNavLink>
       </StyledNav>
     </StyledFooterInner>
     <StyledFooterInner>
