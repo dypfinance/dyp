@@ -24,14 +24,19 @@ import TwitterSvg from '../../assets/svg/twitter_2.svg'
 import GithubSvg from '../../assets/svg/github_black.svg'
 
 import Bio, { Bio2, Bio3, Bio4, Bio5, Bio6 } from '../../components/Bio'
-import CoinTelegraph from '../../assets/images/cointelegraph.png'
-import NewsBTC from '../../assets/images/newsbtc.jpg'
-import Yahoo from '../../assets/images/yahoo.png'
-import Bitcoinist from '../../assets/images/bitcoinist.jpeg'
+// import CoinTelegraph from '../../assets/images/cointelegraph.png'
+// import NewsBTC from '../../assets/images/newsbtc.jpg'
+// import Yahoo from '../../assets/images/yahoo.png'
+// import Bitcoinist from '../../assets/images/bitcoinist.jpeg'
 import Certik from '../../assets/images/certik.png'
 import Peckshield from '../../assets/images/peckshield.png'
 import Consilium from '../../assets/images/consilium.png'
-import BitcoinCom from '../../assets/images/bitcoincom.png'
+// import BitcoinCom from '../../assets/images/bitcoincom.png'
+import Carousel from '../../components/Slideshow'
+import SlideOne from '../../components/Slideshow/carouselSlides/SlideOne'
+import SlideTwo from '../../components/Slideshow/carouselSlides/SlideTwo'
+import SlideThree from '../../components/Slideshow/carouselSlides/SlideThree'
+import SlideFour from '../../components/Slideshow/carouselSlides/SlideFour'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -391,58 +396,68 @@ export default function About() {
         Press Highlights
       </TYPE.black>
       <RowBetween />
-      <RowBetween style={{ maxWidth: '1100px' }}>
+      {/*<RowBetween style={{ maxWidth: '1100px' }}>*/}
+      {/*  <StyledNav>*/}
+      {/*    <ExternalLink*/}
+      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
+      {/*      href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"*/}
+      {/*      target="_blank"*/}
+      {/*    >*/}
+      {/*      <Item>*/}
+      {/*        <img src={CoinTelegraph} style={{ width: '70px' }} alt={'logo'} />*/}
+      {/*        <TextNews>COINTELEGRAPH</TextNews>*/}
+      {/*      </Item>*/}
+      {/*    </ExternalLink>*/}
+      {/*    <ExternalLink*/}
+      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
+      {/*      href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"*/}
+      {/*      target="_blank"*/}
+      {/*    >*/}
+      {/*      <Item>*/}
+      {/*        <img src={NewsBTC} style={{ width: '70px' }} alt={'logo'} />*/}
+      {/*        <TextNews>NEWSBTC</TextNews>*/}
+      {/*      </Item>*/}
+      {/*    </ExternalLink>*/}
+      {/*    <ExternalLink*/}
+      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
+      {/*      href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"*/}
+      {/*      target="_blank"*/}
+      {/*    >*/}
+      {/*      <Item>*/}
+      {/*        <img src={BitcoinCom} style={{ width: '70px' }} alt={'logo'} />*/}
+      {/*        <TextNews>Bitcoin.com</TextNews>*/}
+      {/*      </Item>*/}
+      {/*    </ExternalLink>*/}
+      {/*    <ExternalLink*/}
+      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
+      {/*      href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"*/}
+      {/*      target="_blank"*/}
+      {/*    >*/}
+      {/*      <Item>*/}
+      {/*        <img src={Yahoo} style={{ width: '70px' }} alt={'logo'} />*/}
+      {/*        <TextNews>Yahoo Finance</TextNews>*/}
+      {/*      </Item>*/}
+      {/*    </ExternalLink>*/}
+      {/*    <ExternalLink*/}
+      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
+      {/*      href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"*/}
+      {/*      target="_blank"*/}
+      {/*    >*/}
+      {/*      <Item>*/}
+      {/*        <img src={Bitcoinist} style={{ width: '70px' }} alt={'logo'} />*/}
+      {/*        <TextNews>Bitcoinist</TextNews>*/}
+      {/*      </Item>*/}
+      {/*    </ExternalLink>*/}
+      {/*  </StyledNav>*/}
+      {/*</RowBetween>*/}
+      <RowBetween>
         <StyledNav>
-          <ExternalLink
-            style={{ color: 'whit-  e', textDecoration: 'underline' }}
-            href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"
-            target="_blank"
-          >
-            <Item>
-              <img src={CoinTelegraph} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>COINTELEGRAPH</TextNews>
-            </Item>
-          </ExternalLink>
-          <ExternalLink
-            style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
-            target="_blank"
-          >
-            <Item>
-              <img src={NewsBTC} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>NEWSBTC</TextNews>
-            </Item>
-          </ExternalLink>
-          <ExternalLink
-            style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"
-            target="_blank"
-          >
-            <Item>
-              <img src={BitcoinCom} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>Bitcoin.com</TextNews>
-            </Item>
-          </ExternalLink>
-          <ExternalLink
-            style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"
-            target="_blank"
-          >
-            <Item>
-              <img src={Yahoo} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>Yahoo Finance</TextNews>
-            </Item>
-          </ExternalLink>
-          <ExternalLink
-            style={{ color: 'white', textDecoration: 'underline' }}
-            href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"
-            target="_blank"
-          >
-            <Item>
-              <img src={Bitcoinist} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>Bitcoinist</TextNews>
-            </Item>
-          </ExternalLink>
+          <Carousel>
+            <SlideOne />
+            <SlideTwo />
+            <SlideThree />
+            <SlideFour />
+          </Carousel>
         </StyledNav>
       </RowBetween>
     </PageWrapper>
