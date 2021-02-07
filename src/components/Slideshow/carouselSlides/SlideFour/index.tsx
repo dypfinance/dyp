@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ExternalLink } from '../../../../theme'
-import CoinTelegraph from '../../../../assets/images/cointelegraph.png'
 import NewsBTC from '../../../../assets/images/newsbtc.jpg'
-import BitcoinCom from '../../../../assets/images/bitcoincom.png'
-import Yahoo from '../../../../assets/images/yahoo.png'
+import CoinGape from '../../../../assets/images/coingape.jpeg'
+import CoinDoo from '../../../../assets/images/coindoo.jpeg'
 import Bitcoinist from '../../../../assets/images/bitcoinist.jpeg'
+import CoinmarketCap from '../../../../assets/images/coinmarketcap.jpeg'
 
 // const SContainer = styled.div`
 //   align-items: center;
@@ -50,12 +50,42 @@ const SlideFour = () => (
   <StyledNav>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"
+      href="https://bitcoinist.com/defi-yield-protocol-everything-you-need-to-know-for-2021/"
       target="_blank"
     >
       <Item>
-        <img src={CoinTelegraph} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>COINTELEGRAPH</TextNews>
+        <img src={Bitcoinist} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>Bitcoinist</TextNews>
+      </Item>
+    </ExternalLink>
+    <ExternalLink
+      style={{ color: 'white', textDecoration: 'underline', borderRadius: '50px' }}
+      href="https://coinmarketcap.com/headlines/news/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
+      target="_blank"
+    >
+      <Item>
+        <img src={CoinmarketCap} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+        <TextNews>CoinMarketCap</TextNews>
+      </Item>
+    </ExternalLink>
+    <ExternalLink
+      style={{ color: 'white', textDecoration: 'underline' }}
+      href="https://coingape.com/how-to-use-dyp-to-earn-big-defi-rois/"
+      target="_blank"
+    >
+      <Item>
+        <img src={CoinGape} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+        <TextNews>CoinGape</TextNews>
+      </Item>
+    </ExternalLink>
+    <ExternalLink
+      style={{ color: 'white', textDecoration: 'underline' }}
+      href="https://coindoo.com/dyp-maximizing-the-benefits-of-yield-farming-protocols/"
+      target="_blank"
+    >
+      <Item>
+        <img src={CoinDoo} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>Coindoos</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
@@ -66,36 +96,6 @@ const SlideFour = () => (
       <Item>
         <img src={NewsBTC} style={{ width: '50px' }} alt={'logo'} />
         <TextNews>NEWSBTC</TextNews>
-      </Item>
-    </ExternalLink>
-    <ExternalLink
-      style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"
-      target="_blank"
-    >
-      <Item>
-        <img src={BitcoinCom} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Bitcoin.com</TextNews>
-      </Item>
-    </ExternalLink>
-    <ExternalLink
-      style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"
-      target="_blank"
-    >
-      <Item>
-        <img src={Yahoo} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Yahoo Finance</TextNews>
-      </Item>
-    </ExternalLink>
-    <ExternalLink
-      style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"
-      target="_blank"
-    >
-      <Item>
-        <img src={Bitcoinist} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Bitcoinist</TextNews>
       </Item>
     </ExternalLink>
   </StyledNav>

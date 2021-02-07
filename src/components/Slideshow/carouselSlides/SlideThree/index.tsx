@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ExternalLink } from '../../../../theme'
-import CoinTelegraph from '../../../../assets/images/cointelegraph.png'
-import NewsBTC from '../../../../assets/images/newsbtc.jpg'
-import BitcoinCom from '../../../../assets/images/bitcoincom.png'
-import Yahoo from '../../../../assets/images/yahoo.png'
-import Bitcoinist from '../../../../assets/images/bitcoinist.jpeg'
+import TechBullion from '../../../../assets/images/techbullion.jpeg'
+import HackerNoon from '../../../../assets/images/hackernoon.jpeg'
+import Utoday from '../../../../assets/images/utoday.jpeg'
+import ApNews from '../../../../assets/images/apnews.png'
+import BtcManager from '../../../../assets/images/btcmanager.png'
 
 // const SContainer = styled.div`
 //   align-items: center;
@@ -50,52 +50,52 @@ const SlideThree = () => (
   <StyledNav>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"
+      href="https://techbullion.com/dyp-hits-63-million-tvl-within-its-staking-protocol/"
       target="_blank"
     >
       <Item>
-        <img src={CoinTelegraph} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>COINTELEGRAPH</TextNews>
+        <img src={TechBullion} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+        <TextNews>TechBullion</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
+      href="https://hackernoon.com/defi-projects-that-offer-top-staking-rewards-in-2021-7fs34qs"
       target="_blank"
     >
       <Item>
-        <img src={NewsBTC} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>NEWSBTC</TextNews>
+        <img src={HackerNoon} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+        <TextNews>HackerNoon</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"
+      href="https://u.today/defi-yield-protocol-launches-staking-and-governance-dapp"
       target="_blank"
     >
       <Item>
-        <img src={BitcoinCom} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Bitcoin.com</TextNews>
+        <img src={Utoday} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>U.Today</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"
+      href="https://apnews.com/press-release/accesswire/business-prices-deflation-economy-54076ee83d21025c63d8347c8accc1e2"
       target="_blank"
     >
       <Item>
-        <img src={Yahoo} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Yahoo Finance</TextNews>
+        <img src={ApNews} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>AP News</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"
+      href="https://btcmanager.com/defi-yield-protocol-dyp/"
       target="_blank"
     >
       <Item>
-        <img src={Bitcoinist} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Bitcoinist</TextNews>
+        <img src={BtcManager} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>BTCMANAGER</TextNews>
       </Item>
     </ExternalLink>
   </StyledNav>

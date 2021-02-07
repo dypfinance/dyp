@@ -60,7 +60,7 @@ const SlideOne = () => (
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"
+      href="https://www.newsbtc.com/news/company/defi-yield-protocol-dyp-prepares-to-take-2021-head-on-with-new-developments-as-tvl-surpasses-60m/"
       target="_blank"
     >
       <Item>
