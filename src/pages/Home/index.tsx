@@ -15,6 +15,7 @@ import Carousel from '../../components/Slideshow'
 import SlideOne from '../../components/Slideshow/carouselSlides/SlideOne'
 import SlideTwo from '../../components/Slideshow/carouselSlides/SlideTwo'
 import SlideThree from '../../components/Slideshow/carouselSlides/SlideThree'
+import SlideFour from '../../components/Slideshow/carouselSlides/SlideFour'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -261,6 +262,7 @@ export default function Home() {
                 <SlideOne />
                 <SlideTwo />
                 <SlideThree />
+                <SlideFour />
               </Carousel>
             </StyledNav>
           </RowBetween>

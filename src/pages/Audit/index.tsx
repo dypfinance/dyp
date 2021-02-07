@@ -76,19 +76,18 @@ export default function Index() {
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  Hi, it's great to have you with us! Here, at Defi Yield Protocol, we care so much about security. So,
-                  in order to avoid any vulnerability that may appear in the development of the smart contracts, we have
-                  {/* eslint-disable-next-line react/no-unescaped-entities */} requested services from three reputable
-                  security audits companies. We've chosen Blockchain Consilium, Certik and Peckshield (also thank you by
-                  this way!).
-                  <div /> Also, all of our smart contracts are monitored through a Security Oracle 24/7, provided by
+                  Hi, it is a pleasure to have you with us! Here, at Defi Yield Protocol, we unquestionably value your
+                  security. Thus, to avoid any plausible vulnerability in the development of smart contracts, we have
+                  requested services from three reputable security audit companies. We have chosen Blockchain Consilium,
+                  Certik, and Peckshield (also, heartiest thank you, in this way!).
+                  <div /> In addition, all our smart contracts are monitored 24/7 through a Security Oracle, powered by
                   Certik.
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  Feel free to check every security audit that we've uploaded on our{' '}
+                  Feel free to check every security audit that we have uploaded on our{' '}
                   <StyledLink
                     target="_blank"
                     style={{ color: 'white', textDecoration: 'underline' }}

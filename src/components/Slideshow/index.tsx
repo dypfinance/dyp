@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { AutoColumn } from '../Column'
 
+import leftArrow from '../../assets/svg/leftArrow.svg'
+import rightArrow from '../../assets/svg/rightArrow.svg'
+
 const TopSection = styled(AutoColumn)`
   max-width: 1200px;
   width: 100%;
@@ -12,6 +15,24 @@ const SCarouselWrapper = styled.div`
   display: flex;
 `
 
+const ButtonLeft = styled.div`
+  position: absolute;
+  margin-top: 20px;
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+        display: none;
+  `}
+`
+
+const ButtonRight = styled.div`
+  position: absolute;
+  justify-self: end;
+  display: grid;
+  margin-top: 20px;
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+        display: none;
+  `}
+`
+
 // eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface ICarouselSlide {
   active?: boolean
@@ -20,7 +41,7 @@ interface ICarouselSlide {
 const SCarouselSlide = styled.div<ICarouselSlide>`
   flex: 0 0 auto;
   opacity: ${props => (props.active ? 1 : 0)};
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   width: 100%;
 `
 
@@ -56,30 +77,59 @@ const Carousel = ({ children }: IProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % activeSlide.length)
-    }, 3000)
+    }, 4000)
     return () => clearInterval(interval)
   }, [activeSlide.length, currentSlide])
   //console.log('currentSlide+ ' + currentSlide)
-
   return (
     <TopSection gap="md">
       <SCarouselWrapper>
         <SCarouselSlides currentSlide={currentSlide}>{activeSlide}</SCarouselSlides>
       </SCarouselWrapper>
-      <button
-        onClick={() => {
-          setCurrentSlide((currentSlide - 1 + activeSlide.length) % activeSlide.length)
-        }}
-      >
-        Left
-      </button>
-      <button
-        onClick={() => {
-          setCurrentSlide((currentSlide + 1) % activeSlide.length)
-        }}
-      >
-        Right
-      </button>
+      <ButtonLeft>
+        <button
+          style={{
+            height: '30px',
+            background: 'rgba(255, 255, 255, 0.6)',
+            width: '30px',
+            border: 'none',
+            textAlign: 'center',
+            cursor: 'pointer',
+            color: '#fff',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          onClick={() => {
+            setCurrentSlide((currentSlide - 1 + activeSlide.length) % activeSlide.length)
+          }}
+        >
+          <img src={leftArrow} alt={'leftArrow'} />
+        </button>
+      </ButtonLeft>
+      <ButtonRight>
+        <button
+          style={{
+            height: '30px',
+            background: 'rgba(255, 255, 255, 0.6)',
+            width: '30px',
+            border: 'none',
+            textAlign: 'center',
+            cursor: 'pointer',
+            color: '#fff',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+          onClick={() => {
+            setCurrentSlide((currentSlide + 1) % activeSlide.length)
+          }}
+        >
+          <img src={rightArrow} alt={'rightArrow'} />
+        </button>
+      </ButtonRight>
     </TopSection>
   )
 }
