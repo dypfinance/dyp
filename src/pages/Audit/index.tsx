@@ -71,7 +71,7 @@ export default function Index() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>Defi Yield Protocol Smart Contracts Audits</TYPE.white>
+                <TYPE.white fontWeight={600}>Defi Yield Protocol Smart Contracts Audit</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>

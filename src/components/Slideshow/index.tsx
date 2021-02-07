@@ -28,11 +28,12 @@ const ButtonRight = styled.div`
   position: absolute;
   justify-self: flex-end;
   display: flex;
-  padding-top: 20px;
+  margin-top: 20px;
   justify-content: flex-end;
   justify-items: flex-end;
   max-width: 1200px;
   width: 100%;
+  height: 0px;
   ${({ theme }) => theme.mediaWidth.upToSmall`
         display: none;
   `}
@@ -82,7 +83,7 @@ const Carousel = ({ children }: IProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % activeSlide.length)
-    }, 4000)
+    }, 10000)
     return () => clearInterval(interval)
   }, [activeSlide.length, currentSlide])
   //console.log('currentSlide+ ' + currentSlide)
