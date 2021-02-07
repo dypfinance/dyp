@@ -362,7 +362,7 @@ export default function About() {
           >
             <Item>
               <img src={Peckshield} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>Security Audit</TextNews>
+              <TextNews>Peckshield</TextNews>
             </Item>
           </ExternalLink>
           <ExternalLink
@@ -372,7 +372,7 @@ export default function About() {
           >
             <Item>
               <img src={Consilium} style={{ width: '70px' }} alt={'logo'} />
-              <TextNews>Security Audit</TextNews>
+              <TextNews>Blockchain Consilium</TextNews>
             </Item>
           </ExternalLink>
           <ExternalLink
