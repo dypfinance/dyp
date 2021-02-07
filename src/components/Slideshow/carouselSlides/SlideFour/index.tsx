@@ -85,7 +85,7 @@ const SlideFour = () => (
     >
       <Item>
         <img src={CoinDoo} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Coindoos</TextNews>
+        <TextNews>Coindoo</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
