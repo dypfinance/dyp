@@ -83,7 +83,7 @@ const Carousel = ({ children }: IProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % activeSlide.length)
-    }, 40000)
+    }, 4000)
     return () => clearInterval(interval)
   }, [activeSlide.length, currentSlide])
   //console.log('currentSlide+ ' + currentSlide)
