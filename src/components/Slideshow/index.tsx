@@ -18,6 +18,7 @@ const SCarouselWrapper = styled.div`
 const ButtonLeft = styled.div`
   position: absolute;
   margin-top: 20px;
+  z-index: 1;
   ${({ theme }) => theme.mediaWidth.upToSmall`
         display: none;
   `}
