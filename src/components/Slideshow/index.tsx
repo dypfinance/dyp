@@ -25,9 +25,13 @@ const ButtonLeft = styled.div`
 
 const ButtonRight = styled.div`
   position: absolute;
-  justify-self: end;
-  display: grid;
-  margin-top: 20px;
+  justify-self: flex-end;
+  display: flex;
+  padding-top: 20px;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  max-width: 1200px;
+  width: 100%;
   ${({ theme }) => theme.mediaWidth.upToSmall`
         display: none;
   `}
