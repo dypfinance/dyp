@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { AutoColumn } from '../Column'
+import { useSwipeable } from 'react-swipeable'
 
 import leftArrow from '../../assets/svg/leftArrow.svg'
 import rightArrow from '../../assets/svg/rightArrow.svg'
@@ -87,8 +88,15 @@ const Carousel = ({ children }: IProps) => {
     return () => clearInterval(interval)
   }, [activeSlide.length, currentSlide])
   //console.log('currentSlide+ ' + currentSlide)
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setCurrentSlide((currentSlide + 1) % activeSlide.length),
+    onSwipedRight: () => setCurrentSlide((currentSlide - 1 + activeSlide.length) % activeSlide.length),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  })
   return (
-    <TopSection gap="md">
+    <TopSection gap="md" {...handlers}>
       <SCarouselWrapper>
         <SCarouselSlides currentSlide={currentSlide}>{activeSlide}</SCarouselSlides>
       </SCarouselWrapper>
