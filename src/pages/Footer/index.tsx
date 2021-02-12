@@ -167,6 +167,8 @@ const HideAuditMobile = styled.div`
 const ShowAuditMobile = styled.div`
   display: none;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    margin-top: 5px;
+    margin-bottom: 5px;
     display: block;
   `}
 `
