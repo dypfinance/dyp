@@ -8,7 +8,7 @@ import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 import { NavLink } from 'react-router-dom'
 
 //import { ExternalLink } from '../../theme'
-import { ButtonPrimary } from '../Button'
+//import { ButtonPrimary } from '../Button'
 
 const StyledMenuIcon = styled(MenuIcon)`
   fill: currentColor;
@@ -120,7 +120,7 @@ export default function Menu() {
   const open = useModalOpen(ApplicationModal.MENU)
   const toggle = useToggleModal(ApplicationModal.MENU)
   useOnClickOutside(node, open ? toggle : undefined)
-  const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
+  //const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
 
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
@@ -161,14 +161,17 @@ export default function Menu() {
           {/*>*/}
           {/*  Get DYP*/}
           {/*</MenuItemExternal>*/}
-          <ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">
-            Get DYP
-          </ButtonPrimary>
+          {/*<ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">*/}
+          {/*  Get DYP*/}
+          {/*</ButtonPrimary>*/}
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
             Referral
           </MenuItem>
           <MenuItem id={`about-nav-link`} to={'/about'}>
             About
+          </MenuItem>
+          <MenuItem id={`audit-nav-link`} to={'/audit'}>
+            Audit
           </MenuItem>
         </MenuFlyout>
       )}

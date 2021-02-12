@@ -222,6 +222,11 @@ const UniIcon = styled.div`
   :hover {
     transform: rotate(-5deg);
   }
+  width: 120px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    width: 60px;
+    z-index: 1000;
+  `};
 `
 
 const activeClassName = 'ACTIVE'
@@ -316,7 +321,7 @@ export default function Header() {
       <HeaderRow>
         <Title href="." style={{}}>
           <UniIcon>
-            <img width={'120px'} src={Logo} alt="logo" />
+            <img src={Logo} alt="logo" />
           </UniIcon>
         </Title>
         <HeaderLinks>

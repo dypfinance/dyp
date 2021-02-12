@@ -194,7 +194,7 @@ export default function Home() {
                   Let's start earning DYP!
                 </MenuItemExternal>
                 <MenuItemExternal id={`stake-nav-link`} to={'/feature'}>
-                  DYP Anti-Manipulation Feature
+                  DYP Anti Manipulation
                 </MenuItemExternal>
                 <MenuItemExternal id={`stake-nav-link`} to={'/mining'}>
                   Ethereum Mining Pool
