@@ -164,6 +164,13 @@ const HideAuditMobile = styled.div`
   `}
 `
 
+const ShowAuditMobile = styled.div`
+  display: none;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: block;
+  `}
+`
+
 const CommunityIcon = styled.div`
   width: 24px;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -186,9 +193,11 @@ export default function Footer() {
       <StyledFooterInner>
         <StyledNav>
           <ButtonGetDyp onClick={openClaimModal}>Get DYP</ButtonGetDyp>
-          <StyledNavLink id={`about-nav-link`} to={'/audit'}>
-            Audit
-          </StyledNavLink>
+          <ShowAuditMobile>
+            <StyledNavLink id={`about-nav-link`} to={'/audit'}>
+              Audit
+            </StyledNavLink>
+          </ShowAuditMobile>
           <StyledLink
             target="_blank"
             href="https://etherscan.io/address/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17#code"
