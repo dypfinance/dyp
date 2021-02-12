@@ -131,13 +131,14 @@ const ButtonGetDyp = styled.button`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: block;
     color: grey;
-    margin: 20px 5px 5px 4px;
+    margin: 20px 5px 5px 12px;
     -webkit-align-items: center;
     -webkit-text-decoration: none;
     text-decoration: none;
     border: none;
     background: #1e272f;
     font-size: 16px;
+    padding: 0;
   `};
 `
 
@@ -185,6 +186,9 @@ export default function Footer() {
       <StyledFooterInner>
         <StyledNav>
           <ButtonGetDyp onClick={openClaimModal}>Get DYP</ButtonGetDyp>
+          <StyledNavLink id={`about-nav-link`} to={'/audit'}>
+            Audit
+          </StyledNavLink>
           <StyledLink
             target="_blank"
             href="https://etherscan.io/address/0x961C8c0B1aaD0c0b10a51FeF6a867E3091BCef17#code"
