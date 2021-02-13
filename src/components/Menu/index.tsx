@@ -98,7 +98,8 @@ const ButtonGetDyp = styled.button`
   border: none;
   cursor: pointer;
   text-decoration: none;
-  padding: 0.5rem;
+  margin: 0.5rem;
+  padding: 0;
   background-color: #edeef2;
   font-size: 1rem;
   font-weight: 400;
