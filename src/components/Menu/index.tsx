@@ -91,6 +91,29 @@ const MenuItem = styled(NavLink).attrs({})`
   }
 `
 
+const ButtonGetDyp = styled.button`
+  flex: 1;
+  color: ${({ theme }) => theme.text2};
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: #edeef2;
+  font-size: 1rem;
+  font-weight: 400;
+  justify-content: flex-start;
+  display: flex;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+`
+
 // const MenuItemExternal = styled(ExternalLink).attrs({})`
 //   flex: 1;
 //   padding: 0.5rem 0.5rem;
@@ -120,7 +143,7 @@ export default function Menu() {
   const open = useModalOpen(ApplicationModal.MENU)
   const toggle = useToggleModal(ApplicationModal.MENU)
   useOnClickOutside(node, open ? toggle : undefined)
-  //const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
+  const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
 
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
@@ -134,6 +157,7 @@ export default function Menu() {
           <MenuItem id={`home-nav-link`} to={'/home'}>
             Home
           </MenuItem>
+          <ButtonGetDyp onClick={openClaimModal}>Get DYP</ButtonGetDyp>
           <MenuItem id={`earn-nav-link`} to={'/earn'}>
             Stake
           </MenuItem>
@@ -161,9 +185,6 @@ export default function Menu() {
           {/*>*/}
           {/*  Get DYP*/}
           {/*</MenuItemExternal>*/}
-          {/*<ButtonPrimary onClick={openClaimModal} padding="8px 16px" width="100%" borderRadius="12px" mt="0.5rem">*/}
-          {/*  Get DYP*/}
-          {/*</ButtonPrimary>*/}
           <MenuItem id={`refferal-nav-link`} to={'/refferal'}>
             Referral
           </MenuItem>

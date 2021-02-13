@@ -24,6 +24,12 @@ const Web3StatusGeneric = styled(ButtonSecondary)`
   :focus {
     outline: none;
   }
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    height: 15px;
+    width: 50px;
+    top: 8px;
+    margin-left: 5px;
+  `}
 `
 
 const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
@@ -63,6 +69,9 @@ const Text = styled.p`
   font-size: 1rem;
   width: fit-content;
   font-weight: 500;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    font-size: 10px;
+  `}
 `
 
 function Web3StatusInner() {

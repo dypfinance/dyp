@@ -62,6 +62,8 @@ const TeamRow = styled(AutoColumn)`
   justify-self: center;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     flex-wrap: wrap;
+    max-width: 100px;
+    justify-items: center;
  `}
 `
 
@@ -99,9 +101,26 @@ const StyledNav = styled.nav`
   `}
 `
 
+const StyledNavWorking = styled.nav`
+  align-items: center;
+  display: flex;
+  -webkit-align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        justify-content: space-evenly;
+  `}
+`
+
 const Item = styled.div`
   display: grid;
   justify-items: center;
+  width: 70px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+      width 50px;
+  `}
 `
 
 const TextNews = styled.div`
@@ -136,6 +155,40 @@ const TextSubMobile = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     text-align: center;
     font-size: 20px;
+  `}
+`
+
+const TextName = styled.text`
+  font-size: 20px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    font-size: 10px
+  `}
+`
+
+const SubTitleText = styled.text`
+  font-size: 14px;
+  margin-bottom: 16px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    font-size: 8px;
+    margin-bottom: 0px;
+  `}
+`
+
+const ImgItem = styled.div`
+  width: 150px;
+  border-radius: 200px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    width: 70px;
+    border-radius: 200px;
+  `}
+`
+
+const ImgIcon = styled.div`
+  height: 37px;
+  width: 37px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    width: 15px;
+    margin-top: 8px;
   `}
 `
 
@@ -261,95 +314,111 @@ export default function About() {
           <TeamStyle>
             <div>
               <TeamRow>
-                <img src={Michael} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
-                <TYPE.black fontSize={20}>Michael Nikolas</TYPE.black>
-                <TYPE.black fontSize={14} marginBottom={16}>
-                  CEO & Product Manager
-                </TYPE.black>
+                <ImgItem>
+                  <img src={Michael} style={{ borderRadius: '200px', maxWidth: '100%' }} alt={'logo'} />
+                </ImgItem>
+                <TextName>Michael Nikolas</TextName>
+                <SubTitleText>CEO & Product Manager</SubTitleText>
                 <Justify>
                   <ExternalLink style={{ color: 'black' }} href="https://twitter.com/m_BMN_" target="_blank">
-                    <img src={TwitterSvg} alt="logo" height={37} />
+                    <ImgIcon>
+                      <img src={TwitterSvg} alt="logo" width={'100%'} />
+                    </ImgIcon>
                   </ExternalLink>
                   <Bio />
                 </Justify>
               </TeamRow>
             </div>
             <div>
-              <div>
-                <img src={Ion} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
-                <TYPE.black fontSize={20}>Razvan Ion</TYPE.black>
-                <TYPE.black fontSize={14} marginBottom={16}>
-                  Chief Technical Officer
-                </TYPE.black>
+              <TeamRow>
+                <ImgItem>
+                  <img src={Ion} style={{ borderRadius: '200px', maxWidth: '100%' }} alt={'logo'} />
+                </ImgItem>
+                <TextName>Razvan Ion</TextName>
+                <SubTitleText>Chief Technical Officer</SubTitleText>
                 <Justify>
                   <ExternalLink style={{ color: 'black' }} href="https://www.linkedin.com/in/razvan-ion-b455ba95/">
-                    <img src={LinkedinSvg} alt="" />
+                    <ImgIcon>
+                      <img src={LinkedinSvg} alt="" width={'100%'} />
+                    </ImgIcon>
                   </ExternalLink>
                   <Bio5 />
                 </Justify>
-              </div>
+              </TeamRow>
             </div>
             <div>
-              <div>
-                <img src={Tek} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
-                <TYPE.black fontSize={20}>Teki Kolaneci</TYPE.black>
-                <TYPE.black fontSize={14} marginBottom={16}>
-                  Digital Strategy Manager
-                </TYPE.black>
+              <TeamRow>
+                <ImgItem>
+                  <img src={Tek} style={{ borderRadius: '200px', maxWidth: '100%' }} alt={'logo'} />
+                </ImgItem>
+                <TextName>Teki Kolaneci</TextName>
+                <SubTitleText>Digital Strategy Manager</SubTitleText>
                 <Justify>
                   <ExternalLink style={{ color: 'black' }} href="https://www.linkedin.com/in/teki-kolaneci">
-                    <img src={LinkedinSvg} alt="" />
+                    <ImgIcon>
+                      <img src={LinkedinSvg} alt="" width={'100%'} />
+                    </ImgIcon>
                   </ExternalLink>
                   <Bio4 />
                 </Justify>
-              </div>
+              </TeamRow>
             </div>
           </TeamStyle>
           <RowBetween />
           <TeamStyle>
             <div>
-              <div>
-                <img src={Const} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
-                <TYPE.black fontSize={20}>Constantin Bogdan</TYPE.black>
-                <TYPE.black fontSize={14} marginBottom={16}>
-                  Marketing Manager
-                </TYPE.black>
+              <TeamRow>
+                <ImgItem>
+                  <img src={Const} style={{ borderRadius: '200px', maxWidth: '100%' }} alt={'logo'} />
+                </ImgItem>
+                <TextName>Constantin Bogdan</TextName>
+                <SubTitleText>Marketing Manager</SubTitleText>
                 <Justify>
                   <ExternalLink
                     style={{ color: 'black' }}
                     href="https://www.linkedin.com/in/bogdan-constantin-1105b7201/"
                   >
-                    <img src={LinkedinSvg} alt="" />
+                    <ImgIcon>
+                      <img src={LinkedinSvg} alt="" width={'100%'} />
+                    </ImgIcon>
                   </ExternalLink>
                   <Bio6 />
                 </Justify>
-              </div>
+              </TeamRow>
             </div>
             <div>
-              <img src={Gino} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
-              <TYPE.black fontSize={20}>Gino Vizint</TYPE.black>
-              <TYPE.black fontSize={14} marginBottom={16}>
-                Chief Ecosystem Officer
-              </TYPE.black>
-              <Justify>
-                <ExternalLink style={{ color: 'black' }} href="https://github.com/gianviz">
-                  <img src={GithubSvg} alt="" height={37} />
-                </ExternalLink>
-                <Bio3 />
-              </Justify>
+              <TeamRow>
+                <ImgItem>
+                  <img src={Gino} style={{ borderRadius: '200px', maxWidth: '100%' }} alt={'logo'} />
+                </ImgItem>
+                <TextName>Gino Vizint</TextName>
+                <SubTitleText>Chief Ecosystem Officer</SubTitleText>
+                <Justify>
+                  <ExternalLink style={{ color: 'black' }} href="https://github.com/gianviz">
+                    <ImgIcon>
+                      <img src={GithubSvg} alt="" width={'100%'} />
+                    </ImgIcon>
+                  </ExternalLink>
+                  <Bio3 />
+                </Justify>
+              </TeamRow>
             </div>
             <div>
-              <img src={Daniel} style={{ width: '150px', borderRadius: '200px' }} alt={'logo'} />
-              <TYPE.black fontSize={20}>Daniel Provak</TYPE.black>
-              <TYPE.black fontSize={14} marginBottom={16}>
-                Software Developer
-              </TYPE.black>
-              <Justify>
-                <ExternalLink style={{ color: 'black' }} href="https://github.com/doyledyp">
-                  <img src={GithubSvg} alt="" height={37} />
-                </ExternalLink>
-                <Bio2 />
-              </Justify>
+              <TeamRow>
+                <ImgItem>
+                  <img src={Daniel} style={{ borderRadius: '200px', maxWidth: '100%' }} alt={'logo'} />
+                </ImgItem>
+                <TextName>Daniel Provak</TextName>
+                <SubTitleText>Software Developer</SubTitleText>
+                <Justify>
+                  <ExternalLink style={{ color: 'black' }} href="https://github.com/doyledyp">
+                    <ImgIcon>
+                      <img src={GithubSvg} alt="" width={'100%'} />
+                    </ImgIcon>
+                  </ExternalLink>
+                  <Bio2 />
+                </Justify>
+              </TeamRow>
             </div>
           </TeamStyle>
         </AutoColumn>
@@ -359,14 +428,14 @@ export default function About() {
       </TYPE.black>
       <RowBetween />
       <RowBetween style={{ maxWidth: '800px' }}>
-        <StyledNav>
+        <StyledNavWorking>
           <ExternalLink
             style={{ color: 'white', textDecoration: 'underline' }}
             href="https://peckshield.com"
             target="_blank"
           >
             <Item>
-              <img src={Peckshield} style={{ width: '70px' }} alt={'logo'} />
+              <img src={Peckshield} style={{ width: '100%' }} alt={'logo'} />
               <TextNews>Peckshield</TextNews>
             </Item>
           </ExternalLink>
@@ -376,7 +445,7 @@ export default function About() {
             target="_blank"
           >
             <Item>
-              <img src={Consilium} style={{ width: '70px' }} alt={'logo'} />
+              <img src={Consilium} style={{ width: '100%' }} alt={'logo'} />
               <TextNews>Blockchain Consilium</TextNews>
             </Item>
           </ExternalLink>
@@ -386,70 +455,16 @@ export default function About() {
             target="_blank"
           >
             <Item>
-              <img src={Certik} style={{ width: '70px' }} alt={'logo'} />
+              <img src={Certik} style={{ width: '100%' }} alt={'logo'} />
               <TextNews>Certik Foundation</TextNews>
             </Item>
           </ExternalLink>
-        </StyledNav>
+        </StyledNavWorking>
       </RowBetween>
       <TYPE.black fontWeight={600} fontSize={35} marginTop={25}>
         Press Highlights
       </TYPE.black>
       <RowBetween />
-      {/*<RowBetween style={{ maxWidth: '1100px' }}>*/}
-      {/*  <StyledNav>*/}
-      {/*    <ExternalLink*/}
-      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
-      {/*      href="https://cointelegraph.com/press-releases/defi-yield-protocol-your-new-defi-gem-with-anti-manipulation-feature"*/}
-      {/*      target="_blank"*/}
-      {/*    >*/}
-      {/*      <Item>*/}
-      {/*        <img src={CoinTelegraph} style={{ width: '70px' }} alt={'logo'} />*/}
-      {/*        <TextNews>COINTELEGRAPH</TextNews>*/}
-      {/*      </Item>*/}
-      {/*    </ExternalLink>*/}
-      {/*    <ExternalLink*/}
-      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
-      {/*      href="https://www.newsbtc.com/news/company/defi-yield-protocol-launches-staking-and-governance-dapp-dyp-holders-earn-ethereum/"*/}
-      {/*      target="_blank"*/}
-      {/*    >*/}
-      {/*      <Item>*/}
-      {/*        <img src={NewsBTC} style={{ width: '70px' }} alt={'logo'} />*/}
-      {/*        <TextNews>NEWSBTC</TextNews>*/}
-      {/*      </Item>*/}
-      {/*    </ExternalLink>*/}
-      {/*    <ExternalLink*/}
-      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
-      {/*      href="https://news.bitcoin.com/dyp-launches-staking-and-governance-dapp/"*/}
-      {/*      target="_blank"*/}
-      {/*    >*/}
-      {/*      <Item>*/}
-      {/*        <img src={BitcoinCom} style={{ width: '70px' }} alt={'logo'} />*/}
-      {/*        <TextNews>Bitcoin.com</TextNews>*/}
-      {/*      </Item>*/}
-      {/*    </ExternalLink>*/}
-      {/*    <ExternalLink*/}
-      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
-      {/*      href="https://finance.yahoo.com/news/defi-yield-protocol-dyp-staking-163000220.html"*/}
-      {/*      target="_blank"*/}
-      {/*    >*/}
-      {/*      <Item>*/}
-      {/*        <img src={Yahoo} style={{ width: '70px' }} alt={'logo'} />*/}
-      {/*        <TextNews>Yahoo Finance</TextNews>*/}
-      {/*      </Item>*/}
-      {/*    </ExternalLink>*/}
-      {/*    <ExternalLink*/}
-      {/*      style={{ color: 'white', textDecoration: 'underline' }}*/}
-      {/*      href="https://bitcoinist.com/defi-yield-protocol-debuts-new-staking-and-governance-dapp/"*/}
-      {/*      target="_blank"*/}
-      {/*    >*/}
-      {/*      <Item>*/}
-      {/*        <img src={Bitcoinist} style={{ width: '70px' }} alt={'logo'} />*/}
-      {/*        <TextNews>Bitcoinist</TextNews>*/}
-      {/*      </Item>*/}
-      {/*    </ExternalLink>*/}
-      {/*  </StyledNav>*/}
-      {/*</RowBetween>*/}
       <RowBetween>
         <StyledNav>
           <Carousel>
