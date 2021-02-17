@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ExternalLink } from '../../../../theme'
 import NewsBTC from '../../../../assets/images/newsbtc.jpg'
 import CoinGape from '../../../../assets/images/coingape.jpeg'
-import CoinDoo from '../../../../assets/images/coindoo.jpeg'
+import CoinCodex from '../../../../assets/images/coincodex.jpeg'
 import Bitcoinist from '../../../../assets/images/bitcoinist.jpeg'
 import CoinmarketCap from '../../../../assets/images/coinmarketcap.jpeg'
 
@@ -80,12 +80,12 @@ const SlideFour = () => (
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://coindoo.com/dyp-maximizing-the-benefits-of-yield-farming-protocols/"
+      href="https://coincodex.com/article/10519/defi-yield-protocol-dyp-reaches-63-million-in-total-value-locked/"
       target="_blank"
     >
       <Item>
-        <img src={CoinDoo} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>Coindoo</TextNews>
+        <img src={CoinCodex} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>CoinCodex</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink

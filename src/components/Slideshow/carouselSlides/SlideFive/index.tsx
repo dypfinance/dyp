@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ExternalLink } from '../../../../theme'
-import Utoday from '../../../../assets/images/utoday.jpeg'
-import TechBullion from '../../../../assets/images/techbullion.jpeg'
-import CoinCodex from '../../../../assets/images/coincodex.jpeg'
+import HackerNoon from '../../../../assets/images/hackernoon.jpeg'
+import BtcManager from '../../../../assets/images/btcmanager.png'
+import BitcoinCom from '../../../../assets/images/bitcoincom.png'
 import CryptoCompare from '../../../../assets/images/cryptocompare.png'
-import Coinspeaker from '../../../../assets/images/coinspeaker.jpeg'
+import Blockonomi from '../../../../assets/images/blokonomi.jpeg'
 
 // const SContainer = styled.div`
 //   align-items: center;
@@ -46,41 +46,41 @@ const TextNews = styled.div`
   `}
 `
 
-const SlideTwo = () => (
+const SlideOne = () => (
   <StyledNav>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://u.today/dypfinance-users-earn-more-than-38-million-worth-of-ethereum-eht-rewards"
+      href="https://news.bitcoin.com/earn-yield-farming-rewards-with-defi-yield-protocol-dyp/"
       target="_blank"
     >
       <Item>
-        <img src={Utoday} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>U.Today</TextNews>
+        <img src={BitcoinCom} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>Bitcoin.com</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://techbullion.com/dyp-finance-stake-defi-tokens-and-get-paid-in-eth"
+      href="https://hackernoon.com/hedging-against-market-manipulation-with-defi-mg2q33q1"
       target="_blank"
     >
       <Item>
-        <img src={TechBullion} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
-        <TextNews>TechBullion</TextNews>
+        <img src={HackerNoon} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>HackerNoon</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://coincodex.com/article/10261/defi-yield-protocol-anti-manipulation-farm-yielding-platform/"
+      href="https://btcmanager.com/defi-yield-protocol-dyp-180k-eth-distributed-liquidity-providers"
       target="_blank"
     >
       <Item>
-        <img src={CoinCodex} style={{ width: '50px' }} alt={'logo'} />
-        <TextNews>CoinCodex</TextNews>
+        <img src={BtcManager} style={{ width: '50px' }} alt={'logo'} />
+        <TextNews>BTCMANAGER</TextNews>
       </Item>
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://www.cryptocompare.com/coins/guides/defi-yield-protocol-liquidity-providers-earn-25-000-in-eth-per-day-staking-dyp/"
+      href="https://www.cryptocompare.com/coins/guides/how-to-maximize-security-while-yield-farming-on-defi-protocols/"
       target="_blank"
     >
       <Item>
@@ -90,15 +90,15 @@ const SlideTwo = () => (
     </ExternalLink>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
-      href="https://www.coinspeaker.com/earn-yield-farming-dyp/"
+      href="https://blockonomi.com/defi-yield-protocol-ecosystem/"
       target="_blank"
     >
       <Item>
-        <img src={Coinspeaker} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
-        <TextNews>Coinspeaker</TextNews>
+        <img src={Blockonomi} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+        <TextNews>Blockonomi</TextNews>
       </Item>
     </ExternalLink>
   </StyledNav>
 )
 
-export default SlideTwo
+export default SlideOne
