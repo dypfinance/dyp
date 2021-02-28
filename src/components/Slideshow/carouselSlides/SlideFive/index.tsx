@@ -46,7 +46,7 @@ const TextNews = styled.div`
   `}
 `
 
-const SlideOne = () => (
+const SlideFive = () => (
   <StyledNav>
     <ExternalLink
       style={{ color: 'white', textDecoration: 'underline' }}
@@ -64,7 +64,7 @@ const SlideOne = () => (
       target="_blank"
     >
       <Item>
-        <img src={HackerNoon} style={{ width: '50px' }} alt={'logo'} />
+        <img src={HackerNoon} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
         <TextNews>HackerNoon</TextNews>
       </Item>
     </ExternalLink>
@@ -101,4 +101,4 @@ const SlideOne = () => (
   </StyledNav>
 )
 
-export default SlideOne
+export default SlideFive
