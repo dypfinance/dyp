@@ -44,6 +44,7 @@ import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, Redirec
 
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
+import Competition from './Competition'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -133,6 +134,7 @@ export default function App() {
               <Route exact strict path="/vote" component={Vote} />
               <Route exact strict path="/about" component={About} />
               <Route exact strict path="/audit" component={Audit} />
+              <Route exact strict path="/competition" component={Competition} />
               <Route exact strict path="/create" component={RedirectToAddLiquidity} />
               <Route exact path="/add" component={AddLiquidity} />
               <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
