@@ -82,8 +82,8 @@ export default function Competition() {
             <RowBetween>
               <TYPE.black fontSize={14}>
                 50 new token holders will share $10,000 USDT in 200 prizes of $200 in USDT.<div></div>
-                Reward for 50 new token holders= 50 random token holders that bough DYP between March 01, 2021 and March
-                30, 2021 will get each $200 in USDT.
+                Reward for 50 new token holders= 50 random token holders that bought DYP between March 01, 2021 and
+                March 30, 2021 will get each $200 in USDT.
               </TYPE.black>
             </RowBetween>
             <RowBetween>
