@@ -63,7 +63,7 @@ export default function Competition() {
             </RowBetween>
             <RowBetween>
               <TYPE.white fontSize={14} color={'red'}>
-                The campaign will run from 18:00 on March 01, 2021 to 16:00 on March 30, 2021 (UTC).
+                The campaign will run from 16:00 on March 01, 2021 to 16:00 on March 30, 2021 (UTC).
               </TYPE.white>
             </RowBetween>
             <RowBetween>
