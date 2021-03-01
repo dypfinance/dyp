@@ -18,6 +18,13 @@ const TopSection = styled(AutoColumn)`
   width: 100%;
 `
 
+const Title = styled.div`
+  font-size: 20.5px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 15px;
+  `}
+`
+
 // const StyledLink = styled.a`
 //   color: grey;
 //   -webkit-align-items: center;
@@ -39,9 +46,11 @@ export default function Competition() {
         <CardSection>
           <AutoColumn gap="md">
             <RowBetween>
-              <TYPE.black fontWeight={600} fontSize={15}>
-                DeFi Yield Protocol Buying Competition: $25,000 in USDT to be won!
-              </TYPE.black>
+              <Title>
+                <TYPE.black fontWeight={600}>
+                  DeFi Yield Protocol Buying Competition: $25,000 in USDT to be won!
+                </TYPE.black>
+              </Title>
             </RowBetween>
             <RowBetween>
               <img src={Banner} style={{ width: '100%', borderRadius: '25px' }} alt={'logo'} />
@@ -53,9 +62,9 @@ export default function Competition() {
               </TYPE.black>
             </RowBetween>
             <RowBetween>
-              <TYPE.black fontSize={14}>
+              <TYPE.white fontSize={14} color={'red'}>
                 The campaign will run from 18:00 on March 01, 2021 to 18:00 on March 30, 2021 (UTC).
-              </TYPE.black>
+              </TYPE.white>
             </RowBetween>
             <RowBetween>
               <TYPE.black fontWeight={600} fontSize={15}>
