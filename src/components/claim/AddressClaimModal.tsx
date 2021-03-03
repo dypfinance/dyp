@@ -108,6 +108,9 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
             >
               Uniswap
             </MenuItemExternal>
+            <MenuItemExternal id={`getdyp-gateio-nav-link`} href={'https://www.gate.io/trade/DYP_USDT'}>
+              Gate.io
+            </MenuItemExternal>
             <MenuItemExternal
               id={`getdyp-bithump-nav-link`}
               href={'https://www.bithumb.pro/en-us/spot/trade?q=DYP-USDT'}
