@@ -25,14 +25,14 @@ const Title = styled.div`
   `}
 `
 
-// const StyledLink = styled.a`
-//   color: grey;
-//   -webkit-align-items: center;
-//   text-decoration: none;
-//   &:hover {
-//     color: grey;
-//   }
-// `
+const StyledLink = styled.a`
+  color: grey;
+  -webkit-align-items: center;
+  text-decoration: none;
+  &:hover {
+    color: grey;
+  }
+`
 
 // const popUpAlert = function() {
 //   alert('Coming soon!')
@@ -93,13 +93,46 @@ export default function Competition() {
             </RowBetween>
             <RowBetween>
               <TYPE.black fontSize={14}>
-                1. The campaign is only for the token holders that bought DYP between March 01, 2021 and March 30, 2021.
+                1. The campaign is available only for the token holders that bought DYP between March 01, 2021 and March
+                30, 2021.<div></div>
+                2. DYP can be bought from any exchange:{' '}
+                <StyledLink
+                  target="_blank"
+                  style={{ color: 'red', textDecoration: 'underline' }}
+                  href="https://info.uniswap.org/token/0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17"
+                >
+                  Uniswap
+                </StyledLink>
+                ,{' '}
+                <StyledLink
+                  target="_blank"
+                  style={{ color: 'red', textDecoration: 'underline' }}
+                  href="https://www.gate.io/trade/DYP_USDT"
+                >
+                  Gate.io
+                </StyledLink>
+                ,{' '}
+                <StyledLink
+                  target="_blank"
+                  style={{ color: 'red', textDecoration: 'underline' }}
+                  href="https://www.bithumb.pro/en-us/exchange/professional?q=DYP-USDT"
+                >
+                  Bithumb Global
+                </StyledLink>
+                , and{' '}
+                <StyledLink
+                  target="_blank"
+                  style={{ color: 'red', textDecoration: 'underline' }}
+                  href="https://www.mycointainer.com/dashboard/invest/defiyieldprotocol/"
+                >
+                  Mycointainer
+                </StyledLink>
                 <div></div>
-                2. The minimum amount of DYP that you need to hold is 5 DYP tokens.<div></div>
-                3. The Sub-Holders (addresses that received DYP tokens from an existent holder) will be treated as the
+                3. The minimum amount of DYP that you need to hold is 5 DYP tokens.<div></div>
+                4. The Sub-Holders (addresses that received DYP tokens from an existent holder) will be treated as the
                 same account when participating in the activity.<div></div>
-                4. The final rankings will be updated within 3 days of the competition ending.<div></div>
-                5. Rewards will be distributed within 7 days of the campaign ending.
+                5. The final rankings will be updated within 3 days of the competition ending.<div></div>
+                6. Rewards will be distributed within 7 days of the campaign ending.
               </TYPE.black>
             </RowBetween>
           </AutoColumn>
