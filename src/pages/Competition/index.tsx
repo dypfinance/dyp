@@ -1,12 +1,16 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { TYPE } from '../../theme'
+import { ExternalLink, TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import { CardSection } from '../../components/earn/styled'
 import Whitelist from '../../components/Whitelist'
 
 import Banner from '../../assets/images/dyp_giveaway.jpg'
+import Uniswap from '../../assets/images/uniswap.jpg'
+import GateIo from '../../assets/images/gateio.jpg'
+import BithumbGlobal from '../../assets/images/bithumb_global.jpg'
+import MyContainer from '../../assets/images/mycontainer.jpg'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -32,6 +36,34 @@ const StyledLink = styled.a`
   &:hover {
     color: grey;
   }
+`
+
+const StyledNav = styled.nav`
+  align-items: center;
+  display: flex;
+  -webkit-align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        justify-content: space-between;
+  `}
+`
+
+const Item = styled.div`
+  display: grid;
+  justify-items: center;
+`
+
+const TextNews = styled.div`
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 10px;
+        font-weight: 500;
+  `}
 `
 
 // const popUpAlert = function() {
@@ -134,6 +166,58 @@ export default function Competition() {
                 5. The final rankings will be updated within 3 days of the competition ending.<div></div>
                 6. Rewards will be distributed within 7 days of the campaign ending.
               </TYPE.black>
+            </RowBetween>
+            <RowBetween />
+            <RowBetween style={{ display: 'flex', justifyContent: 'center' }}>
+              <TYPE.black fontSize={15} fontWeight={600}>
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                Don't forget to get your DYP!
+              </TYPE.black>
+            </RowBetween>
+            <RowBetween />
+            <RowBetween style={{ paddingTop: '10px' }}>
+              <StyledNav>
+                <ExternalLink
+                  style={{ color: 'white', textDecoration: 'underline' }}
+                  href="https://info.uniswap.org/token/0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17"
+                  target="_blank"
+                >
+                  <Item>
+                    <img src={Uniswap} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+                    <TextNews>Uniswap</TextNews>
+                  </Item>
+                </ExternalLink>
+                <ExternalLink
+                  style={{ color: 'white', textDecoration: 'underline' }}
+                  href="https://www.gate.io/trade/DYP_USDT"
+                  target="_blank"
+                >
+                  <Item>
+                    <img src={GateIo} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+                    <TextNews>Gate.io</TextNews>
+                  </Item>
+                </ExternalLink>
+                <ExternalLink
+                  style={{ color: 'white', textDecoration: 'underline' }}
+                  href="https://www.bithumb.pro/en-us/exchange/professional?q=DYP-USDT"
+                  target="_blank"
+                >
+                  <Item>
+                    <img src={BithumbGlobal} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+                    <TextNews>Bithumb Global</TextNews>
+                  </Item>
+                </ExternalLink>
+                <ExternalLink
+                  style={{ color: 'white', textDecoration: 'underline' }}
+                  href="https://www.mycointainer.com/dashboard/invest/defiyieldprotocol/"
+                  target="_blank"
+                >
+                  <Item>
+                    <img src={MyContainer} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+                    <TextNews>Mycointainer</TextNews>
+                  </Item>
+                </ExternalLink>
+              </StyledNav>
             </RowBetween>
           </AutoColumn>
         </CardSection>
