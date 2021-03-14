@@ -192,7 +192,7 @@ export default function Home() {
               <PageWrapperLinks>
                 <MenuItemExternal id={`stake-nav-link`} to={'/earn'}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
-                  Let's start earning DYP!
+                  Let's start earning ETH
                 </MenuItemExternal>
                 <MenuItemExternal id={`stake-nav-link`} to={'/feature'}>
                   DYP Anti Manipulation

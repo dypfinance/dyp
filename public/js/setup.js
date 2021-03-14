@@ -2989,6 +2989,21 @@ window.get_circulating_supply = 0
 
 window.COMBINED_TVL = 0
 window.CALLED_ONCE = false
+
+const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+
+const getWethBalance = async (contractAddress) => {
+  let contract = new window.infuraWeb3.eth.Contract(window.TOKEN_ABI, WETH_ADDRESS, {from: undefined})
+  return (await contract.methods.balanceOf(contractAddress).call())
+}
+
+const getWethPaidOut = async (contractAddress) => {
+  let contract = new window.infuraWeb3.eth.Contract(window.STAKING_ABI, contractAddress, {from: undefined})
+  let wethPaidOut = await contract.methods.totalClaimedRewardsEth().call()
+  let wethBalance = await getWethBalance(contractAddress)
+  return new window.BigNumber(wethBalance).plus(wethPaidOut).toString(10)
+}
+
 const getCombinedTvlUsd = async () => {
   test();
   let hello = await refreshBalance()
@@ -3008,6 +3023,27 @@ const getCombinedTvlUsd = async () => {
   window.COMBINED_TVL = tvl
   return tvl
 }
+
+const PaidOutETH = async () => {
+  let wethPaiOutTotal = 0
+  let lp_ids = LP_ID_LIST
+  for (let id of lp_ids) {
+    let contractAddress = id.split('-')[1]
+    let wethPaidOut = await Promise.all([getWethPaidOut(contractAddress)])
+    wethPaiOutTotal += parseInt(wethPaidOut, 10)
+  }
+  return wethPaiOutTotal / 1e18
+}
+window.PaidOutETH = PaidOutETH
+
+const PaidEthInUsd = async () => {
+  let [usdPerToken] = await Promise.all([window.getPrice('ethereum')])
+  let wethPaidOutTotal = await PaidOutETH()
+  console.log('aaaaaaa', wethPaidOutTotal * usdPerToken)
+  return wethPaidOutTotal * usdPerToken
+}
+
+window.PaidEthInUsd = PaidEthInUsd
 
 const FarmingTvl = async () => {
   let hello = await refreshBalance()

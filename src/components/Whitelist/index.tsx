@@ -4,7 +4,10 @@ import styled from 'styled-components'
 import { ExternalLink, TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 
-import getFormattedNumber from '../Function/get-formatted-number'
+//import getFormattedNumber from '../Function/get-formatted-number'
+import HeaderSlideshow from '../Slideshow/HeaderSlideshow'
+import TextOne from '../Slideshow/headerSlides/TextOne'
+import TextTwo from '../Slideshow/headerSlides/TextTwo'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 900px;
@@ -108,47 +111,47 @@ const TextFont = styled.div`
 //         font-size: 13px;
 //   `}
 // `
-const window1 = window
+//const window1 = window
 
 export default function Whitelist() {
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [tvlFarming, setTvlFarming] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  tvlFarming === 0 &&
-    window1
-      // eslint-disable-next-line
-      // @ts-ignore
-      .FarmingTvl()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(tvlFarming => setTvlFarming(tvlFarming))
-      .catch(console.error)
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [tvl, setTvl] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  tvl === 0 &&
-    window1
-      // eslint-disable-next-line
-      //@ts-ignore
-      .getCombinedTvlUsd()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(tvl => setTvl(tvl))
-      .catch(console.error)
-  let tvlPoolsTotal = 0
-  // eslint-disable-next-line
-  //@ts-ignore
-  if (window1.the_graph_result.lp_data) {
-    // eslint-disable-next-line
-    //@ts-ignore
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    tvlPoolsTotal = tvl + tvlFarming
-    //tvl = tvlPoolsTotal
-  }
+  // // eslint-disable-next-line
+  // //@ts-ignore
+  // const [tvlFarming, setTvlFarming] = React.useState(0)
+  // // eslint-disable-next-line
+  // //@ts-ignore
+  // tvlFarming === 0 &&
+  //   window1
+  //     // eslint-disable-next-line
+  //     // @ts-ignore
+  //     .FarmingTvl()
+  //     // eslint-disable-next-line
+  //     //@ts-ignore
+  //     .then(tvlFarming => setTvlFarming(tvlFarming))
+  //     .catch(console.error)
+  // // eslint-disable-next-line
+  // //@ts-ignore
+  // const [tvl, setTvl] = React.useState(0)
+  // // eslint-disable-next-line
+  // //@ts-ignore
+  // tvl === 0 &&
+  //   window1
+  //     // eslint-disable-next-line
+  //     //@ts-ignore
+  //     .getCombinedTvlUsd()
+  //     // eslint-disable-next-line
+  //     //@ts-ignore
+  //     .then(tvl => setTvl(tvl))
+  //     .catch(console.error)
+  // let tvlPoolsTotal = 0
+  // // eslint-disable-next-line
+  // //@ts-ignore
+  // if (window1.the_graph_result.lp_data) {
+  //   // eslint-disable-next-line
+  //   //@ts-ignore
+  //   // eslint-disable-next-line @typescript-eslint/camelcase
+  //   tvlPoolsTotal = tvl + tvlFarming
+  //   //tvl = tvlPoolsTotal
+  // }
   return (
     <WhitelistForm>
       <AutoColumn gap="md">
@@ -163,9 +166,13 @@ export default function Whitelist() {
             JOIN NOW AND START EARNING ETH REWARDS
           </MenuItemExternalMobile>
         </PageWrapper>
-        <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
-          <TextFont>Total Value Locked: ${getFormattedNumber(tvlPoolsTotal, 2)}</TextFont>
-        </TYPE.white>
+        {/*<TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>*/}
+        {/*  <TextFont>Total Value Locked: ${getFormattedNumber(tvlPoolsTotal, 2)}</TextFont>*/}
+        {/*</TYPE.white>*/}
+        <HeaderSlideshow>
+          <TextOne />
+          <TextTwo />
+        </HeaderSlideshow>
       </AutoColumn>
     </WhitelistForm>
   )
