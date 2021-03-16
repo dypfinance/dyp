@@ -3039,11 +3039,38 @@ window.PaidOutETH = PaidOutETH
 const PaidEthInUsd = async () => {
   let [usdPerToken] = await Promise.all([window.getPrice('ethereum')])
   let wethPaidOutTotal = await PaidOutETH()
-  console.log('aaaaaaa', wethPaidOutTotal * usdPerToken)
   return wethPaidOutTotal * usdPerToken
 }
 
 window.PaidEthInUsd = PaidEthInUsd
+
+window.highApy = 0
+
+const GetHighAPY = async () => {
+  let highApyArray = []
+  if (window.CALLED_ONCE_2) {
+    return window.highApy
+  }
+  window.CALLED_ONCE_2 = true
+  let the_graph_result = await refresh_the_graph_result()
+  let highApy = 0
+  if (!the_graph_result.lp_data) return 0
+
+  let lp_ids = Object.keys(the_graph_result.lp_data)
+  for (let id of lp_ids) {
+    highApy = the_graph_result.lp_data[id].apy
+    highApyArray.push(highApy)
+    //console.log('highhh', highApy)
+  }
+  highApyArray.sort()
+  //console.log('bbbbb', highApyArray)
+
+  highApy = highApyArray[highApyArray.length - 1]
+
+  window.highApy = highApy
+  return highApy
+}
+window.GetHighAPY = GetHighAPY
 
 const FarmingTvl = async () => {
   let hello = await refreshBalance()

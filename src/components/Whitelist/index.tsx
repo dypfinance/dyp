@@ -8,6 +8,7 @@ import { AutoColumn } from '../Column'
 import HeaderSlideshow from '../Slideshow/HeaderSlideshow'
 import TextOne from '../Slideshow/headerSlides/TextOne'
 import TextTwo from '../Slideshow/headerSlides/TextTwo'
+import TextThree from '../Slideshow/headerSlides/TextThree'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 900px;
@@ -172,6 +173,7 @@ export default function Whitelist() {
         <HeaderSlideshow>
           <TextOne />
           <TextTwo />
+          <TextThree />
         </HeaderSlideshow>
       </AutoColumn>
     </WhitelistForm>
