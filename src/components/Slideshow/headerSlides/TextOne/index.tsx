@@ -95,7 +95,7 @@ export default function TextOne() {
   }
   return (
     <SContainer>
-      <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
+      <TYPE.white fontWeight={500} fontSize={17} style={{ margin: 'auto' }}>
         <TextFont>Total Value Locked: ${getFormattedNumber(tvlPoolsTotal, 2)}</TextFont>
       </TYPE.white>
     </SContainer>

@@ -70,7 +70,7 @@ export default function TextThree() {
       .catch(console.error)
   return (
     <SContainer>
-      <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
+      <TYPE.white fontWeight={500} fontSize={17} style={{ margin: 'auto' }}>
         <TextFont>Join one of our liquidity pools and earn up to {getHighApy}% APY</TextFont>
       </TYPE.white>
     </SContainer>

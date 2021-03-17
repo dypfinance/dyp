@@ -85,7 +85,7 @@ export default function TextTwo() {
       .catch(console.error)
   return (
     <SContainer>
-      <TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>
+      <TYPE.white fontWeight={500} fontSize={17} style={{ margin: 'auto' }}>
         <TextFont>
           {getFormattedNumber(wethPaiOutTotals, 2)} Ethereum worth ${getFormattedNumber(paidInUsd, 2)} paid to the
           Liquidity providers since launch
