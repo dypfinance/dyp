@@ -33,13 +33,13 @@ export default function ExchangeList() {
   return isMobile ? (
     <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
-        <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
+        <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '0px' }} alt={'logo'} />
         <code style={{ marginTop: '17px', display: 'inline', fontWeight: 'bold' }}>
           DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
         </code>
       </div>
     </PhishAlert>
-  ) : window.location.hostname === '206.166.251.146' ? (
+  ) : window.location.hostname === 'dyp.finance' ? (
     <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
