@@ -31,7 +31,7 @@ export default function URLWarning() {
   return isMobile ? (
     <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
-        <img src={Kucoin} width={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
+        <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
         <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
           DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
         </code>
