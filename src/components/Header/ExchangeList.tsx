@@ -12,7 +12,7 @@ const PhishAlert = styled.div<{ isActive: any }>`
   padding: 6px 6px;
   background-color: ${({ theme }) => theme.blue1};
   color: white;
-  font-size: 11px;
+  font-size: 10px;
   justify-content: space-between;
   align-items: center;
   display: ${({ isActive }) => (isActive ? 'flex' : 'none')};
@@ -32,7 +32,7 @@ export default function URLWarning() {
     <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
-        <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
+        <code style={{ marginTop: '17px', display: 'inline', fontWeight: 'bold' }}>
           DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
         </code>
       </div>
