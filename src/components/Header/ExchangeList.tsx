@@ -43,7 +43,7 @@ export default function ExchangeList() {
     <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
-        <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
+        <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold', fontSize: '13px' }}>
           DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin DYP/USDT & DYP/ETH trading will start tomorrow, March 25th at
           10AM UTC!
         </code>
