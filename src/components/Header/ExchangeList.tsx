@@ -6,6 +6,7 @@ import { X } from 'react-feather'
 import { isMobile } from 'react-device-detect'
 
 import Kucoin from '../../assets/images/kucoin.png'
+import { ExternalLink } from '../../theme'
 
 const PhishAlert = styled.div<{ isActive: any }>`
   display: flex;
@@ -26,6 +27,12 @@ export const StyledClose = styled(X)`
   }
 `
 
+const PointerLink = styled.div`
+  :hover {
+    cursor: pointer;
+  }
+`
+
 export default function ExchangeList() {
   // const toggleURLWarning = useURLWarningToggle()
   // const showURLWarning = useURLWarningVisible()
@@ -35,7 +42,15 @@ export default function ExchangeList() {
       <div style={{ display: 'flex' }}>
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '0px' }} alt={'logo'} />
         <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
-          DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
+          <PointerLink>
+            <ExternalLink
+              target="_blank"
+              style={{ color: 'white' }}
+              href="https://www.kucoin.com/news/en-dyp-gets-listed-on-kucoin?utm_source=DYP"
+            >
+              DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
+            </ExternalLink>
+          </PointerLink>
         </code>
       </div>
     </PhishAlert>
@@ -44,8 +59,16 @@ export default function ExchangeList() {
       <div style={{ display: 'flex' }}>
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
         <code style={{ marginTop: '18px', display: 'inline', fontWeight: 'bold', fontSize: '13px' }}>
-          DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin DYP/USDT & DYP/ETH trading will start tomorrow, March 25th at
-          10AM UTC!
+          <PointerLink>
+            <ExternalLink
+              target="_blank"
+              style={{ color: 'white' }}
+              href="https://www.kucoin.com/news/en-dyp-gets-listed-on-kucoin?utm_source=DYP"
+            >
+              DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin DYP/USDT & DYP/ETH trading will start tomorrow, March 25th
+              at 10AM UTC!
+            </ExternalLink>
+          </PointerLink>
         </code>
       </div>
     </PhishAlert>
