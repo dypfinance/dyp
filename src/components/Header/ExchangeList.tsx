@@ -39,7 +39,7 @@ export default function ExchangeList() {
         </code>
       </div>
     </PhishAlert>
-  ) : window.location.hostname === 'localhost' ? (
+  ) : (
     <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
@@ -49,5 +49,5 @@ export default function ExchangeList() {
         </code>
       </div>
     </PhishAlert>
-  ) : null
+  )
 }
