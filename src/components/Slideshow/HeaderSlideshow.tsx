@@ -16,6 +16,9 @@ const TopSection = styled(AutoColumn)`
 const SCarouselWrapper = styled.div`
   display: flex;
   width: 100%;
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+        max-width: 300px;
+  `}
 `
 
 const ButtonLeft = styled.div`
@@ -61,6 +64,7 @@ interface ICarouselProps {
 
 const SCarouselSlides = styled.div<ICarouselProps>`
   display: flex;
+  width: 100%;
   ${props =>
     props.currentSlide &&
     css`

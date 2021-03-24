@@ -5,6 +5,8 @@ import { AlertTriangle, X } from 'react-feather'
 import { useURLWarningToggle, useURLWarningVisible } from '../../state/user/hooks'
 import { isMobile } from 'react-device-detect'
 
+import Kucoin from '../../assets/images/kucoin.png'
+
 const PhishAlert = styled.div<{ isActive: any }>`
   width: 100%;
   padding: 6px 6px;
@@ -22,17 +24,18 @@ export const StyledClose = styled(X)`
   }
 `
 
-export default function ExchangeList() {
+export default function URLWarning() {
   const toggleURLWarning = useURLWarningToggle()
   const showURLWarning = useURLWarningVisible()
 
   return isMobile ? (
-    <PhishAlert isActive={showURLWarning}>
+    <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
-        <AlertTriangle style={{ marginRight: 6 }} size={12} /> Make sure the URL is
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>dyp.finance</code>
+        <img src={Kucoin} width={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
+        <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
+          DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
+        </code>
       </div>
-      <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
   ) : window.location.hostname === 'app.uniswap.org' ? (
     <PhishAlert isActive={showURLWarning}>

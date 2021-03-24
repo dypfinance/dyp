@@ -9,6 +9,7 @@ import HeaderSlideshow from '../Slideshow/HeaderSlideshow'
 import TextOne from '../Slideshow/headerSlides/TextOne'
 import TextTwo from '../Slideshow/headerSlides/TextTwo'
 import TextThree from '../Slideshow/headerSlides/TextThree'
+import TextFour from '../Slideshow/headerSlides/TextFour'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 900px;
@@ -171,6 +172,7 @@ export default function Whitelist() {
         {/*  <TextFont>Total Value Locked: ${getFormattedNumber(tvlPoolsTotal, 2)}</TextFont>*/}
         {/*</TYPE.white>*/}
         <HeaderSlideshow>
+          <TextFour />
           <TextOne />
           <TextTwo />
           <TextThree />

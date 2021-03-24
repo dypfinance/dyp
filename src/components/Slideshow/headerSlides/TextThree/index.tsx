@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const TextFont = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-        font-size: 15px;
+        font-size: 13px;
         text-align: center;
   `}
 `

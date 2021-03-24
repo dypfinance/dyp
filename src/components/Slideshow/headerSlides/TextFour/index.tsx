@@ -3,7 +3,7 @@ import React from 'react'
 //import { ExternalLink } from '../../../../theme'
 import { TYPE } from '../../../../theme'
 import styled from 'styled-components'
-import getFormattedNumber from '../../../Function/get-formatted-number'
+import { NavLink } from 'react-router-dom'
 
 const TextFont = styled.div`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -16,6 +16,31 @@ const SContainer = styled.div`
   max-width: 100%;
   justify-content: center;
   display: flex;
+`
+
+const MenuItemExternal = styled(NavLink).attrs({})`
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  color: ${({ theme }) => theme.text1};
+  text-decoration: none;
+  background-color: white;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 8px;
+  margin: auto 5px;
+  padding: 2px;
+  font-size: 14px;
+  :hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  > svg {
+    margin-right: 8px;
+  }
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+        font-size: 10px;
+  `}
 `
 
 // const STextWrapper = styled.div`
@@ -52,43 +77,15 @@ const SContainer = styled.div`
 //   `}
 // `
 
-const window1 = window
-
-export default function TextTwo() {
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [wethPaiOutTotals, setwethPaiOutTotal] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  wethPaiOutTotals === 0 &&
-    window1
-      // eslint-disable-next-line
-      // @ts-ignore
-      .PaidOutETH()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(wethPaiOutTotals => setwethPaiOutTotal(wethPaiOutTotals))
-      .catch(console.error)
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [paidInUsd, setPaidInUsd] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  paidInUsd === 0 &&
-    window1
-      // eslint-disable-next-line
-      // @ts-ignore
-      .PaidEthInUsd()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(paidInUsd => setPaidInUsd(paidInUsd))
-      .catch(console.error)
+export default function TextFour() {
   return (
     <SContainer>
       <TYPE.white fontWeight={500} fontSize={17} style={{ margin: 'auto' }}>
         <TextFont>
-          {getFormattedNumber(wethPaiOutTotals, 2)} Ethereum worth ${getFormattedNumber(paidInUsd, 2)} paid to the
-          Liquidity providers since launch
+          DeFi Yield Protocol Buying Competition: $25,000 in USDT to be won!
+          <MenuItemExternal id={`stake-nav-link`} to={'/competition'}>
+            JOIN NOW
+          </MenuItemExternal>
         </TextFont>
       </TYPE.white>
     </SContainer>
