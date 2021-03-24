@@ -22,7 +22,7 @@ export const StyledClose = styled(X)`
   }
 `
 
-export default function ExchangeList() {
+export default function URLWarning() {
   const toggleURLWarning = useURLWarningToggle()
   const showURLWarning = useURLWarningVisible()
 

@@ -17,7 +17,6 @@ import SlideTwo from '../../components/Slideshow/carouselSlides/SlideTwo'
 import SlideThree from '../../components/Slideshow/carouselSlides/SlideThree'
 import SlideFour from '../../components/Slideshow/carouselSlides/SlideFour'
 import SlideFive from '../../components/Slideshow/carouselSlides/SlideFive'
-import HomeExchangeList from '../../components/Whitelist/HomeExchangeList'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 100%;
@@ -166,7 +165,6 @@ export default function Home() {
   return (
     <PageWrapper gap="lg" justify="center">
       <Whitelist />
-      <HomeExchangeList />
       <TopSection gap="md">
         <AutoColumn gap="md">
           <RowBetween>

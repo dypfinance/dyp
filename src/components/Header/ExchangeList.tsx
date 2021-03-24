@@ -1,19 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { AlertTriangle, X } from 'react-feather'
-import { useURLWarningToggle, useURLWarningVisible } from '../../state/user/hooks'
+import { X } from 'react-feather'
+//import { useURLWarningToggle, useURLWarningVisible } from '../../state/user/hooks'
 import { isMobile } from 'react-device-detect'
 
 import Kucoin from '../../assets/images/kucoin.png'
 
 const PhishAlert = styled.div<{ isActive: any }>`
+  display: flex;
   width: 100%;
+  max-width: 100%;
   padding: 6px 6px;
   background-color: ${({ theme }) => theme.blue1};
   color: white;
   font-size: 10px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   display: ${({ isActive }) => (isActive ? 'flex' : 'none')};
 `
@@ -24,9 +26,9 @@ export const StyledClose = styled(X)`
   }
 `
 
-export default function URLWarning() {
-  const toggleURLWarning = useURLWarningToggle()
-  const showURLWarning = useURLWarningVisible()
+export default function ExchangeList() {
+  // const toggleURLWarning = useURLWarningToggle()
+  // const showURLWarning = useURLWarningVisible()
 
   return isMobile ? (
     <PhishAlert isActive={true}>
@@ -37,14 +39,15 @@ export default function URLWarning() {
         </code>
       </div>
     </PhishAlert>
-  ) : window.location.hostname === 'app.uniswap.org' ? (
-    <PhishAlert isActive={showURLWarning}>
+  ) : window.location.hostname === 'localhost' ? (
+    <PhishAlert isActive={true}>
       <div style={{ display: 'flex' }}>
-        <AlertTriangle style={{ marginRight: 6 }} size={12} /> Always make sure the URL is
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>dyp.finance</code> - bookmark it to be
-        safe.
+        <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
+        <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
+          DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin DYP/USDT & DYP/ETH trading will start tomorrow, March 25th at
+          10AM UTC!
+        </code>
       </div>
-      <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
   ) : null
 }
