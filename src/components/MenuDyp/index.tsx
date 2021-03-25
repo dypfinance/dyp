@@ -133,9 +133,6 @@ export default function Menu() {
           <MenuItemExternal id={`getdyp-gateio-nav-link`} href={'https://www.gate.io/trade/DYP_USDT'}>
             Gate.io
           </MenuItemExternal>
-          <MenuItemExternal id={`getdyp-bithump-nav-link`} href={'https://www.bithumb.pro/en-us/spot/trade?q=DYP-USDT'}>
-            Bithumb
-          </MenuItemExternal>
           <MenuItemExternal id={`getdyp-fiat-nav-link`} href={'https://www.mycointainer.com/dashboard/invest/dyp/'}>
             Fiat
           </MenuItemExternal>

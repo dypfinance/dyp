@@ -9,7 +9,7 @@ import Whitelist from '../../components/Whitelist'
 import Banner from '../../assets/images/dyp_giveaway.jpg'
 import Uniswap from '../../assets/images/uniswap.jpg'
 import GateIo from '../../assets/images/gateio.jpg'
-import BithumbGlobal from '../../assets/images/bithumb_global.jpg'
+import Kucoin from '../../assets/images/kucoin.png'
 import MyContainer from '../../assets/images/mycontainer.jpg'
 
 const PageWrapper = styled(AutoColumn)`
@@ -189,22 +189,22 @@ export default function Competition() {
                 </ExternalLink>
                 <ExternalLink
                   style={{ color: 'white', textDecoration: 'underline' }}
+                  href="https://www.bithumb.pro/en-us/exchange/professional?q=DYP-USDT"
+                  target="_blank"
+                >
+                  <Item>
+                    <img src={Kucoin} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
+                    <TextNews>KuCoin</TextNews>
+                  </Item>
+                </ExternalLink>
+                <ExternalLink
+                  style={{ color: 'white', textDecoration: 'underline' }}
                   href="https://www.gate.io/trade/DYP_USDT"
                   target="_blank"
                 >
                   <Item>
                     <img src={GateIo} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
                     <TextNews>Gate.io</TextNews>
-                  </Item>
-                </ExternalLink>
-                <ExternalLink
-                  style={{ color: 'white', textDecoration: 'underline' }}
-                  href="https://www.bithumb.pro/en-us/exchange/professional?q=DYP-USDT"
-                  target="_blank"
-                >
-                  <Item>
-                    <img src={BithumbGlobal} style={{ width: '50px', borderRadius: '50px' }} alt={'logo'} />
-                    <TextNews>Bithumb Global</TextNews>
                   </Item>
                 </ExternalLink>
                 <ExternalLink
