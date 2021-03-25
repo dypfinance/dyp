@@ -43,12 +43,8 @@ export default function ExchangeList() {
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '0px' }} alt={'logo'} />
         <code style={{ marginTop: '19px', display: 'inline', fontWeight: 'bold' }}>
           <PointerLink>
-            <ExternalLink
-              target="_blank"
-              style={{ color: 'white' }}
-              href="https://www.kucoin.com/news/en-dyp-gets-listed-on-kucoin?utm_source=DYP"
-            >
-              DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin
+            <ExternalLink target="_blank" style={{ color: 'white' }} href="https://trade.kucoin.com/DYP-USDT">
+              DYP trading is now live on #KuCoin!
             </ExternalLink>
           </PointerLink>
         </code>
@@ -60,13 +56,8 @@ export default function ExchangeList() {
         <img src={Kucoin} width={30} height={30} style={{ margin: '10px', marginLeft: '25px' }} alt={'logo'} />
         <code style={{ marginTop: '18px', display: 'inline', fontWeight: 'bold', fontSize: '13px' }}>
           <PointerLink>
-            <ExternalLink
-              target="_blank"
-              style={{ color: 'white' }}
-              href="https://www.kucoin.com/news/en-dyp-gets-listed-on-kucoin?utm_source=DYP"
-            >
-              DeFi Yield Protocol (DYP) GETS LISTED ON KuCoin DYP/USDT & DYP/ETH trading will start tomorrow, March 25th
-              at 10AM UTC!
+            <ExternalLink target="_blank" style={{ color: 'white' }} href="https://trade.kucoin.com/DYP-USDT">
+              DYP trading is now live on #KuCoin!
             </ExternalLink>
           </PointerLink>
         </code>
