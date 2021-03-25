@@ -127,6 +127,9 @@ export default function Menu() {
           >
             Uniswap
           </MenuItemExternal>
+          <MenuItemExternal id={`getdyp-kucoin-nav-link`} href={'https://trade.kucoin.com/DYP-USDT'}>
+            KuCoin
+          </MenuItemExternal>
           <MenuItemExternal id={`getdyp-gateio-nav-link`} href={'https://www.gate.io/trade/DYP_USDT'}>
             Gate.io
           </MenuItemExternal>
