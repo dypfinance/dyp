@@ -5,7 +5,7 @@ import { ExternalLink, TYPE } from '../../theme'
 import { RowBetween } from '../../components/Row'
 import Whitelist from '../../components/Whitelist'
 
-import Michael from '../../assets/images/team/michael.png'
+import Michael from '../../assets/images/team/guest.png'
 import Ion from '../../assets/images/team/ion.png'
 import Tek from '../../assets/images/team/tek.png'
 import Const from '../../assets/images/team/const.png'
@@ -20,7 +20,7 @@ import Rig5 from '../../assets/images/rig5.jpg'
 
 // import Logo from '../../assets/images/sample1.png'
 import LinkedinSvg from '../../assets/svg/linkedin_2.svg'
-import TwitterSvg from '../../assets/svg/twitter_2.svg'
+//import TwitterSvg from '../../assets/svg/twitter_2.svg'
 import GithubSvg from '../../assets/svg/github_black.svg'
 
 import Bio, { Bio2, Bio3, Bio4, Bio5, Bio6 } from '../../components/Bio'
@@ -321,9 +321,13 @@ export default function About() {
                 <TextName>Michael Nikolas</TextName>
                 <SubTitleText>CEO & Product Manager</SubTitleText>
                 <Justify>
-                  <ExternalLink style={{ color: 'black' }} href="https://twitter.com/m_BMN_" target="_blank">
+                  <ExternalLink
+                    style={{ color: 'black' }}
+                    href="https://www.linkedin.com/in/michael-nikolas/"
+                    target="_blank"
+                  >
                     <ImgIcon>
-                      <img src={TwitterSvg} alt="logo" width={'100%'} />
+                      <img src={LinkedinSvg} alt="logo" width={'100%'} />
                     </ImgIcon>
                   </ExternalLink>
                   <Bio />
