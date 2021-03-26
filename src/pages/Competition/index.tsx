@@ -189,7 +189,7 @@ export default function Competition() {
                 </ExternalLink>
                 <ExternalLink
                   style={{ color: 'white', textDecoration: 'underline' }}
-                  href="https://www.bithumb.pro/en-us/exchange/professional?q=DYP-USDT"
+                  href="https://trade.kucoin.com/DYP-USDT"
                   target="_blank"
                 >
                   <Item>
