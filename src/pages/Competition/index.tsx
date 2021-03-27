@@ -139,17 +139,17 @@ export default function Competition() {
                 <StyledLink
                   target="_blank"
                   style={{ color: 'red', textDecoration: 'underline' }}
-                  href="https://www.gate.io/trade/DYP_USDT"
+                  href="https://trade.kucoin.com/DYP-USDT"
                 >
-                  Gate.io
+                  KuCoin
                 </StyledLink>
                 ,{' '}
                 <StyledLink
                   target="_blank"
                   style={{ color: 'red', textDecoration: 'underline' }}
-                  href="https://www.bithumb.pro/en-us/exchange/professional?q=DYP-USDT"
+                  href="https://www.gate.io/trade/DYP_USDT"
                 >
-                  Bithumb Global
+                  Gate.io
                 </StyledLink>
                 , and{' '}
                 <StyledLink
