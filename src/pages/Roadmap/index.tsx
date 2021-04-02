@@ -160,10 +160,10 @@ export default function Roadmap() {
                   <AutoColumn gap="md">
                     <RowBetween>
                       <TYPE.white fontWeight={600}>
-                        ➫ Launch New Ethereum mining pool after Ethereum move to PoS<div></div>➫ Launch DYP Lending
-                        <div></div>➫ Migration from Uniswap<div></div>➫ Built-in insurance for all DYP liquidity
-                        providers<div></div>➫ Further extension and project growth in different areas
-                        <div></div>
+                        ➫Launch DYP NFT dApp v1.0<div></div>➫ Launch New Ethereum mining pool after Ethereum move to PoS
+                        <div></div>➫ Launch DYP Lending<div></div>➫ Migration from Uniswap<div></div>➫ Built-in
+                        insurance for all DYP liquidity providers<div></div>➫ Further extension and project growth in
+                        different areas<div></div>
                       </TYPE.white>
                     </RowBetween>
                   </AutoColumn>

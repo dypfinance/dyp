@@ -167,6 +167,20 @@ export default function Competition() {
                 6. Rewards will be distributed within 7 days of the campaign ending.
               </TYPE.black>
             </RowBetween>
+            <RowBetween style={{ display: 'flex', justifyContent: 'center', color: 'red' }}>
+              <TYPE.black fontSize={15} fontWeight={600}>
+                DeFi Yield Protocol March Competition Rankings:
+              </TYPE.black>
+            </RowBetween>
+            <RowBetween style={{ display: 'flex', justifyContent: 'center' }}>
+              <StyledLink
+                target="_blank"
+                style={{ color: 'red', textDecoration: 'underline' }}
+                href="https://bit.ly/31GAMgn"
+              >
+                https://bit.ly/31GAMgn
+              </StyledLink>
+            </RowBetween>
             <RowBetween />
             <RowBetween style={{ display: 'flex', justifyContent: 'center' }}>
               <TYPE.black fontSize={15} fontWeight={600}>
