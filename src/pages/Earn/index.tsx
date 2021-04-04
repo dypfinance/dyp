@@ -184,7 +184,7 @@ export default function Earn() {
                 href="https://medium.com/@dypfinance/introducing-the-defi-yield-protocol-12ea2146d328"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>Read more about DYP Bridge</TYPE.white>
+                <TYPE.white fontSize={14}>Read more about DYP Bridge Tutorial</TYPE.white>
               </ExternalLink>
             </AutoColumn>
           </CardSection>
