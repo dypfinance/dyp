@@ -73,7 +73,7 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>DYP Staking Pools</TYPE.white>
+                <TYPE.white fontWeight={600}>DYP ETH Staking Pools</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
@@ -83,10 +83,9 @@ export default function Earn() {
               <RowBetween>
                 <TYPE.white fontSize={14}>
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
-                  DYP to ETH by the smart contract at 00:00 UTC, and ETH is distributed as a reward to the liquidity
-                  providers. <p>{'\n'}</p> Maintaining token price stability — every day at 00:00 UTC, the smart
-                  contract will automatically try to convert the DYP rewards to ETH. If the DYP price is affected by
-                  more than{' '}
+                  DYP to ETH by the smart contract, and ETH is distributed as a reward to the liquidity providers.
+                  <div></div>Maintaining token price stability — every 24 hours, the smart contract will automatically
+                  try to convert the DYP rewards to ETH. If the DYP price is affected by more than{' '}
                   <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
                     <img src={Arrow} alt="icon" />
                     2.5%
@@ -102,7 +101,7 @@ export default function Earn() {
                 href="https://dypfinance.medium.com/dyp-staking-pools-tutorial-82bd49e65527"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>DYP Staking Pools Tutorial</TYPE.white>
+                <TYPE.white fontSize={14}>DYP ETH Staking Pools Tutorial</TYPE.white>
               </ExternalLink>
               <RowBetween />{' '}
               <ExternalLink
@@ -111,6 +110,80 @@ export default function Earn() {
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about DYP</TYPE.white>
+              </ExternalLink>
+            </AutoColumn>
+          </CardSection>
+          <CardBGImage />
+          <CardNoise />
+        </DataCard>
+      </TopSection>
+
+      <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
+        <DataRow style={{ alignItems: 'baseline' }}>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
+          {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
+          <TYPE.black>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TYPE.black>
+        </DataRow>
+
+        <PoolSection>
+          {stakingRewardsExist && stakingInfos?.length === 0 ? (
+            <Loader style={{ margin: 'auto' }} />
+          ) : !stakingRewardsExist ? (
+            'No active rewards'
+          ) : (
+            stakingInfos?.map(stakingInfo => {
+              // need to sort by added liquidity here
+              return <PoolCard key={stakingInfo.stakingRewardAddress} stakingInfo={stakingInfo} />
+            })
+          )}
+        </PoolSection>
+      </AutoColumn>
+      <RowBetween />
+      <TopSection gap="md">
+        <DataCard>
+          <CardBGImage />
+          <CardNoise />
+          <CardSection>
+            <AutoColumn gap="md">
+              <RowBetween>
+                <TYPE.white fontWeight={600}>DYP BSC Staking Pools</TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>
+                  Deposit your liquidity provider tokens to receive ETH/BNB/DYP as rewards.
+                </TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>
+                  In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
+                  DYP to BNB by the smart contract, and ETH/BNB/DYP is distributed as a reward to the liquidity
+                  providers. The users can choose between three different type of rewards: ETH, BNB, or DYP rewards.
+                  <div></div>Maintaining token price stability — every 24 hours, the smart contract will automatically
+                  try to convert the DYP rewards to BNB. If the DYP price is affected by more than{' '}
+                  <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
+                    <img src={Arrow} alt="icon" />
+                    2.5%
+                  </a>
+                  , then the maximum DYP amount that does not affect the price will be swapped to BNB, with the
+                  remaining amount distributed in the next day’s rewards. After seven days, if we still have
+                  undistributed DYP rewards, the DeFi Yield protocol governance will vote on whether the remaining DYP
+                  will be distributed to the token holders or burned (all burned tokens are removed from circulation).
+                </TYPE.white>
+              </RowBetween>{' '}
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://dypfinance.medium.com/dyp-staking-pools-tutorial-82bd49e65527"
+                target="_blank"
+              >
+                <TYPE.white fontSize={14}>DYP BSC Staking Pools Tutorial</TYPE.white>
+              </ExternalLink>
+              <RowBetween />{' '}
+              <ExternalLink
+                style={{ color: 'white', textDecoration: 'underline' }}
+                href="https://medium.com/@dypfinance/introducing-the-defi-yield-protocol-12ea2146d328"
+                target="_blank"
+              >
+                <TYPE.white fontSize={14}>Read more about DYP Bridge</TYPE.white>
               </ExternalLink>
             </AutoColumn>
           </CardSection>
