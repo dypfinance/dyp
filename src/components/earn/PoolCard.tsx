@@ -198,6 +198,12 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         window1.the_graph_result.lp_data[LP_IDs.wbtc[3]].tvl_usd
     }
   }
+  if (stakingInfo.tokens[1].symbol === 'WBNB') {
+    link = 'staking-bnb'
+  }
+  if (stakingInfo.tokens[1].symbol === 'BUSD') {
+    link = 'staking-busd'
+  }
 
   // get the color of the token
   const token = currency0 === ETHER ? token1 : token0

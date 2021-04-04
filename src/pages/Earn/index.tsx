@@ -1,7 +1,7 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { STAKING_REWARDS_INFO, useStakingInfo } from '../../state/stake/hooks'
+import { STAKING_REWARDS_INFO, useStakingInfo, useStakingInfoBSC } from '../../state/stake/hooks'
 import { TYPE, ExternalLink } from '../../theme'
 import PoolCard from '../../components/earn/PoolCard'
 import { RowBetween } from '../../components/Row'
@@ -41,6 +41,7 @@ const window1 = window
 export default function Earn() {
   const { chainId } = useActiveWeb3React()
   const stakingInfos = useStakingInfo()
+  const stakingInfosBsc = useStakingInfoBSC()
 
   const DataRow = styled(RowBetween)`
     ${({ theme }) => theme.mediaWidth.upToSmall`
@@ -157,7 +158,7 @@ export default function Earn() {
                 <TYPE.white fontSize={14}>
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
                   DYP to BNB by the smart contract, and ETH/BNB/DYP is distributed as a reward to the liquidity
-                  providers. The users can choose between three different type of rewards: ETH, BNB, or DYP rewards.
+                  providers. The users can choose between three different type of rewards: ETH, BNB, or DYP.
                   <div></div>Maintaining token price stability — every 24 hours, the smart contract will automatically
                   try to convert the DYP rewards to BNB. If the DYP price is affected by more than{' '}
                   <a style={{ color: 'red', textDecoration: 'none' }} href="#earn">
@@ -200,12 +201,12 @@ export default function Earn() {
         </DataRow>
 
         <PoolSection>
-          {stakingRewardsExist && stakingInfos?.length === 0 ? (
+          {stakingRewardsExist && stakingInfosBsc?.length === 0 ? (
             <Loader style={{ margin: 'auto' }} />
           ) : !stakingRewardsExist ? (
             'No active rewards'
           ) : (
-            stakingInfos?.map(stakingInfo => {
+            stakingInfosBsc?.map(stakingInfo => {
               // need to sort by added liquidity here
               return <PoolCard key={stakingInfo.stakingRewardAddress} stakingInfo={stakingInfo} />
             })

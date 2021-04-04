@@ -4,10 +4,11 @@ import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import DYPLogo from '../../assets/svg/dyp_thicker.svg'
+import WBNBLogo from '../../assets/images/wbnb_logo.png'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
-import { DYP } from '../../constants'
+import { DYP, WBNB } from '../../constants'
 
 const getTokenLogoURL = (address: string) =>
   `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
@@ -62,6 +63,10 @@ export default function CurrencyLogo({
 
   if (currency === DYP) {
     return <StyledDYPLogo src={DYPLogo} size={size} style={style} />
+  }
+
+  if (currency === WBNB) {
+    return <StyledEthereumLogo src={WBNBLogo} size={size} style={style} />
   }
 
   return <StyledLogo size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />
