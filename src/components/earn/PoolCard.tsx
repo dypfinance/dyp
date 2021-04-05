@@ -207,6 +207,9 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   if (stakingInfo.apr === '99%') {
     link = 'https://app-bsc.dyp.finance/staking-eth'
   }
+  if (stakingInfo.days === '100') {
+    tvlPools = 4065076
+  }
 
   // get the color of the token
   const token = currency0 === ETHER ? token1 : token0
