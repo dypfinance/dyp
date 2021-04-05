@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { ExternalLink, TYPE } from '../../theme'
+import { TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 
 //import getFormattedNumber from '../Function/get-formatted-number'
@@ -9,6 +9,7 @@ import HeaderSlideshow from '../Slideshow/HeaderSlideshow'
 import TextOne from '../Slideshow/headerSlides/TextOne'
 import TextTwo from '../Slideshow/headerSlides/TextTwo'
 import TextThree from '../Slideshow/headerSlides/TextThree'
+import { NavLink } from 'react-router-dom'
 //import TextFour from '../Slideshow/headerSlides/TextFour'
 
 const PageWrapper = styled(AutoColumn)`
@@ -50,7 +51,7 @@ const WhitelistForm = styled.div`
   `}
 `
 
-const MenuItemExternal = styled(ExternalLink).attrs({})`
+const MenuItemExternal = styled(NavLink).attrs({})`
   flex: 1;
   padding: 0.5rem 0.5rem;
   color: ${({ theme }) => theme.text1};
@@ -74,7 +75,8 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
         display: none;
   `}
 `
-const MenuItemExternalMobile = styled(ExternalLink).attrs({})`
+
+const MenuItemExternalMobile = styled(NavLink)`
   flex: 1;
   padding: 0.5rem 0.5rem;
   color: ${({ theme }) => theme.text1};
@@ -159,13 +161,13 @@ export default function Whitelist() {
       <AutoColumn gap="md">
         <PageWrapper>
           <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
-            <TextFont>DeFi Yield Protocol staking dApp is live! </TextFont>
+            <TextFont>DeFi Yield Protocol staking dApp is live on Binance Smart Chain! </TextFont>
           </TYPE.white>
-          <MenuItemExternal id={`stake-nav-link`} href={'https://app.dyp.finance/'}>
-            JOIN NOW AND START EARNING ETH REWARDS
+          <MenuItemExternal id={`stake-nav-link`} to={'/earn'}>
+            JOIN NOW
           </MenuItemExternal>
-          <MenuItemExternalMobile id={`stake-nav-link`} href={'https://app.dyp.finance/'}>
-            JOIN NOW AND START EARNING ETH REWARDS
+          <MenuItemExternalMobile id={`stake-nav-link`} to={'/earn'}>
+            JOIN NOW AND START EARNING ETH/BNB REWARDS
           </MenuItemExternalMobile>
         </PageWrapper>
         {/*<TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>*/}

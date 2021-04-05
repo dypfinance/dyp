@@ -127,6 +127,14 @@ export default function Menu() {
           >
             Uniswap
           </MenuItemExternal>
+          <MenuItemExternal
+            id={`getdyp-pancakeswap-nav-link`}
+            href={
+              'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'
+            }
+          >
+            PancakeSwap
+          </MenuItemExternal>
           <MenuItemExternal id={`getdyp-kucoin-nav-link`} href={'https://trade.kucoin.com/DYP-USDT'}>
             KuCoin
           </MenuItemExternal>

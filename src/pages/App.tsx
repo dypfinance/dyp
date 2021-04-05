@@ -6,7 +6,7 @@ import AddressClaimModal from '../components/claim/AddressClaimModal'
 import Header from '../components/Header'
 import Polling from '../components/Header/Polling'
 import URLWarning from '../components/Header/URLWarning'
-import ExchangeList from '../components/Header/ExchangeList'
+//import ExchangeList from '../components/Header/ExchangeList'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
 import { ApplicationModal } from '../state/application/actions'
@@ -41,11 +41,13 @@ import Bounty from './Bounty'
 import Feature from './Feature'
 import About from './About'
 import Audit from './Audit'
+import Bridge from './Bridge'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
 import Competition from './Competition'
+import BscStake from '../components/Header/BscStake'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -105,7 +107,7 @@ export default function App() {
       <Route component={DarkModeQueryParamReader} />
       <AppWrapper>
         <URLWarning />
-        <ExchangeList />
+        <BscStake />
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
@@ -136,6 +138,7 @@ export default function App() {
               <Route exact strict path="/vote" component={Vote} />
               <Route exact strict path="/about" component={About} />
               <Route exact strict path="/audit" component={Audit} />
+              <Route exact strict path="/bridge" component={Bridge} />
               <Route exact strict path="/competition" component={Competition} />
               <Route exact strict path="/create" component={RedirectToAddLiquidity} />
               <Route exact path="/add" component={AddLiquidity} />

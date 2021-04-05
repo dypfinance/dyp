@@ -73,7 +73,7 @@ export const STAKING_REWARDS_INFO_BSC: {
       // stakingRewardAddress: address of liq pool
       tokens: [DYP, WETH[ChainId.MAINNET]],
       stakingRewardAddress: '0xa1484C3aa22a66C62b77E0AE78E15258bd0cB711',
-      apr: '20%',
+      apr: '99%',
       days: '30 Days'
     },
     {

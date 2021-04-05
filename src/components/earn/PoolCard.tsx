@@ -91,7 +91,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   //     stakingInfo.tokens[1].symbol === 'USDT' ||
   //     stakingInfo.tokens[1].symbol === 'WBTC'
   // )
-  let link = 'staking-eth'
+  let link = 'https://app.dyp.finance/staking-eth'
   let tvlPools = 0
   // eslint-disable-next-line
   //@ts-ignore
@@ -118,7 +118,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
       window1.the_graph_result.lp_data[LP_IDs.eth[3]].tvl_usd
   }
   if (stakingInfo.tokens[1].symbol === 'USDC') {
-    link = 'staking-usdc'
+    link = 'https://app.dyp.finance/staking-usdc'
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result.lp_data) {
@@ -145,7 +145,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     }
   }
   if (stakingInfo.tokens[1].symbol === 'USDT') {
-    link = 'staking-usdt'
+    link = 'https://app.dyp.finance/staking-usdt'
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result.lp_data) {
@@ -172,7 +172,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     }
   }
   if (stakingInfo.tokens[1].symbol === 'WBTC') {
-    link = 'staking-wbtc'
+    link = 'https://app.dyp.finance/staking-wbtc'
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result.lp_data) {
@@ -199,10 +199,13 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     }
   }
   if (stakingInfo.tokens[1].symbol === 'WBNB') {
-    link = 'staking-bnb'
+    link = 'https://app-bsc.dyp.finance/staking-bnb'
   }
   if (stakingInfo.tokens[1].symbol === 'BUSD') {
-    link = 'staking-busd'
+    link = 'https://app-bsc.dyp.finance/staking-busd'
+  }
+  if (stakingInfo.apr === '99%') {
+    link = 'https://app-bsc.dyp.finance/staking-eth'
   }
 
   // get the color of the token
@@ -249,7 +252,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           style={{
             width: '100%'
           }}
-          href={`https://app.dyp.finance/${link}`}
+          href={`${link}`}
           target="_blank"
         >
           <ButtonPrimary padding="8px" borderRadius="8px">

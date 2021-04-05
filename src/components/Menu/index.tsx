@@ -162,6 +162,9 @@ export default function Menu() {
           <MenuItem id={`earn-nav-link`} to={'/earn'}>
             Stake
           </MenuItem>
+          <MenuItem id={`earn-bridge-link`} to={'/bridge'}>
+            Bridge
+          </MenuItem>
           <MenuItem id={`earn-nav-link`} to={'/farm'}>
             Farm
           </MenuItem>
