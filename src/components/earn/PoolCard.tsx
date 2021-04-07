@@ -198,17 +198,90 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         window1.the_graph_result.lp_data[LP_IDs.wbtc[3]].tvl_usd
     }
   }
+  // BSC --->
   if (stakingInfo.tokens[1].symbol === 'WBNB') {
     link = 'https://app-bsc.dyp.finance/staking-bnb'
+    tvlPools = 4699145
+    // eslint-disable-next-line
+    //@ts-ignore
+    if (window1.the_graph_result_BSC.lp_data) {
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      tvlPools =
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.wbtc[0]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.wbtc[1]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.wbtc[2]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.wbtc[3]].tvl_usd
+    }
   }
   if (stakingInfo.tokens[1].symbol === 'BUSD') {
     link = 'https://app-bsc.dyp.finance/staking-busd'
+    tvlPools = 4611216
+    // eslint-disable-next-line
+    //@ts-ignore
+    if (window1.the_graph_result_BSC.lp_data) {
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      tvlPools =
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.usdc[0]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.usdc[1]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.usdc[2]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.usdc[3]].tvl_usd
+    }
   }
   if (stakingInfo.apr === '99%') {
     link = 'https://app-bsc.dyp.finance/staking-eth'
-  }
-  if (stakingInfo.days === '100') {
-    tvlPools = 4065076
+    tvlPools = 4739215
+    // eslint-disable-next-line
+    //@ts-ignore
+    if (window1.the_graph_result_BSC.lp_data) {
+      // eslint-disable-next-line
+      //@ts-ignore
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      tvlPools =
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.eth[0]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.eth[1]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.eth[2]].tvl_usd +
+        // eslint-disable-next-line
+        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        window1.the_graph_result_BSC.lp_data[LP_IDs_BSC.eth[3]].tvl_usd
+    }
   }
 
   // get the color of the token

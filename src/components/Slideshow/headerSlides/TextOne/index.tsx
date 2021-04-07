@@ -55,6 +55,9 @@ const SContainer = styled.div`
 const window1 = window
 
 export default function TextOne() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  const tvlBsc = window1.getTvlBsc
   // eslint-disable-next-line
   //@ts-ignore
   const [tvlFarming, setTvlFarming] = React.useState(0)
@@ -90,7 +93,7 @@ export default function TextOne() {
     // eslint-disable-next-line
     //@ts-ignore
     // eslint-disable-next-line @typescript-eslint/camelcase
-    tvlPoolsTotal = tvl + tvlFarming
+    tvlPoolsTotal = tvl + tvlFarming + tvlBsc
     //tvl = tvlPoolsTotal
   }
   return (

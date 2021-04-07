@@ -42,7 +42,6 @@ export default function Earn() {
   const { chainId } = useActiveWeb3React()
   const stakingInfos = useStakingInfo()
   const stakingInfosBsc = useStakingInfoBSC()
-  const tvlPoolBsc = 12195280
   const DataRow = styled(RowBetween)`
     ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-direction: column;
@@ -62,6 +61,11 @@ export default function Earn() {
       //@ts-ignore
       .then(tvl => setTvl(tvl))
       .catch(console.error)
+  // eslint-disable-next-line
+  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  const tvlBsc = window1.getTvlBsc
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
 
   return (
@@ -197,7 +201,7 @@ export default function Earn() {
         <DataRow style={{ alignItems: 'baseline' }}>
           <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
           {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
-          <TYPE.black>Total Value Locked: ${getFormattedNumber(tvlPoolBsc, 2)}</TYPE.black>
+          <TYPE.black>Total Value Locked: ${getFormattedNumber(tvlBsc, 2)}</TYPE.black>
         </DataRow>
 
         <PoolSection>
