@@ -2986,7 +2986,7 @@ async function get_usd_values_with_apy_and_tvl_BSC(...arguments) {
 
 async function refresh_the_graph_result_BSC() {
   let result = await get_usd_values_with_apy_and_tvl_BSC({token_contract_addresses: [TOKEN_ADDRESS], lp_ids: LP_ID_LIST_BSC})
-  window.the_graph_result_BSC = result
+  //window.the_graph_result_BSC = result
   //window.TVL_FARMING_POOLS = await refreshBalance()
   return result
 }
@@ -3070,7 +3070,7 @@ function get_usd_values({
         let data = response.data
         if (!data) return reject(response);
 
-        console.log(data)
+        //console.log(data)
 
         let usd_per_eth = new BigNumber(data.bundle.ethPrice).toFixed(2)*1
 
@@ -3236,6 +3236,37 @@ async function get_the_graph_bsc() {
   }
 }
 
+window.totaltvl = 0
+
+async function getTotalTvl() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/totaltvl')
+    window.totaltvl = parseInt(res)
+    //console.log(res)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+window.highestAPY = 0
+
+async function getHighestAPYApi() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/highest-apy')
+    window.highestAPY = res
+    //console.log(res)
+  } catch (err) {
+    console.log(err)
+  }
+  return window.highestAPY
+}
+
+const getHighestAPY = async () => {
+  const highestApy = await getHighestAPYApi()
+  return highestApy
+}
+window.getHighestAPY = getHighestAPY
+
 async function refreshBalance() {
 
   //let reward_token = window.reward_token
@@ -3342,10 +3373,11 @@ const getWethPaidOut = async (contractAddress) => {
 }
 
 const getCombinedTvlUsd = async () => {
-  //let circSupply = await test()
   await get_the_graph_eth()
   await get_the_graph_bsc()
   await getTvlBscApi()
+  await getTotalTvl()
+  GetHighAPY_BSC()
   let hello = await refreshBalance()
   window.tvl_farming = hello
   if (window.CALLED_ONCE) {
@@ -3362,6 +3394,7 @@ const getCombinedTvlUsd = async () => {
     tvl += the_graph_result.lp_data[id].tvl_usd*1 || 0
   }
   window.COMBINED_TVL = tvl
+  tvl = window.totaltvl
   return tvl
 }
 
@@ -3409,7 +3442,6 @@ const GetHighAPY = async () => {
   //console.log('bbbbb', highApyArray)
 
   highApy = highApyArray[highApyArray.length - 1]
-
   window.highApy = highApy
   return highApy
 }

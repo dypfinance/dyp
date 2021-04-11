@@ -55,25 +55,6 @@ const SContainer = styled.div`
 const window1 = window
 
 export default function TextOne() {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-  // @ts-ignore
-  const tvlBsc = window1.getTvlBsc
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [tvlFarming, setTvlFarming] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  tvlFarming === 0 &&
-    window1
-      // eslint-disable-next-line
-      // @ts-ignore
-      .FarmingTvl()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(tvlFarming => setTvlFarming(tvlFarming))
-      .catch(console.error)
-  // eslint-disable-next-line
-  //@ts-ignore
   const [tvl, setTvl] = React.useState(0)
   // eslint-disable-next-line
   //@ts-ignore
@@ -86,20 +67,10 @@ export default function TextOne() {
       //@ts-ignore
       .then(tvl => setTvl(tvl))
       .catch(console.error)
-  let tvlPoolsTotal = 0
-  // eslint-disable-next-line
-  //@ts-ignore
-  if (window1.the_graph_result.lp_data) {
-    // eslint-disable-next-line
-    //@ts-ignore
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    tvlPoolsTotal = tvl + tvlFarming + tvlBsc
-    //tvl = tvlPoolsTotal
-  }
   return (
     <SContainer>
       <TYPE.white fontWeight={500} fontSize={17} style={{ margin: 'auto' }}>
-        <TextFont>Total Value Locked: ${getFormattedNumber(tvlPoolsTotal, 2)}</TextFont>
+        <TextFont>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TextFont>
       </TYPE.white>
     </SContainer>
   )

@@ -63,7 +63,7 @@ export default function TextThree() {
     window1
       // eslint-disable-next-line
       // @ts-ignore
-      .GetHighAPY()
+      .getHighestAPY()
       // eslint-disable-next-line
       //@ts-ignore
       .then(getHighApy => setgetHighApy(getHighApy))
