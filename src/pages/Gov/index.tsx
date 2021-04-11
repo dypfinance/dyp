@@ -61,7 +61,20 @@ export default function Gov() {
                   >
                     gov.dyp.finance
                   </StyledLink>{' '}
-                  to start shaping and participating in protocol governance.
+                  to start shaping and participating in protocol governance on ETH Network.
+                </TYPE.white>
+              </RowBetween>{' '}
+              <RowBetween>
+                <TYPE.white fontSize={14}>
+                  Visit{' '}
+                  <StyledLink
+                    target="_blank"
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://gov-bsc.dyp.finance/"
+                  >
+                    gov-bsc.dyp.finance
+                  </StyledLink>{' '}
+                  to start shaping and participating in protocol governance on BSC Network.
                 </TYPE.white>
               </RowBetween>{' '}
             </AutoColumn>

@@ -27,10 +27,20 @@ const IMGs = styled.div`
 const window1 = window
 
 export default function Tokenomics() {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-  // @ts-ignore
-  const circulatingSupply = window1.get_circulating_supply
-  //console.log('aaa+ ', circulatingSupply)
+  // eslint-disable-next-line
+  //@ts-ignore
+  const [circSupply, setCircSupply] = React.useState(0)
+  // eslint-disable-next-line
+  //@ts-ignore
+  circSupply === 0 &&
+    window1
+      // eslint-disable-next-line
+      //@ts-ignore
+      .getCirculatingSupply()
+      // eslint-disable-next-line
+      //@ts-ignore
+      .then(circSupply => setCircSupply(circSupply))
+      .catch(console.error)
   return (
     <PageWrapper gap="lg" justify="center">
       <Whitelist />
@@ -48,7 +58,7 @@ export default function Tokenomics() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Initial Circulating Supply: {getFormattedNumber(circulatingSupply, 2)} DYP
+                  Initial Circulating Supply: {getFormattedNumber(circSupply, 2)} DYP
                 </TYPE.white>
               </RowBetween>
               <RowBetween>

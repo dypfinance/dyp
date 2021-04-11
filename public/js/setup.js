@@ -25,8 +25,7 @@ const TOKENS_DISBURSED_PER_YEAR = [
   900_000,
   1_200_000,
 ]
-const LP_IDs =
-  {
+const LP_IDs = {
     "eth": [
       "0xba7872534a6c9097d805d8bee97e030f4e372e54-0xa7d6f5fa9b0be0e98b3b40e6ac884e53f2f9460e",
       "0xba7872534a6c9097d805d8bee97e030f4e372e54-0x0b0a544ae6131801522e3ac1fbac6d311094c94c",
@@ -3179,7 +3178,7 @@ async function get_usd_values_with_apy_and_tvl(...arguments) {
 
 async function refresh_the_graph_result() {
   let result = await get_usd_values_with_apy_and_tvl({token_contract_addresses: [TOKEN_ADDRESS], lp_ids: LP_ID_LIST})
-  window.the_graph_result = result
+  //window.the_graph_result = result
   //await refresh_the_graph_result_BSC()
   return result
 }
@@ -3193,12 +3192,18 @@ window.refresh_the_graph_result = refresh_the_graph_result
 async function test() {
   try {
     const res = await getData('https://api.dyp.finance/api/circulating-supply')
-    window.get_circulating_supply = res
+    window.get_circulating_supply = parseInt(res)
     //console.log(res)
   } catch(err) {
     console.log(err);
   }
 }
+
+const getCirculatingSupply = async () => {
+  const circSupply = window.get_circulating_supply
+  return circSupply
+}
+window.getCirculatingSupply = getCirculatingSupply
 
 window.getTvlBsc = 0
 
@@ -3207,6 +3212,24 @@ async function getTvlBscApi() {
     const res = await getData('https://api.dyp.finance/tvl-bsc')
     window.getTvlBsc = parseInt(res)
     //console.log(res)
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+async function get_the_graph_eth() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/the_graph_eth')
+    window.the_graph_result = res.the_graph_eth
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+async function get_the_graph_bsc() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/the_graph_bsc')
+    window.the_graph_result_BSC = res.the_graph_bsc
   } catch(err) {
     console.log(err);
   }
@@ -3318,16 +3341,18 @@ const getWethPaidOut = async (contractAddress) => {
 }
 
 const getCombinedTvlUsd = async () => {
-  test()
-  getTvlBscApi()
+  await test()
+  await get_the_graph_eth()
+  await get_the_graph_bsc()
+  await getTvlBscApi()
   let hello = await refreshBalance()
   window.tvl_farming = hello
   if (window.CALLED_ONCE) {
     return window.COMBINED_TVL
   }
   window.CALLED_ONCE = true
-  refresh_the_graph_result_BSC()
-  let the_graph_result = await refresh_the_graph_result()
+  //refresh_the_graph_result_BSC()
+  //let the_graph_result = await refresh_the_graph_result()
   let tvl = 0
   if (!the_graph_result.lp_data) return 0
 

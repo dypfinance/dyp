@@ -47,7 +47,7 @@ import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, Redirec
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
 import Competition from './Competition'
-import BscStake from '../components/Header/BscStake'
+//import BscStake from '../components/Header/BscStake'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -107,7 +107,6 @@ export default function App() {
       <Route component={DarkModeQueryParamReader} />
       <AppWrapper>
         <URLWarning />
-        <BscStake />
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>

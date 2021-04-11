@@ -201,7 +201,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   // BSC --->
   if (stakingInfo.tokens[1].symbol === 'WBNB') {
     link = 'https://app-bsc.dyp.finance/staking-bnb'
-    tvlPools = 4699145
+    tvlPools = 0
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result_BSC.lp_data) {
@@ -229,7 +229,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   }
   if (stakingInfo.tokens[1].symbol === 'BUSD') {
     link = 'https://app-bsc.dyp.finance/staking-busd'
-    tvlPools = 4611216
+    tvlPools = 0
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result_BSC.lp_data) {
@@ -257,7 +257,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   }
   if (stakingInfo.apr === '99%') {
     link = 'https://app-bsc.dyp.finance/staking-eth'
-    tvlPools = 4739215
+    tvlPools = 0
     // eslint-disable-next-line
     //@ts-ignore
     if (window1.the_graph_result_BSC.lp_data) {
