@@ -3197,10 +3197,11 @@ async function test() {
   } catch(err) {
     console.log(err);
   }
+  return window.get_circulating_supply
 }
 
 const getCirculatingSupply = async () => {
-  const circSupply = window.get_circulating_supply
+  const circSupply = await test()
   return circSupply
 }
 window.getCirculatingSupply = getCirculatingSupply
@@ -3341,7 +3342,7 @@ const getWethPaidOut = async (contractAddress) => {
 }
 
 const getCombinedTvlUsd = async () => {
-  await test()
+  //let circSupply = await test()
   await get_the_graph_eth()
   await get_the_graph_bsc()
   await getTvlBscApi()
