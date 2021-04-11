@@ -3381,7 +3381,7 @@ const getCombinedTvlUsd = async () => {
   let hello = await refreshBalance()
   window.tvl_farming = hello
   if (window.CALLED_ONCE) {
-    return window.COMBINED_TVL
+    return window.totaltvl
   }
   window.CALLED_ONCE = true
   //refresh_the_graph_result_BSC()

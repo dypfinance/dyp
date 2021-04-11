@@ -47,22 +47,9 @@ export default function Earn() {
     flex-direction: column;
   `};
   `
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [tvl, setTvl] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  tvl === 0 &&
-    window1
-      // eslint-disable-next-line
-      //@ts-ignore
-      .getCombinedTvlUsd()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(tvl => setTvl(tvl))
-      .catch(console.error)
-  // eslint-disable-next-line
-  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  const tvl = window1.COMBINED_TVL
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   const tvlBsc = window1.getTvlBsc
