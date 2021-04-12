@@ -3267,6 +3267,25 @@ const getHighestAPY = async () => {
 }
 window.getHighestAPY = getHighestAPY
 
+window.jsonTotalPaid = {}
+
+async function getTotalPaidApi() {
+  try {
+    const res = await getData('https://api.dyp.finance/api/totalpaid')
+    window.jsonTotalPaid = res
+    console.log('total paic', res)
+  } catch (err) {
+    console.log(err)
+  }
+  return window.jsonTotalPaid
+}
+
+const getTotalPaid = async () => {
+  const totalPaid = await getTotalPaidApi()
+  return totalPaid
+}
+window.getTotalPaid = getTotalPaid
+
 async function refreshBalance() {
 
   //let reward_token = window.reward_token

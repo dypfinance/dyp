@@ -55,40 +55,40 @@ const SContainer = styled.div`
 const window1 = window
 
 export default function TextTwo() {
+  let ethTotalethTotal = 0
+  let bnbTotal = 0
+  let totalPaidInUsd = 0
   // eslint-disable-next-line
   //@ts-ignore
-  const [wethPaiOutTotals, setwethPaiOutTotal] = React.useState(0)
+  const [jsonTotalPaid, setwethPaiOutTotal] = React.useState(0)
   // eslint-disable-next-line
   //@ts-ignore
-  wethPaiOutTotals === 0 &&
+  jsonTotalPaid === 0 &&
     window1
       // eslint-disable-next-line
       // @ts-ignore
-      .PaidOutETH()
+      .getTotalPaid()
       // eslint-disable-next-line
       //@ts-ignore
-      .then(wethPaiOutTotals => setwethPaiOutTotal(wethPaiOutTotals))
+      .then(jsonTotalPaid => setwethPaiOutTotal(jsonTotalPaid))
       .catch(console.error)
-  // eslint-disable-next-line
-  //@ts-ignore
-  const [paidInUsd, setPaidInUsd] = React.useState(0)
-  // eslint-disable-next-line
-  //@ts-ignore
-  paidInUsd === 0 &&
-    window1
-      // eslint-disable-next-line
-      // @ts-ignore
-      .PaidEthInUsd()
-      // eslint-disable-next-line
-      //@ts-ignore
-      .then(paidInUsd => setPaidInUsd(paidInUsd))
-      .catch(console.error)
+  if (jsonTotalPaid) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
+    ethTotalethTotal = jsonTotalPaid.ethTotal.wethPaiOutTotals
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
+    bnbTotal = jsonTotalPaid.bnbTotal.wbnbPaidOutTotals
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
+    totalPaidInUsd = jsonTotalPaid.totalPaidInUsd
+  }
   return (
     <SContainer>
       <TYPE.white fontWeight={500} fontSize={17} style={{ margin: 'auto' }}>
         <TextFont>
-          {getFormattedNumber(wethPaiOutTotals, 2)} Ethereum worth ${getFormattedNumber(paidInUsd, 2)} paid to the
-          Liquidity providers since launch
+          {getFormattedNumber(ethTotalethTotal, 2)} ETH and {getFormattedNumber(bnbTotal, 2)} BNB worth $
+          {getFormattedNumber(totalPaidInUsd, 2)} paid to the Liquidity providers since launch
         </TextFont>
       </TYPE.white>
     </SContainer>
