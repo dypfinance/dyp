@@ -164,7 +164,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://dypfinance.medium.com/dyp-staking-pools-tutorial-82bd49e65527"
+                href="https://dypfinance.medium.com/defi-yield-protocol-community-update-staking-pools-tutorial-on-binance-smart-chain-dfa342a5634b"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>DYP BSC Staking Pools Tutorial</TYPE.white>
@@ -172,7 +172,7 @@ export default function Earn() {
               <RowBetween />{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://medium.com/@dypfinance/introducing-the-defi-yield-protocol-12ea2146d328"
+                href="https://dypfinance.medium.com/defi-yield-protocol-bridge-tutorial-9dad5226537f"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about DYP Bridge Tutorial</TYPE.white>
