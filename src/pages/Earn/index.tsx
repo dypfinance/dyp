@@ -147,6 +147,23 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
+                  NOTE: The staking dApp works ONLY with the PancakeSwap V1 (old) LP tokens!
+                </TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>
+                  When you add your liquidity to PancakeSwap be sure that you add it on the old version{' '}
+                  <ExternalLink
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://v1exchange.pancakeswap.finance/#/swap"
+                    target="_blank"
+                  >
+                    <TYPE.white fontSize={14}>https://v1exchange.pancakeswap.finance/#/swap</TYPE.white>
+                  </ExternalLink>
+                </TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
                   DYP to BNB by the smart contract, and ETH/BNB/DYP is distributed as a reward to the liquidity
                   providers. The users can choose between three different type of rewards: ETH, BNB, or DYP.
