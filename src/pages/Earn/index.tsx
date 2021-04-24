@@ -155,10 +155,10 @@ export default function Earn() {
                   When you add your liquidity to PancakeSwap be sure that you add it on the old version{' '}
                   <ExternalLink
                     style={{ color: 'white', textDecoration: 'underline' }}
-                    href="https://v1exchange.pancakeswap.finance/#/swap"
+                    href="https://pancakeswap-v1.dyp.finance/#/swap"
                     target="_blank"
                   >
-                    <TYPE.white fontSize={14}>https://v1exchange.pancakeswap.finance/#/swap</TYPE.white>
+                    <TYPE.white fontSize={14}>https://pancakeswap-v1.dyp.finance/#/swap</TYPE.white>
                   </ExternalLink>
                 </TYPE.white>
               </RowBetween>
