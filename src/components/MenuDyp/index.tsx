@@ -130,7 +130,7 @@ export default function Menu() {
           <MenuItemExternal
             id={`getdyp-pancakeswap-nav-link`}
             href={
-              'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'
+              'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'
             }
           >
             PancakeSwap
