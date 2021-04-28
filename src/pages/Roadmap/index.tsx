@@ -133,10 +133,8 @@ export default function Roadmap() {
                   <AutoColumn gap="md">
                     <RowBetween>
                       <TYPE.white fontWeight={600}>
-                        ➫ Launch Ethereum mining pool & yield farming for miners<div></div>➫ Launch DYP Earn Vault
-                        <div></div>➫ Launch DYP Tools<div></div>➫ Bridge for swapping DYP between BSC and ETH networks
-                        <div></div>➫ Partnerships<div></div>➫ DYP Apps Development
-                        <div></div>
+                        ✓ Launch DYP Earn Vault<div></div>✓ Bridge for swapping DYP between BSC and ETH networks
+                        <div></div>✓ Partnerships<div></div>✓ DYP Apps Development<div></div>➫ Launch DYP Tools
                       </TYPE.white>
                     </RowBetween>
                   </AutoColumn>
@@ -160,7 +158,7 @@ export default function Roadmap() {
                   <AutoColumn gap="md">
                     <RowBetween>
                       <TYPE.white fontWeight={600}>
-                        ➫Launch DYP NFT dApp v1.0<div></div>➫ Launch New Ethereum mining pool after Ethereum move to PoS
+                        ➫Launch DYP NFT dApp v1.0<div></div>➫ Launch Ethereum mining pool & yield farming for miners
                         <div></div>➫ Launch DYP Lending<div></div>➫ Migration from Uniswap<div></div>➫ Built-in
                         insurance for all DYP liquidity providers<div></div>➫ Further extension and project growth in
                         different areas<div></div>

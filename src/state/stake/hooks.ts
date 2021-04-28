@@ -1,6 +1,6 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, WETH, Pair } from '@uniswap/sdk'
 import { useMemo } from 'react'
-import { UNI, USDC, USDT, WBTC, DYP, WBNB, BUSD } from '../../constants'
+import { UNI, USDC, USDT, WBTC, DYP, WBNB, BUSD, DAI } from '../../constants'
 // import { DAI, UNI, USDC, USDT, WBTC, DYP } from '../../constants'
 import { STAKING_REWARDS_INTERFACE } from '../../constants/abis/staking-rewards'
 import { useActiveWeb3React } from '../../hooks'
@@ -85,6 +85,55 @@ export const STAKING_REWARDS_INFO_BSC: {
   ]
 }
 
+export const EARN_VAULT_ETH: {
+  [chainId in ChainId]?: {
+    tokens: [Token, Token]
+    stakingRewardAddress: string
+    apr: string
+    days: string
+    link: string
+  }[]
+} = {
+  [ChainId.MAINNET]: [
+    {
+      // stakingRewardAddress: address of liq pool
+      tokens: [DYP, WETH[ChainId.MAINNET]],
+      stakingRewardAddress: '0xa1484C3aa22a66C62b77E0AE78E15258bd0cB711',
+      apr: '3%-13%',
+      days: '3 Days',
+      link: 'vault-list-eth'
+    },
+    {
+      tokens: [DYP, WBTC],
+      stakingRewardAddress: '0x7FBa4B8Dc5E7616e59622806932DBea72537A56b',
+      apr: '3%-13%',
+      days: '3 Days',
+      link: 'vault-list-wbtc'
+    },
+    {
+      tokens: [DYP, USDT],
+      stakingRewardAddress: '0x6C3e4cb2E96B01F4b866965A91ed4437839A121a',
+      apr: '9%-23%',
+      days: '3 Days',
+      link: 'vault-list-usdt'
+    },
+    {
+      tokens: [DYP, USDC],
+      stakingRewardAddress: '0xCA35e32e7926b96A9988f61d510E038108d8068e',
+      apr: '8%-22%',
+      days: '3 Days',
+      link: 'vault-list-usdc'
+    },
+    {
+      tokens: [DYP, DAI],
+      stakingRewardAddress: '0xCA35e32e7926b96A9988f61d510E038108d8068e',
+      apr: '8%-21%',
+      days: '3 Days',
+      link: 'vault-list-dai'
+    }
+  ]
+}
+
 export interface StakingInfo {
   // the address of the reward contract
   stakingRewardAddress: string
@@ -143,6 +192,19 @@ export interface StakingInfoBSC {
     totalStakedAmount: TokenAmount,
     totalRewardRate: TokenAmount
   ) => TokenAmount
+}
+
+export interface EarnVaultETH {
+  // the address of the reward contract
+  stakingRewardAddress: string
+  // the tokens involved in this pair
+  tokens: [Token, Token]
+  //apr
+  apr: string
+  //days
+  days: string
+  //link
+  link: string
 }
 
 // gets the staking info from the network for the active chain id
@@ -424,6 +486,43 @@ export function useStakingInfoBSC(pairToFilterBy?: Pair | null): StakingInfoBSC[
     totalSupplies,
     uni
   ])
+}
+
+export function useEarnInfo(pairToFilterBy?: Pair | null): EarnVaultETH[] {
+  const { chainId } = useActiveWeb3React()
+
+  const info = useMemo(
+    () =>
+      chainId
+        ? EARN_VAULT_ETH[chainId]?.filter(stakingRewardInfo =>
+            pairToFilterBy === undefined
+              ? true
+              : pairToFilterBy === null
+              ? false
+              : pairToFilterBy.involvesToken(stakingRewardInfo.tokens[0]) &&
+                pairToFilterBy.involvesToken(stakingRewardInfo.tokens[1])
+          ) ?? []
+        : [],
+    [chainId, pairToFilterBy]
+  )
+
+  const rewardsAddresses = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
+  const aprs = useMemo(() => info.map(({ apr }) => apr), [info])
+  const dayss = useMemo(() => info.map(({ days }) => days), [info])
+  const link = useMemo(() => info.map(({ link }) => link), [info])
+
+  return useMemo(() => {
+    return rewardsAddresses.reduce<EarnVaultETH[]>((memo, rewardsAddress, index) => {
+      memo.push({
+        days: dayss[index],
+        apr: aprs[index],
+        link: link[index],
+        stakingRewardAddress: rewardsAddress,
+        tokens: info[index].tokens
+      })
+      return memo
+    }, [])
+  }, [aprs, dayss, rewardsAddresses, link])
 }
 
 export function useTotalUniEarned(): TokenAmount | undefined {

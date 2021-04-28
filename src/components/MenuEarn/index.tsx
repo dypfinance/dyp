@@ -1,12 +1,13 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
+import { darken } from 'polished'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 //import { NavLink } from 'react-router-dom'
 
-import { ExternalLink } from '../../theme'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
 
 // const StyledMenuIcon = styled(MenuIcon)`
 //   fill: currentColor;
@@ -27,16 +28,18 @@ const StyledMenuButton = styled.button`
   margin: 0;
   padding: 0;
   height: 35px;
-  background-color: ${({ theme }) => theme.bg3};
+  background-color: #edeef200;
+  color: #565a69;
+  font-size: 1rem;
+  font-weight: 550;
+  cursor: pointer;
 
   padding: 0.15rem 0.5rem;
   border-radius: 0.5rem;
 
   :hover,
   :focus {
-    cursor: pointer;
-    outline: none;
-    background-color: ${({ theme }) => theme.bg4};
+    color: ${({ theme }) => darken(0.1, theme.text1)};
   }
 
   svg {
@@ -92,7 +95,7 @@ const MenuFlyout = styled.span`
 //   }
 // `
 
-const MenuItemExternal = styled(ExternalLink).attrs({})`
+const MenuItem = styled(NavLink).attrs({})`
   flex: 1;
   padding: 0.5rem 0.5rem;
   color: ${({ theme }) => theme.text2};
@@ -106,44 +109,44 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
     margin-right: 8px;
   }
 `
+const NewSticker = styled.div`
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  background-color: #00c9a7;
+`
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>()
-  const open = useModalOpen(ApplicationModal.MENUDYP)
-  const toggle = useToggleModal(ApplicationModal.MENUDYP)
+  const open = useModalOpen(ApplicationModal.EARN)
+  const toggle = useToggleModal(ApplicationModal.EARN)
   useOnClickOutside(node, open ? toggle : undefined)
   const { t } = useTranslation()
 
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
     <StyledMenu ref={node as any}>
-      <StyledMenuButton onClick={toggle}>{t('Get DYP')}</StyledMenuButton>
+      <StyledMenuButton onClick={toggle}>{t('Earn')}</StyledMenuButton>
 
       {open && (
         <MenuFlyout>
-          <MenuItemExternal
-            id={`getdyp-uniswap-nav-link`}
-            href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
-          >
-            Uniswap
-          </MenuItemExternal>
-          <MenuItemExternal
-            id={`getdyp-pancakeswap-nav-link`}
-            href={
-              'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'
-            }
-          >
-            PancakeSwap
-          </MenuItemExternal>
-          <MenuItemExternal id={`getdyp-kucoin-nav-link`} href={'https://trade.kucoin.com/DYP-USDT'}>
-            KuCoin
-          </MenuItemExternal>
-          <MenuItemExternal id={`getdyp-gateio-nav-link`} href={'https://www.gate.io/trade/DYP_USDT'}>
-            Gate.io
-          </MenuItemExternal>
-          <MenuItemExternal id={`getdyp-fiat-nav-link`} href={'https://www.mycointainer.com/dashboard/invest/dyp/'}>
-            Fiat
-          </MenuItemExternal>
+          <MenuItem id={`earn-farm-link`} to={'/vault'}>
+            Vault <NewSticker>NEW</NewSticker>
+          </MenuItem>
+          <MenuItem id={`earn-farm-link`} to={'/farm'}>
+            Farm 🔥
+          </MenuItem>
+          <MenuItem id={`earn-farm-link`} to={'/stake'}>
+            Stake 🚜
+          </MenuItem>
         </MenuFlyout>
       )}
     </StyledMenu>

@@ -65,7 +65,7 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>DYP ETH Staking Pools</TYPE.white>
+                <TYPE.white fontWeight={600}>Ethereum Farms</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
@@ -93,7 +93,7 @@ export default function Earn() {
                 href="https://dypfinance.medium.com/dyp-staking-pools-tutorial-82bd49e65527"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>DYP ETH Staking Pools Tutorial</TYPE.white>
+                <TYPE.white fontSize={14}>DYP Ethereum Farms Tutorial</TYPE.white>
               </ExternalLink>
               <RowBetween />{' '}
               <ExternalLink
@@ -112,7 +112,7 @@ export default function Earn() {
 
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
         <DataRow style={{ alignItems: 'baseline' }}>
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Pools</TYPE.mediumHeader>
           {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
           <TYPE.black>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TYPE.black>
         </DataRow>
@@ -138,7 +138,7 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>DYP BSC Staking Pools</TYPE.white>
+                <TYPE.white fontWeight={600}>Binance Smart Chain Farms</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
@@ -147,7 +147,7 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  NOTE: The staking dApp works ONLY with the PancakeSwap V1 (old) LP tokens!
+                  NOTE: The farming dApp works ONLY with the PancakeSwap V1 (old) LP tokens!
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
@@ -184,7 +184,7 @@ export default function Earn() {
                 href="https://dypfinance.medium.com/defi-yield-protocol-community-update-staking-pools-tutorial-on-binance-smart-chain-dfa342a5634b"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>DYP BSC Staking Pools Tutorial</TYPE.white>
+                <TYPE.white fontSize={14}>DYP Binance Smart Chain Farms Tutorial</TYPE.white>
               </ExternalLink>
               <RowBetween />{' '}
               <ExternalLink
@@ -203,7 +203,7 @@ export default function Earn() {
 
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
         <DataRow style={{ alignItems: 'baseline' }}>
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Pools</TYPE.mediumHeader>
           {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
           <TYPE.black>Total Value Locked: ${getFormattedNumber(tvlBsc, 2)}</TYPE.black>
         </DataRow>

@@ -73,7 +73,8 @@ const PageWrapperLinks = styled(AutoColumn)`
 
 const WhitelistForm = styled.div`
   // Header Color
-  background-color: red;
+  //background-color: red;
+  background-image: linear-gradient(to top, rgba(240, 240, 240, 0), rgba(255, 0, 0, 0.28));
   //display: grid;
   grid-template-columns: 1fr 120px;
   align-items: center;
@@ -83,7 +84,7 @@ const WhitelistForm = styled.div`
   width: 100%;
   top: 0;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   z-index: 2;
   margin-bottom: 50px;
@@ -190,14 +191,14 @@ export default function Home() {
           <RowBetween>
             <WhitelistForm>
               <PageWrapperLinks>
-                <MenuItemExternal id={`stake-nav-link`} to={'/earn'}>
+                <MenuItemExternal id={`stake-farm-link`} to={'/farm'}>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Let's start earning ETH
                 </MenuItemExternal>
-                <MenuItemExternal id={`stake-nav-link`} to={'/feature'}>
+                <MenuItemExternal id={`stake-feature-link`} to={'/feature'}>
                   DYP Anti Manipulation
                 </MenuItemExternal>
-                <MenuItemExternal id={`stake-nav-link`} to={'/mining'}>
+                <MenuItemExternal id={`stake-mining-link`} to={'/mining'}>
                   Ethereum Mining Pool
                 </MenuItemExternal>
               </PageWrapperLinks>

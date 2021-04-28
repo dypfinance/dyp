@@ -47,6 +47,7 @@ import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, Redirec
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
 import Competition from './Competition'
+import EarnMobile from '../components/MenuEarn/EarnMobile'
 //import BscStake from '../components/Header/BscStake'
 
 const AppWrapper = styled.div`
@@ -95,6 +96,12 @@ const Marginer = styled.div`
 `
 
 function TopLevelModals() {
+  const open2 = useModalOpen(ApplicationModal.EARN_MOBILE)
+  const toggle2 = useToggleModal(ApplicationModal.EARN_MOBILE)
+  return <EarnMobile isOpen={open2} onDismiss={toggle2} />
+}
+
+function TopLevelModalEarn() {
   const open = useModalOpen(ApplicationModal.ADDRESS_CLAIM)
   const toggle = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
   return <AddressClaimModal isOpen={open} onDismiss={toggle} />
@@ -114,6 +121,7 @@ export default function App() {
           <Popups />
           <Polling />
           <TopLevelModals />
+          <TopLevelModalEarn />
           <Web3ReactManager>
             <Switch>
               <Route exact strict path="/home" component={Home} />
@@ -132,8 +140,8 @@ export default function App() {
               <Route exact strict path="/find" component={PoolFinder} />
               <Route exact strict path="/pool" component={Pool} />
               <Route exact strict path="/uni" component={Earn} />
-              <Route exact strict path="/earn" component={Earn} />
-              <Route exact strict path="/farm" component={Farm} />
+              <Route exact strict path="/farm" component={Earn} />
+              <Route exact strict path="/stake" component={Farm} />
               <Route exact strict path="/vote" component={Vote} />
               <Route exact strict path="/about" component={About} />
               <Route exact strict path="/audit" component={Audit} />

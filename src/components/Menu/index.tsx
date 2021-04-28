@@ -145,6 +145,7 @@ export default function Menu() {
   const toggle = useToggleModal(ApplicationModal.MENU)
   useOnClickOutside(node, open ? toggle : undefined)
   const openClaimModal = useToggleModal(ApplicationModal.ADDRESS_CLAIM)
+  const openClaimModal2 = useToggleModal(ApplicationModal.EARN_MOBILE)
 
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
@@ -159,20 +160,12 @@ export default function Menu() {
             Home
           </MenuItem>
           <ButtonGetDyp onClick={openClaimModal}>Get DYP</ButtonGetDyp>
-          <MenuItem id={`earn-nav-link`} to={'/earn'}>
-            Stake
-          </MenuItem>
+          <ButtonGetDyp onClick={openClaimModal2}>Earn</ButtonGetDyp>
           <MenuItem id={`earn-bridge-link`} to={'/bridge'}>
             Bridge
           </MenuItem>
-          <MenuItem id={`earn-nav-link`} to={'/farm'}>
-            Farm
-          </MenuItem>
           <MenuItem id={`mining-nav-link`} to={'/mining'}>
             Pool
-          </MenuItem>
-          <MenuItem id={`vault-nav-link`} to={'/vault'}>
-            Earn
           </MenuItem>
           <MenuItem id={`vote-nav-link`} to={'/gov'}>
             Vote

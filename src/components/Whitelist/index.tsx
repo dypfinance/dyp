@@ -13,20 +13,20 @@ import { NavLink } from 'react-router-dom'
 //import TextFour from '../Slideshow/headerSlides/TextFour'
 
 const PageWrapper = styled(AutoColumn)`
-  max-width: 900px;
+  max-width: 600px;
   width: 100%;
   display: flex;
   justify-self: center;
   margin: auto;
   justify-content: center;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-        display: grid;
+        max-width: 320px;
   `}
 `
 
 const WhitelistForm = styled.div`
   // Header Color
-  background-color: red;
+  background-image: linear-gradient(to top, rgba(240, 240, 240, 0), rgba(255, 0, 0, 0.76));
   //display: grid;
   grid-template-columns: 1fr 120px;
   align-items: center;
@@ -36,10 +36,11 @@ const WhitelistForm = styled.div`
   width: 100%;
   top: 0;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  //padding: 1rem;
+  padding: 3rem 3rem 6rem 3rem;
   z-index: 2;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
   ${({ theme }) => theme.mediaWidth.upToMedium`
     grid-template-columns: 1fr;
     padding: 0 1rem;
@@ -47,7 +48,8 @@ const WhitelistForm = styled.div`
     position: relative;
   `};
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-        padding: 0.5rem 1rem;
+        //padding: 0.5rem 1rem;
+        padding: 1.5rem 0rem 3.5rem 0rem;
   `}
 `
 
@@ -160,14 +162,14 @@ export default function Whitelist() {
     <WhitelistForm>
       <AutoColumn gap="md">
         <PageWrapper>
-          <TYPE.white fontWeight={500} fontSize={25} style={{ margin: 'auto' }}>
-            <TextFont>DeFi Yield Protocol staking dApp is live on Binance Smart Chain! </TextFont>
+          <TYPE.white fontWeight={650} fontSize={25} style={{ margin: 'auto' }}>
+            <TextFont>DeFi Yield Protocol Earn Vault is Live! </TextFont>
           </TYPE.white>
-          <MenuItemExternal id={`stake-nav-link`} to={'/earn'}>
+          <MenuItemExternal id={`stake-nav-link`} to={'/vault'}>
             JOIN NOW
           </MenuItemExternal>
-          <MenuItemExternalMobile id={`stake-nav-link`} to={'/earn'}>
-            JOIN NOW AND START EARNING ETH/BNB REWARDS
+          <MenuItemExternalMobile id={`stake-nav-link`} to={'/vault'}>
+            JOIN
           </MenuItemExternalMobile>
         </PageWrapper>
         {/*<TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>*/}

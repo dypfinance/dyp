@@ -19,6 +19,7 @@ import { TYPE } from '../../theme'
 import { YellowCard } from '../Card'
 import Menu from '../Menu'
 import MenuDyp from '../MenuDyp'
+import MenuEarn from '../MenuEarn'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
@@ -116,6 +117,13 @@ const HeaderElementWrap = styled.div`
 `}
 `
 const HeaderElementWrap2 = styled.div`
+  margin-right: 5px;
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    display: none;
+`}
+`
+
+const HeaderElementWrap3 = styled.div`
   margin-right: 5px;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: none;
@@ -328,21 +336,24 @@ export default function Header() {
           <StyledNavLink id={`home-nav-link`} to={'/home'}>
             {t('Home')}
           </StyledNavLink>
-          <StyledNavLink id={`earn-nav-link`} to={'/earn'}>
-            {t('Stake')}
-          </StyledNavLink>
+          <HeaderElementWrap3>
+            <MenuEarn />
+          </HeaderElementWrap3>
+          {/*<StyledNavLink id={`earn-farm-link`} to={'/farm'}>*/}
+          {/*  {t('Farm')}*/}
+          {/*</StyledNavLink>*/}
           <StyledNavLink id={`earn-bridge-link`} to={'/bridge'}>
             {t('Bridge')}
           </StyledNavLink>
-          <StyledNavLink id={`earn-nav-link`} to={'/farm'}>
-            {t('Farm')}
-          </StyledNavLink>
+          {/*<StyledNavLink id={`earn-stake-link`} to={'/stake'}>*/}
+          {/*  {t('Stake')}*/}
+          {/*</StyledNavLink>*/}
           <StyledNavLink id={`mining-nav-link`} to={'/mining'}>
             {t('Pool')}
           </StyledNavLink>
-          <StyledNavLink id={`vault-nav-link`} to={'/vault'}>
-            {t('Earn')}
-          </StyledNavLink>
+          {/*<StyledNavLink id={`vault-nav-link`} to={'/vault'}>*/}
+          {/*  {t('Earn')}*/}
+          {/*</StyledNavLink>*/}
           <StyledNavLink id={`vote-nav-link`} to={'/gov'}>
             {t('Vote')}
           </StyledNavLink>

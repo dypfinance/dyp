@@ -73,7 +73,7 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>DYP Farming Pools</TYPE.white>
+                <TYPE.white fontWeight={600}>DYP Staking</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>Deposit your DYP tokens to earn DYP rewards.</TYPE.white>
@@ -113,7 +113,7 @@ export default function Earn() {
 
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
         <DataRow style={{ alignItems: 'baseline' }}>
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Pools</TYPE.mediumHeader>
           {/*<Countdown exactEnd={stakingInfos?.[0]?.periodFinish} />*/}
           <TYPE.black>Total Value Locked: ${getFormattedNumber(tvl, 2)}</TYPE.black>
         </DataRow>
