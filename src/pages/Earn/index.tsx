@@ -74,6 +74,19 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
+                  NOTE: The farming dApp works ONLY with the{' '}
+                  <ExternalLink
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://app.uniswap.org/#/swap?use=V2&inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17"
+                    target="_blank"
+                  >
+                    Uniswap V2
+                  </ExternalLink>{' '}
+                  (old) LP tokens!
+                </TYPE.white>
+              </RowBetween>
+              <RowBetween>
+                <TYPE.white fontSize={14}>
                   In order to lower the risk of DYP price volatility, all pool rewards are automatically converted from
                   DYP to ETH by the smart contract, and ETH is distributed as a reward to the liquidity providers.
                   <div></div>Maintaining token price stability — every 24 hours, the smart contract will automatically
@@ -147,7 +160,15 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  NOTE: The farming dApp works ONLY with the PancakeSwap V1 (old) LP tokens!
+                  NOTE: The farming dApp works ONLY with the{' '}
+                  <ExternalLink
+                    style={{ color: 'white', textDecoration: 'underline' }}
+                    href="https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17"
+                    target="_blank"
+                  >
+                    PancakeSwap V1
+                  </ExternalLink>{' '}
+                  (old) LP tokens!
                 </TYPE.white>
               </RowBetween>
               <RowBetween>
