@@ -104,9 +104,9 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
           <AutoColumn gap="md" justify={'center'}>
             <MenuItemExternal
               id={`getdyp-uniswap-nav-link`}
-              href={'https://app.uniswap.org/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
+              href={'https://app.uniswap.org/#/swap?use=V2&inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'}
             >
-              Uniswap
+              Uniswap V2
             </MenuItemExternal>
             <MenuItemExternal
               id={`getdyp-pancakeswap-nav-link`}
@@ -114,7 +114,7 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
                 'https://v1exchange.pancakeswap.finance/#/swap?inputCurrency=0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17'
               }
             >
-              PancakeSwap
+              PancakeSwap V1
             </MenuItemExternal>
             <MenuItemExternal id={`getdyp-kucoin-nav-link`} href={'https://trade.kucoin.com/DYP-USDT'}>
               KuCoin
