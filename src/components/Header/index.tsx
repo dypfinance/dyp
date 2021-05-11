@@ -1,6 +1,6 @@
 import { ChainId, TokenAmount, JSBI } from '@uniswap/sdk'
 import React, { useState } from 'react'
-import { Text } from 'rebass'
+//import { Text } from 'rebass'
 import { NavLink } from 'react-router-dom'
 import { darken } from 'polished'
 import { useTranslation } from 'react-i18next'
@@ -11,10 +11,10 @@ import Logo from '../../assets/svg/logo.svg'
 // import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 // import { useDarkModeManager } from '../../state/user/hooks'
-import { useETHBalances, useAggregateUniBalance } from '../../state/wallet/hooks'
+import { useAggregateUniBalance } from '../../state/wallet/hooks'
 import { CardNoise } from '../earn/styled'
 import { CountUp } from 'use-count-up'
-import { TYPE } from '../../theme'
+import { ExternalLink, TYPE } from '../../theme'
 
 import { YellowCard } from '../Card'
 import Menu from '../Menu'
@@ -22,7 +22,7 @@ import MenuDyp from '../MenuDyp'
 import MenuEarn from '../MenuEarn'
 
 import Row, { RowFixed } from '../Row'
-import Web3Status from '../Web3Status'
+//import Web3Status from '../Web3Status'
 import ClaimModal from '../claim/ClaimModal'
 import { useToggleSelfClaimModal, useShowClaimPopup } from '../../state/application/hooks'
 import { useUserHasAvailableClaim } from '../../state/claim/hooks'
@@ -205,11 +205,11 @@ const NetworkCard = styled(YellowCard)`
   `};
 `
 
-const BalanceText = styled(Text)`
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    display: none;
-  `};
-`
+// const BalanceText = styled(Text)`
+//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+//     display: none;
+//   `};
+// `
 
 const Title = styled.a`
   display: flex;
@@ -292,6 +292,46 @@ const StyledNavLink = styled(NavLink).attrs({
 // `}
 // `
 
+const MenuItemExternal = styled(ExternalLink).attrs({})`
+  text-align: center;
+  outline: currentcolor none medium;
+  text-decoration: none;
+  -moz-box-pack: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  -moz-box-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  :hover {
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(241, 201, 218);
+    color: rgb(0, 0, 0);
+  }
+`
+
+const TextTools = styled.p`
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0px 0.5rem 0px 0.25rem;
+  font-size: 1rem;
+  width: -moz-fit-content;
+  font-weight: 500;
+`
+
 const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
@@ -303,7 +343,7 @@ export default function Header() {
   const { account, chainId } = useActiveWeb3React()
   const { t } = useTranslation()
 
-  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+  //const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
   // const [isDark] = useDarkModeManager()
 
   const toggleClaimModal = useToggleSelfClaimModal()
@@ -449,13 +489,18 @@ export default function Header() {
               <CardNoise />
             </UNIWrapper>
           )}
+          {/*<AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>*/}
+          {/*  {account && userEthBalance ? (*/}
+          {/*    <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>*/}
+          {/*      {userEthBalance?.toSignificant(4)} ETH*/}
+          {/*    </BalanceText>*/}
+          {/*  ) : null}*/}
+          {/*  <Web3Status />*/}
+          {/*</AccountElement>*/}
           <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-            {account && userEthBalance ? (
-              <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                {userEthBalance?.toSignificant(4)} ETH
-              </BalanceText>
-            ) : null}
-            <Web3Status />
+            <MenuItemExternal id={`getdyp-uniswap-nav-link`} href={'https://tools.dyp.finance'}>
+              <TextTools>DYP Tools</TextTools>
+            </MenuItemExternal>
           </AccountElement>
         </HeaderElement>
         <HeaderElementWrap>
