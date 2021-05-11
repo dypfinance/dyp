@@ -318,6 +318,7 @@ const MenuItemExternal = styled(ExternalLink).attrs({})`
     background-color: rgb(255, 0, 0);
     border: 1px solid rgb(241, 201, 218);
     color: rgb(0, 0, 0);
+    text-decoration: none;
   }
 `
 
