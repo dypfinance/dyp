@@ -163,13 +163,13 @@ export default function Whitelist() {
       <AutoColumn gap="md">
         <PageWrapper>
           <TYPE.white fontWeight={650} fontSize={25} style={{ margin: 'auto' }}>
-            <TextFont>DeFi Yield Protocol Earn Vault is Live! </TextFont>
+            <TextFont>Maximize your Yield Farming Rewards! </TextFont>
           </TYPE.white>
-          <MenuItemExternal id={`stake-nav-link`} to={'/vault'}>
-            JOIN NOW
+          <MenuItemExternal id={`stake-nav-link`} to={'/farm'}>
+            Go to Farms
           </MenuItemExternal>
-          <MenuItemExternalMobile id={`stake-nav-link`} to={'/vault'}>
-            JOIN
+          <MenuItemExternalMobile id={`stake-nav-link`} to={'/farm'}>
+            Farms
           </MenuItemExternalMobile>
         </PageWrapper>
         {/*<TYPE.white fontWeight={400} fontSize={17} style={{ margin: 'auto', textDecoration: 'underline' }}>*/}
